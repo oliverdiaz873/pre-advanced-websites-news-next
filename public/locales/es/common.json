@@ -1,0 +1,20 @@
+{
+  "publishedOn": "Publicado el",
+  "readMore": "Leer más",
+  "backToHome": "Volver a la portada",
+  "backToHomeAlt": "Volver al inicio",
+  "category": "Categoría",
+  "readArticle": "Leer noticia: {{title}}",
+  "theme": {
+    "selectorLabel": "Selector de tema. Preferencia activa: {{preference}}. Tema aplicado: {{applied}}.",
+    "triggerLabel": "Tema: {{preference}}. Tema aplicado: {{applied}}.",
+    "menuLabel": "Opciones de tema",
+    "useThemeLabel": "Usar tema {{theme}}.",
+    "useSystemLabel": "Usar tema {{theme}}. Actualmente aplicado: {{applied}}.",
+    "options": {
+      "light": "claro",
+      "dark": "oscuro",
+      "system": "auto"
+    }
+  }
+}

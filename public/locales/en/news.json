@@ -1,0 +1,23 @@
+{
+  "notFound": {
+    "label": "Article not found",
+    "title": "We couldn't find this article",
+    "description": "The requested article is not yet available or the URL does not match any migrated content."
+  },
+  "relatedNews": "Related News",
+  "recentNews": "Recent News",
+  "breadcrumbHome": "Home",
+  "category": {
+    "notFoundLabel": "Category not found",
+    "notFoundTitle": "We couldn't find that editorial section",
+    "notFoundDescription": "The requested URL does not match any available category in the system.",
+    "recentNews": "Recent News"
+  },
+  "opinion": {
+    "notFoundLabel": "Opinion not found",
+    "notFoundTitle": "This opinion column is not available",
+    "notFoundDescription": "The article you're looking for doesn't exist or has been moved.",
+    "sidebarTitle": "Other Opinions",
+    "breadcrumbCategory": "Opinion"
+  }
+}

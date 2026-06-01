@@ -1,0 +1,24 @@
+/* Mantenemos directivas que son más eficientes en CSS estándar */
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .footer-links a {
+      margin: 0 10px;
+      font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-links a {
+      margin: 0 10px;
+      font-size: 16px;
+  }
+}

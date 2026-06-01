@@ -1,0 +1,246 @@
+/* LegalLayout.css - Inspirado en Hypermarket pero adaptado a NewsHub */
+.legal-main {
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+}
+
+.legal-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 16px;
+  padding: 30px 40px 40px 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  line-height: 1.7;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.legal-content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.legal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-base, 'Georgia', serif);
+}
+
+.legal-updated {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Primer párrafo - Introducción destacada */
+.legal-content > p:first-of-type {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #212529;
+  text-align: left;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  padding: 20px;
+  border-left: 4px solid #dc3545;
+  background: rgba(220, 53, 69, 0.05);
+  border-radius: 0 8px 8px 0;
+}
+
+/* Párrafos generales */
+.legal-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #37474f;
+  text-align: left;
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtítulos h2 - Diseño moderno */
+.legal-content h2 {
+  font-size: 1.3rem;
+  color: #212529;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: left;
+  position: relative;
+  padding-left: 20px;
+}
+
+.legal-content h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #dc3545;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
+}
+
+/* Enlaces - Diseño elegante */
+.legal-content a {
+  color: #dc3545;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.legal-content a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #dc3545, #ff6b6b);
+  transition: width 0.3s ease;
+}
+
+.legal-content a:hover {
+  color: #c82333;
+}
+
+.legal-content a:hover::after {
+  width: 100%;
+}
+
+/* Listas */
+.legal-content ul {
+  margin: 10px 0 20px 20px;
+  line-height: 1.7;
+}
+
+.legal-content li {
+  margin-bottom: 0.5rem;
+  color: #37474f;
+}
+
+/* Modo oscuro */
+html[data-theme='dark'] .legal-content {
+  background: #242424;
+  color: #e0e0e0;
+  border: none;
+}
+
+html[data-theme='dark'] .legal-title {
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] .legal-updated {
+  color: #9ca3af;
+}
+
+html[data-theme='dark'] .legal-content > p:first-of-type {
+  color: #ffffff;
+  background: rgba(239, 68, 68, 0.1);
+  border-left-color: #ef4444;
+}
+
+html[data-theme='dark'] .legal-content p {
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .legal-content h2 {
+  color: #ffffff !important;
+}
+
+html[data-theme='dark'] .legal-content h2::before {
+  background: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+html[data-theme='dark'] .legal-content a {
+  color: #ef4444;
+}
+
+html[data-theme='dark'] .legal-content a:hover {
+  color: #dc2626;
+}
+
+html[data-theme='dark'] .legal-content a::after {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+html[data-theme='dark'] .legal-content li {
+  color: #ffffff;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .legal-content {
+    padding: 25px;
+    margin: 0 15px 30px 15px;
+    border-radius: 12px;
+  }
+  
+  .legal-content > p:first-of-type {
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  .legal-title {
+    font-size: 1.5rem;
+  }
+  
+  .legal-content h2 {
+    font-size: 1.2rem;
+    padding-left: 15px;
+  }
+  
+  .legal-content h2::before {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .legal-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 576px) {
+  .legal-content {
+    padding: 20px;
+    margin: 0 10px 25px 10px;
+    border-radius: 8px;
+  }
+  
+  .legal-content > p:first-of-type {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+  
+  .legal-title {
+    font-size: 1.3rem;
+  }
+  
+  .legal-content h2 {
+    font-size: 1.1rem;
+    padding-left: 12px;
+    margin-top: 2rem;
+  }
+  
+  .legal-content h2::before {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .legal-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}

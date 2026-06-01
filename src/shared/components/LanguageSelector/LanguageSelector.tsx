@@ -1,0 +1,101 @@
+'use client';
+
+import { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { WorldIcon } from '../icons/Icons';
+
+const languages = [
+  { code: 'es', name: 'Español', nativeName: 'Español' },
+  { code: 'en', name: 'English', nativeName: 'English' },
+];
+
+
+/**
+ * LanguageSelector - Versión Premium (estilo Hypermarket)
+ * 
+ * Un selector de idiomas profesional unificado para todas las vistas con:
+ * - Menú desplegable animado via Tailwind Animate
+ * - Accesibilidad completa
+ * - Estética moderna con glassmorphism
+ */
+export const LanguageSelector = () => {
+  const { i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language || 'es';
+  }, [i18n.language]);
+
+  const changeLanguage = (lng: string) => {
+    if (i18n.language !== lng) {
+      i18n.changeLanguage(lng);
+    }
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="relative inline-block text-left" ref={dropdownRef}>
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium text-gray-700 dark:text-white bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 border border-transparent dark:border-white/10 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500/50"
+        aria-haspopup="true"
+        aria-expanded={isOpen}
+      >
+        <WorldIcon className="w-4 h-4 shrink-0" />
+        <span className="uppercase" style={{ fontSize: '13px', letterSpacing: '0.05em' }}>{currentLanguage.code}</span>
+        <svg 
+          className={`w-3 h-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+          style={{ fill: 'none' }}
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {isOpen && (
+        <div 
+          className="absolute left-0 md:left-auto md:right-0 mt-2 w-40 origin-top-left md:origin-top-right bg-[var(--color-surface-base)] border border-[var(--color-border-subtle)] rounded-[16px] shadow-[var(--shadow-elevation-2)] backdrop-blur-xl z-[1100] overflow-hidden animate-in fade-in zoom-in duration-200"
+          role="menu"
+        >
+          <div className="py-1">
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => changeLanguage(lang.code)}
+                className={`flex items-center justify-between w-full px-4 py-2 transition-colors duration-200 ${
+                  i18n.language === lang.code 
+                    ? 'bg-red-500/10 text-red-600 dark:text-red-400 font-semibold' 
+                    : 'text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10'
+                }`}
+                role="menuitem"
+              >
+                <span style={{ fontSize: '13px', letterSpacing: '0.05em' }}>{lang.nativeName}</span>
+
+                {i18n.language === lang.code && (
+                  <svg className="w-4 h-4" style={{ fill: 'none' }} stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};

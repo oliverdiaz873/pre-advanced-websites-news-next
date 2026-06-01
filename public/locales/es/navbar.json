@@ -1,0 +1,19 @@
+{
+  "home": "Inicio",
+  "categories": "Categorías",
+  "politics": "Política",
+  "international": "Internacional",
+  "economy": "Economía",
+  "health": "Salud",
+  "sports": "Deporte",
+  "weather": "Clima",
+  "justice": "Justicia",
+  "desktopNavLabel": "Navegación de Escritorio",
+  "tabletNavLabel": "Navegación de Tablet",
+  "mobileNavLabel": "Navegación Móvil",
+  "openSearch": "Abrir buscador",
+  "closeSearch": "Cerrar buscador",
+  "searchPlaceholder": "Buscar...",
+  "toggleNavigation": "Abrir menú de navegación",
+  "goToHomepage": "Ir a la página principal de NewsHub"
+}

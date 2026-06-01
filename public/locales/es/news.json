@@ -1,0 +1,23 @@
+{
+  "notFound": {
+    "label": "Noticia no encontrada",
+    "title": "No encontramos este artículo",
+    "description": "La nota solicitada todavía no está disponible o la ruta no coincide con el contenido migrado."
+  },
+  "relatedNews": "Noticias Relacionadas",
+  "recentNews": "Noticias Recientes",
+  "breadcrumbHome": "Inicio",
+  "category": {
+    "notFoundLabel": "Categoría no encontrada",
+    "notFoundTitle": "No encontramos esa sección editorial",
+    "notFoundDescription": "La ruta solicitada no coincide con las categorías disponibles en el sistema.",
+    "recentNews": "Noticias Recientes"
+  },
+  "opinion": {
+    "notFoundLabel": "Opinión no encontrada",
+    "notFoundTitle": "Esta columna de opinión no está disponible",
+    "notFoundDescription": "El artículo que buscas no existe o ha sido movido.",
+    "sidebarTitle": "Otras Opiniones",
+    "breadcrumbCategory": "Opinión"
+  }
+}

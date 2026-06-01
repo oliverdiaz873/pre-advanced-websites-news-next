@@ -1,0 +1,6 @@
+/* El estilo del Breadcrumb se maneja ahora principalmente vía Tailwind en el componente TSX 
+   para asegurar la alineación con el layout de 1600px y la consistencia del modo oscuro. */
+
+.breadcrumb-container {
+  /* Mantenemos la clase por si se referencia externamente, pero el estilo es vía utility classes */
+}

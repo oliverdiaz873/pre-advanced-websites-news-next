@@ -1,0 +1,234 @@
+/* ================================
+   ESTILOS PARA LA NOTICIA INDIVIDUAL (Cuerpo)
+================================ */
+
+/* Estilos para el Breadcrumb */
+.breadcrumb-container {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 0px;
+}
+
+.breadcrumb-item a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  color: #ff2929;
+}
+
+html[data-theme='dark'] .breadcrumb-container {
+  background-color: var(--dark-card-bg);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+html[data-theme='dark'] .breadcrumb {
+  color: var(--dark-text);
+}
+
+html[data-theme='dark'] .breadcrumb-item a {
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .breadcrumb-item a:hover {
+  color: #ff2929;
+}
+
+html[data-theme='dark'] .breadcrumb-item + .breadcrumb-item::before {
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .breadcrumb-item.active {
+  color: #adb5bd;
+}
+
+/* Margin para sidebar de noticias individuales - evitar contacto con footer */
+.aside-sidebar {
+  margin-bottom: 2rem;
+}
+
+.article-layout {
+  padding-top: 1rem;
+}
+
+/* Truncamiento para móviles */
+@media (max-width: 576px) {
+  .article-layout {
+    padding-top: 0.75rem;
+  }
+
+  .breadcrumb-item a {
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .breadcrumb-item.active {
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* Estilo para h1 en páginas de noticias */
+.article-wrapper .h1 {
+  font-family: sans-serif, Helvetica !important;
+  font-size: 30px !important;
+  line-height: 1.2 !important;
+}
+
+/* Contenedor unificado para que la cabecera y el cuerpo tengan el mismo fondo */
+.article-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 2rem;
+}
+
+/* Cuerpo de la noticia: texto completo y lead uniforme */
+.article-body,
+.featured-article .lead {
+  font-size: 1.1rem !important;
+  /* Uniformidad total */
+  line-height: 1.8;
+  color: #333;
+}
+
+.article-body {
+  padding: 1rem 0;
+  display: block;
+  width: 100%;
+}
+
+.article-body p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  font-size: 1.1rem !important;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Sobrescribir hover para que no tenga borde/sombra ni cambio de color en la página de noticia */
+.featured-article:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+html[data-theme='dark'] .featured-article:hover {
+  background-color: var(--dark-card-bg) !important;
+  /* Mantiene el color de la tarjeta en modo oscuro */
+}
+
+/* figure caption (en caso de que se use en el cuerpo) */
+.article-body figure {
+  margin-bottom: 1.5rem;
+}
+
+.article-body figure img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Estilos adicionales para React */
+.article-wrapper .featured-article .content {
+  flex: none;
+  max-width: 100%;
+  width: 100%;
+}
+
+.article-wrapper .featured-article .image-wrapper {
+  flex: none;
+  max-width: 100%;
+  width: 100%;
+}
+
+.article-wrapper .featured-article .image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.article-body {
+  padding: 0 0.25rem;
+}
+
+.main-content {
+  min-height: calc(100vh - 200px);
+}
+
+/* Estilos responsive */
+@media (min-width: 992px) {
+  .article-wrapper .featured-article .content {
+    flex: 0 0 40%;
+    max-width: 40%;
+    width: auto;
+  }
+
+  .article-wrapper .featured-article .image-wrapper {
+    flex: 0 0 55%;
+    max-width: 55%;
+    width: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .article-wrapper .featured-article .d-flex {
+    flex-direction: column;
+  }
+  
+  .article-wrapper .featured-article .image-wrapper {
+    flex: none;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .article-wrapper {
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .article-wrapper .featured-article .image-wrapper {
+    border-radius: 8px;
+  }
+
+  .article-wrapper .h1 {
+    font-size: 1.55rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .article-body,
+  .featured-article .lead,
+  .article-body p {
+    font-size: 1rem !important;
+    line-height: 1.7;
+  }
+
+  .article-body p,
+  .article-wrapper .featured-article p {
+    text-align: left;
+  }
+}
+
+html[data-theme='dark'] .article-wrapper {
+  background-color: var(--dark-card-bg);
+}
+
+html[data-theme='dark'] .article-wrapper .featured-article h1 {
+  color: var(--color-text-primary);
+}
+
+html[data-theme='dark'] .article-wrapper .featured-article .text-muted {
+  color: var(--color-text-secondary) !important;
+}
+
+html[data-theme='dark'] .article-wrapper .featured-article .lead {
+  color: #d1d5db;
+}
+
+html[data-theme='dark'] .article-body p {
+  color: #d1d5db;
+}

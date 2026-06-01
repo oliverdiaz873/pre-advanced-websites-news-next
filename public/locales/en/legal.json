@@ -1,0 +1,94 @@
+{
+  "lastUpdated": "Last updated:",
+  "privacy": {
+    "title": "Privacy Policy",
+    "date": "April 23, 2026",
+    "intro": "At NewsHub, we take the privacy of our users very seriously. This policy describes how we collect, use, and protect the personal information you provide when using our website.",
+    "sections": [
+      {
+        "id": "1",
+        "title": "1. Information We Collect",
+        "content": "We may collect personal information such as your name, email address, and preferences when you interact with our contact forms, newsletters, or other services."
+      },
+      {
+        "id": "2",
+        "title": "2. Use of Information",
+        "content": "The information we collect is used to improve the user experience, send relevant communications, and personalize the content we offer."
+      },
+      {
+        "id": "3",
+        "title": "3. Information Protection",
+        "content": "We implement technical and organizational security measures to protect your information from unauthorized access, loss, or disclosure."
+      },
+      {
+        "id": "4",
+        "title": "4. Cookies and Similar Technologies",
+        "content": "NewsHub may use cookies to improve website functionality and analyze traffic. You can manage cookies through your browser settings."
+      },
+      {
+        "id": "5",
+        "title": "5. Third-Party Links",
+        "content": "Our site may contain links to third-party websites. NewsHub is not responsible for the privacy policies of these external sites."
+      },
+      {
+        "id": "6",
+        "title": "6. Changes to the Privacy Policy",
+        "content": "We reserve the right to update this policy at any time. Changes will be posted on this page with the corresponding update date."
+      },
+      {
+        "id": "7",
+        "title": "7. Contact",
+        "content": "If you have questions about this privacy policy, you can contact us via email: ",
+        "email": "contacto@newshub.com"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "date": "April 23, 2026",
+    "intro": "Welcome to NewsHub. By accessing and using our website, you agree to comply with the following terms of use:",
+    "sections": [
+      {
+        "id": "1",
+        "title": "1. Acceptance of Terms",
+        "content": "By using NewsHub, you agree to be bound by these Terms of Use and our Privacy Policy. If you disagree, please do not use our site."
+      },
+      {
+        "id": "2",
+        "title": "2. Permitted Use",
+        "content": "You may use the site for personal and non-commercial purposes only. Copying, reproducing, distributing, or modifying any content without authorization is prohibited."
+      },
+      {
+        "id": "3",
+        "title": "3. User Content",
+        "content": "Any comments or content you post must be appropriate, respectful, and not infringe on the rights of third parties."
+      },
+      {
+        "id": "4",
+        "title": "4. Intellectual Property",
+        "content": "All content on NewsHub, including text, images, logos, and graphics, is protected by copyright and trademarks."
+      },
+      {
+        "id": "5",
+        "title": "5. Limitation of Liability",
+        "content": "NewsHub is not responsible for any direct or indirect damages that may arise from the use of this website or the information contained herein."
+      },
+      {
+        "id": "6",
+        "title": "6. External Links",
+        "content": "Our site may contain links to third-party websites. We are not responsible for the content or privacy practices of these external sites."
+      },
+      {
+        "id": "7",
+        "title": "7. Modifications",
+        "content": "We reserve the right to modify these terms at any time. Modifications will take effect upon publication on this site."
+      },
+      {
+        "id": "8",
+        "title": "8. Contact",
+        "content": "If you have questions about these terms of use, you can contact us via email: ",
+        "email": "contacto@newshub.com"
+      }
+    ]
+  }
+}
