@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import type { NewsArticle } from '../../../../data';
 import { useArticleTranslator } from '../../hooks/useArticleTranslation';
 
@@ -24,7 +24,7 @@ interface RecentNewsSidebarProps {
  */
 export const RecentNewsSidebar = ({ title, articles: rawArticles }: RecentNewsSidebarProps) => {
   const translateArticle = useArticleTranslator();
-  const { t } = useTranslation('news');
+  const t = useTranslations('news');
   // Traducción y límite de artículos
   const recentArticles = rawArticles.slice(0, 5).map(translateArticle);
 

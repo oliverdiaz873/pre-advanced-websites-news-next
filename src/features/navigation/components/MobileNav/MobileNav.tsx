@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { navItems } from '../../config/navItems';
 
 /**
@@ -12,7 +12,7 @@ import { navItems } from '../../config/navItems';
  * Diseño puramente vertical, pensado para vivir dentro de un menú lateral (drawer) o acordeón.
  */
 export const MobileNav = ({ onItemClick }: { onItemClick?: () => void }) => {
-  const { t } = useTranslation('navbar');
+  const t = useTranslations('navbar');
   const pathname = usePathname();
 
   return (

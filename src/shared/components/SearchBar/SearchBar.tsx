@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { SearchIcon, CloseIcon } from '../icons';
 import { useSearch } from '../../../features/news/hooks/useSearch';
 import { useArticleTranslator } from '../../../features/news/hooks/useArticleTranslation';
@@ -22,7 +22,7 @@ export const SearchBar = ({ onSearchComplete }: { onSearchComplete?: () => void 
   const router = useRouter();
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const { t } = useTranslation('navbar');
+  const t = useTranslations('navbar');
   
   const translateArticle = useArticleTranslator();
   const { results: rawResults, hasQuery } = useSearch(searchTerm);

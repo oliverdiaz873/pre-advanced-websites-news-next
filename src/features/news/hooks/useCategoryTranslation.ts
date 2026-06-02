@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import type { CategoryPageContent } from '../../../data/newsModels';
 import { useArticleTranslator } from './useArticleTranslation';
 
@@ -6,23 +6,27 @@ import { useArticleTranslator } from './useArticleTranslation';
  * useCategoryTranslation - Hook para gestionar la internacionalización de datos de categoría.
  */
 export const useCategoryTranslation = (content?: CategoryPageContent): CategoryPageContent | undefined => {
-  const { t } = useTranslation(['data', 'common']);
+  const t = useTranslations();
   const translateArticle = useArticleTranslator();
   
   if (!content || !content.slug) return content;
 
-  const basePath = `data:categories.${content.slug}`;
+  const basePath = `data.categories.${content.slug}`;
   
+  const getVal = (key: string, defaultValue: string) => {
+    return t.has(key) ? t(key) : defaultValue;
+  };
+
   // Traducimos los campos base de la categoría
   const translatedContent: CategoryPageContent = {
     ...content,
-    label: t(`${basePath}.label`, { defaultValue: content.label }),
-    description: t(`${basePath}.description`, { defaultValue: content.description }),
-    latestTitle: t(`${basePath}.latestTitle`, { defaultValue: content.latestTitle }),
-    sidebarTitle: t(`${basePath}.sidebarTitle`, { defaultValue: content.sidebarTitle }),
+    label: getVal(`${basePath}.label`, content.label),
+    description: getVal(`${basePath}.description`, content.description),
+    latestTitle: getVal(`${basePath}.latestTitle`, content.latestTitle),
+    sidebarTitle: getVal(`${basePath}.sidebarTitle`, content.sidebarTitle),
     featuredSection: {
       ...content.featuredSection,
-      title: t(`${basePath}.featuredSectionTitle`, { defaultValue: content.featuredSection.title }),
+      title: getVal(`${basePath}.featuredSectionTitle`, content.featuredSection.title),
       // Traducimos los artículos destacados
       primary: translateArticle(content.featuredSection.primary),
       secondary: [

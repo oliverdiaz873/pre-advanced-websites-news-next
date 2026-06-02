@@ -1,0 +1,8 @@
+{
+  "noResults": "No se encontraron resultados",
+  "noResultsHint": "Intenta con otros términos como \"economía\", \"deporte\" o \"inflación\".",
+  "resultsFor": "Resultados de búsqueda para:",
+  "foundCount": "{count, plural, =1 {Se encontró 1 noticia relacionada.} other {Se encontraron {count} noticias relacionadas.}}",
+  "noActiveSearch": "¿Qué estás buscando?",
+  "useSearchHint": "Usa el buscador para encontrar las últimas noticias"
+}

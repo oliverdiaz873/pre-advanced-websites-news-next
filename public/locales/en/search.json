@@ -1,9 +1,0 @@
-{
-  "noResults": "No results found",
-  "noResultsHint": "Try different terms like \"economy\", \"sports\" or \"inflation\".",
-  "resultsFor": "Search results for:",
-  "foundCount": "{{count}} related articles found.",
-  "foundCount_one": "{{count}} related article found.",
-  "noActiveSearch": "What are you looking for?",
-  "useSearchHint": "Use the search bar to find the latest news"
-}

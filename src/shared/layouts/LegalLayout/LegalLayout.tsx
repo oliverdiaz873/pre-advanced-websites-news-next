@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslations } from 'next-intl'
 
 interface LegalLayoutProps {
   title: string
@@ -16,7 +16,7 @@ interface LegalLayoutProps {
  * Centra el contenido y aplica estilos específicos de lectura legal.
  */
 export const LegalLayout: React.FC<LegalLayoutProps> = ({ title, date, children }) => {
-  const { t } = useTranslation('legal')
+  const t = useTranslations('legal')
 
   return (
     <main className="legal-main">

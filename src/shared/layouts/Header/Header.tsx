@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { MenuIcon, CloseIcon } from '../../components/icons';
 import logoImg from '../../../assets/images/logo/logo.jpg';
@@ -17,7 +17,7 @@ import { SearchBar, ThemeToggle, LanguageSelector } from '../../components';
  */
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useTranslation('navbar');
+  const t = useTranslations('navbar');
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

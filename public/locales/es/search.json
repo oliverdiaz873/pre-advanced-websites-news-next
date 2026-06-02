@@ -1,9 +1,0 @@
-{
-  "noResults": "No se encontraron resultados",
-  "noResultsHint": "Intenta con otros términos como \"economía\", \"deporte\" o \"inflación\".",
-  "resultsFor": "Resultados de búsqueda para:",
-  "foundCount": "Se encontraron {{count}} noticias relacionadas.",
-  "foundCount_one": "Se encontró {{count}} noticia relacionada.",
-  "noActiveSearch": "¿Qué estás buscando?",
-  "useSearchHint": "Usa el buscador para encontrar las últimas noticias"
-}

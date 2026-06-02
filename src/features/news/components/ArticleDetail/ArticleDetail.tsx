@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import type { FullNewsArticle } from '../../../../data';
 
 interface ArticleDetailProps {
@@ -21,7 +21,7 @@ interface ArticleDetailProps {
  * @returns {JSX.Element} El componente de detalle de la noticia.
  */
 export const ArticleDetail: React.FC<ArticleDetailProps> = ({ article }) => {
-  const { t } = useTranslation('common');
+  const t = useTranslations('common');
   
   // Separamos el primer párrafo del resto para mejorar el diseño visual
   const [firstParagraph, ...restParagraphs] = article.content || [];

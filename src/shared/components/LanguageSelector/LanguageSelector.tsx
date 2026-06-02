@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useLocale } from 'next-intl';
+import { useRouter, usePathname } from '@/i18n/routing';
 import { WorldIcon } from '../icons/Icons';
 
 const languages = [
@@ -19,11 +20,13 @@ const languages = [
  * - Estética moderna con glassmorphism
  */
 export const LanguageSelector = () => {
-  const { i18n } = useTranslation();
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -36,12 +39,12 @@ export const LanguageSelector = () => {
   }, []);
 
   useEffect(() => {
-    document.documentElement.lang = i18n.language || 'es';
-  }, [i18n.language]);
+    document.documentElement.lang = locale || 'es';
+  }, [locale]);
 
   const changeLanguage = (lng: string) => {
-    if (i18n.language !== lng) {
-      i18n.changeLanguage(lng);
+    if (locale !== lng) {
+      router.replace(pathname, { locale: lng });
     }
     setIsOpen(false);
   };
@@ -78,7 +81,7 @@ export const LanguageSelector = () => {
                 key={lang.code}
                 onClick={() => changeLanguage(lang.code)}
                 className={`flex items-center justify-between w-full px-4 py-2 transition-colors duration-200 ${
-                  i18n.language === lang.code 
+                  locale === lang.code 
                     ? 'bg-red-500/10 text-red-600 dark:text-red-400 font-semibold' 
                     : 'text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10'
                 }`}
@@ -86,7 +89,7 @@ export const LanguageSelector = () => {
               >
                 <span style={{ fontSize: '13px', letterSpacing: '0.05em' }}>{lang.nativeName}</span>
 
-                {i18n.language === lang.code && (
+                {locale === lang.code && (
                   <svg className="w-4 h-4" style={{ fill: 'none' }} stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>

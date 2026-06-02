@@ -1,0 +1,8 @@
+{
+  "noResults": "No results found",
+  "noResultsHint": "Try different terms like \"economy\", \"sports\" or \"inflation\".",
+  "resultsFor": "Search results for:",
+  "foundCount": "{count, plural, =1 {1 related article found.} other {{count} related articles found.}}",
+  "noActiveSearch": "What are you looking for?",
+  "useSearchHint": "Use the search bar to find the latest news"
+}

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import {
   featuredGrid,
   featuredPrimary,
@@ -13,7 +13,7 @@ import { useArticleTranslator } from '../../hooks/useArticleTranslation';
 
 /** Muestra el bloque de metadatos editoriales de una noticia: fecha y categoria. */
 const ArticleMeta = ({ article }: { article: NewsArticle }) => {
-  const { t } = useTranslation('common');
+  const t = useTranslations('common');
   return (
     <p className="mb-2 text-[0.85rem] leading-[1.5] text-[#5f6871] dark:text-[var(--color-text-secondary)]">
       {t('publishedOn')} <time dateTime={article.datetime}>{article.date}</time> | {article.category}
@@ -31,7 +31,7 @@ const CardLink = ({
   titleClassName: string;
   imageClassName: string;
 }) => {
-  const { t } = useTranslation('common');
+  const t = useTranslations('common');
   return (
     <Link href={article.href} aria-label={t('readArticle', { title: article.title })} className="block text-inherit no-underline">
       <img src={article.imageUrl} alt={article.alt} loading="lazy" className={imageClassName} />
@@ -49,8 +49,8 @@ interface FeaturedNewsSectionProps {
 /** Renderiza un bloque editorial destacado reusable para portada y categorias. */
 export const FeaturedNewsSection = ({ content }: FeaturedNewsSectionProps) => {
   const translateArticle = useArticleTranslator();
-  const { t } = useTranslation('home');
-  const { t: tCommon } = useTranslation('common');
+  const t = useTranslations('home');
+  const tCommon = useTranslations('common');
 
   const rawSectionContent: FeaturedSectionContent = content ?? {
     title: t('featuredNews'),

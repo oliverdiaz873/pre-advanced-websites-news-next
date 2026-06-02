@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 /**
  * BreakingNewsBadge
@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
  * Está estrechamente acoplado al BreakingNewsBanner del módulo de noticias.
  */
 export const BreakingNewsBadge = () => {
-  const { t } = useTranslation('home');
+  const t = useTranslations('home');
 
   return (
     <div className="z-10 ml-2 mr-2 flex shrink-0 items-center gap-2 rounded-md bg-[#212529] px-3 py-[0.25em] text-[0.75em] font-bold uppercase">

@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslations, useLocale } from 'next-intl';
 import type { NewsArticle, FullNewsArticle, OpinionArticle, ArticleContent } from '../../../data/newsModels';
 
 type AnyArticle = NewsArticle | FullNewsArticle | OpinionArticle | ArticleContent;
@@ -7,33 +7,38 @@ type AnyArticle = NewsArticle | FullNewsArticle | OpinionArticle | ArticleConten
  * useArticleTranslation - Hook para gestionar la internacionalización de artículos.
  *
  * Implementa el patrón "Overlay & Fallback" (inspirado en Hypermercado):
- * Busca la traducción del artículo en 'data:articles.{id}',
+ * Busca la traducción del artículo en 'data.articles.{id}',
  * si no existe, usa las propiedades originales del objeto de datos en español.
  */
 export const useArticleTranslator = () => {
-  const { t, i18n } = useTranslation(['data', 'common']);
+  const t = useTranslations();
+  const locale = useLocale();
   
   return <T extends AnyArticle>(article: T | undefined | null): T => {
     if (!article || !article.id) return article as T;
 
     const articleId = article.id;
     
+    const getVal = (key: string, defaultValue: string) => {
+      return t.has(key) ? t(key) : defaultValue;
+    };
+
     // Obtenemos los campos traducidos con fallback al original
-    const title = t(`data:articles.${articleId}.title`, { defaultValue: article.title });
-    const summary = t(`data:articles.${articleId}.summary`, { defaultValue: article.summary });
-    const alt = t(`data:articles.${articleId}.alt`, { defaultValue: article.alt });
+    const title = getVal(`data.articles.${articleId}.title`, article.title);
+    const summary = getVal(`data.articles.${articleId}.summary`, article.summary);
+    const alt = getVal(`data.articles.${articleId}.alt`, article.alt);
     
     // Para la categoría, primero intentamos buscarla en el mapeo de categorías
     // Si no, usamos el valor directo del artículo
     const categoryKey = article.category?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    const category = t(`data:categories.${categoryKey}.label`, { defaultValue: article.category });
+    const category = getVal(`data.categories.${categoryKey}.label`, article.category);
     
     // Formateo de fecha según locale
     let dateText = article.date;
-    if (article.datetime && i18n.language) {
+    if (article.datetime && locale) {
       try {
         const d = new Date(article.datetime);
-        dateText = new Intl.DateTimeFormat(i18n.language.startsWith('en') ? 'en-US' : 'es-ES', {
+        dateText = new Intl.DateTimeFormat(locale.startsWith('en') ? 'en-US' : 'es-ES', {
           year: 'numeric',
           month: 'long',
           day: 'numeric'
@@ -58,13 +63,12 @@ export const useArticleTranslator = () => {
       const fullArticle = translatedBase as unknown as FullNewsArticle;
       
       // Intentamos obtener el contenido traducido (array)
-      const translatedContent = t(`data:articles.${articleId}.content`, { 
-        returnObjects: true, 
-        defaultValue: article.content 
-      }) as unknown;
-
-      if (Array.isArray(translatedContent)) {
-        fullArticle.content = translatedContent.filter((item): item is string => typeof item === 'string');
+      const contentKey = `data.articles.${articleId}.content`;
+      if (t.has(contentKey)) {
+        const translatedContent = t.raw(contentKey);
+        if (Array.isArray(translatedContent)) {
+          fullArticle.content = translatedContent.filter((item): item is string => typeof item === 'string');
+        }
       }
       
       // Traducimos el breadcrumb si existe
@@ -80,11 +84,11 @@ export const useArticleTranslator = () => {
       if (Array.isArray(fullArticle.relatedNews)) {
         fullArticle.relatedNews = fullArticle.relatedNews.map(rel => {
           const relId = rel.id;
-          const relTitle = t(`data:articles.${relId}.title`, { defaultValue: rel.title });
-          const relSummary = t(`data:articles.${relId}.summary`, { defaultValue: rel.summary });
-          const relAlt = t(`data:articles.${relId}.alt`, { defaultValue: rel.alt });
+          const relTitle = getVal(`data.articles.${relId}.title`, rel.title);
+          const relSummary = getVal(`data.articles.${relId}.summary`, rel.summary);
+          const relAlt = getVal(`data.articles.${relId}.alt`, rel.alt);
           const relCatKey = rel.category?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-          const relCat = t(`data:categories.${relCatKey}.label`, { defaultValue: rel.category });
+          const relCat = getVal(`data.categories.${relCatKey}.label`, rel.category);
           
           return {
             ...rel,

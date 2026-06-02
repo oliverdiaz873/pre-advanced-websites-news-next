@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { navItems } from '../../config/navItems';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
@@ -13,7 +13,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
  * Diseño horizontal más compacto con fuentes ligeramente más pequeñas para evitar desbordes.
  */
 export const TabletNav = () => {
-  const { t } = useTranslation('navbar');
+  const t = useTranslations('navbar');
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const wrapperRef = useRef<HTMLElement | null>(null);

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useId, useRef, useState, type ReactElement } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { SunIcon, MoonIcon, SystemIcon } from '../icons';
 import { useTheme, type ThemePreference } from '../../../theme';
 
@@ -18,14 +18,19 @@ const options: Array<{ value: ThemePreference; labelKey: string }> = [
 ];
 
 export const ThemeToggle = () => {
-  const { t } = useTranslation('common');
+  const t = useTranslations('common');
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
   const selectedOption = options.find((option) => option.value === theme) ?? options[2];
   const selectedLabel = t(selectedOption.labelKey);
-  const resolvedThemeLabel = t(`theme.options.${resolvedTheme}`);
+  const resolvedThemeLabel = mounted ? t(`theme.options.${resolvedTheme}`) : '';
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handlePointerDown = (event: MouseEvent) => {
@@ -58,10 +63,9 @@ export const ThemeToggle = () => {
     <div
       ref={rootRef}
       className="theme-toggle"
-      aria-label={t('theme.selectorLabel', {
-        preference: selectedLabel,
-        applied: resolvedThemeLabel,
-      })}
+      aria-label={mounted
+        ? t('theme.selectorLabel', { preference: selectedLabel, applied: resolvedThemeLabel })
+        : t('theme.menuLabel')}
     >
       <button
         type="button"
@@ -69,10 +73,9 @@ export const ThemeToggle = () => {
         aria-haspopup="menu"
         aria-expanded={isOpen}
         aria-controls={menuId}
-        aria-label={t('theme.triggerLabel', {
-          preference: selectedLabel,
-          applied: resolvedThemeLabel,
-        })}
+        aria-label={mounted
+          ? t('theme.triggerLabel', { preference: selectedLabel, applied: resolvedThemeLabel })
+          : t('theme.menuLabel')}
         onClick={() => setIsOpen((currentValue) => !currentValue)}
       >
         {iconByTheme[theme]}
@@ -96,13 +99,12 @@ export const ThemeToggle = () => {
             onClick={() => handleSelect(option.value)}
             role="menuitemradio"
             aria-checked={theme === option.value}
-            aria-label={t(
-              option.value === 'system' ? 'theme.useSystemLabel' : 'theme.useThemeLabel',
-              {
-                theme: t(option.labelKey),
-                applied: resolvedThemeLabel,
-              },
-            )}
+            aria-label={mounted
+              ? t(option.value === 'system' ? 'theme.useSystemLabel' : 'theme.useThemeLabel', {
+                  theme: t(option.labelKey),
+                  applied: resolvedThemeLabel,
+                })
+              : t('theme.menuLabel')}
           >
             {iconByTheme[option.value]}
             <span className="theme-toggle-label">{t(option.labelKey)}</span>

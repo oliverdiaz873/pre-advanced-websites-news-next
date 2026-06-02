@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { navItems } from '../../config/navItems';
 
 /**
@@ -12,7 +12,7 @@ import { navItems } from '../../config/navItems';
  * Diseño horizontal amplio.
  */
 export const DesktopNav = () => {
-  const { t } = useTranslation('navbar');
+  const t = useTranslations('navbar');
   const pathname = usePathname();
 
   return (

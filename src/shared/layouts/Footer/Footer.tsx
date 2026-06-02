@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { FacebookIcon, TwitterIcon, InstagramIcon } from '../../components/icons';
 
@@ -11,7 +11,7 @@ import { FacebookIcon, TwitterIcon, InstagramIcon } from '../../components/icons
  * Contiene derechos reservados, redes sociales y enlaces legales.
  */
 export const Footer = () => {
-  const { t } = useTranslation('footer');
+  const t = useTranslations('footer');
 
   return (
     <footer className="w-full bg-[rgba(0,0,0,0.85)] text-white py-5 md:pt-4 md:pb-6 lg:pt-5 lg:px-7 lg:pb-7 text-center">

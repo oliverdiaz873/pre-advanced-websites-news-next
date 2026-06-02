@@ -1,6 +1,7 @@
-import { useMemo, useEffect } from 'react';
+import { useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { useTranslation } from 'react-i18next';
+import { createTranslator } from 'next-intl';
+import enMessages from '../../../../messages/en.json';
 import { newsArticles, opinionArticles } from '../../../data';
 import { hasSearchQuery, matchesSearchQuery } from '../../../shared/utils/searchUtils';
 
@@ -14,17 +15,11 @@ import { hasSearchQuery, matchesSearchQuery } from '../../../shared/utils/search
 export const useSearch = (overrideQuery?: string) => {
   const searchParams = useSearchParams();
   const query = overrideQuery !== undefined ? overrideQuery : (searchParams.get('q') || '');
-  const { i18n } = useTranslation('data');
 
-  // Obtenemos traductores fijos para ambos idiomas
-  const tEn = i18n.getFixedT('en', 'data');
-  
-  // Aseguramos que el idioma inglés esté cargado para la búsqueda bilingüe
-  useEffect(() => {
-    if (i18n.options.supportedLngs && (i18n.options.supportedLngs as string[]).includes('en')) {
-      i18n.loadLanguages('en');
-    }
-  }, [i18n]);
+  // Obtenemos traductores fijos para el idioma inglés de forma síncrona
+  const translator = useMemo(() => {
+    return createTranslator({ locale: 'en', messages: enMessages }) as unknown as (key: string) => string;
+  }, []);
 
   const results = useMemo(() => {
     if (!hasSearchQuery(query)) return [];
@@ -34,6 +29,10 @@ export const useSearch = (overrideQuery?: string) => {
       ...newsArticles,
       ...opinionArticles
     ];
+
+    const getEnVal = (key: string) => {
+      return translator(key) ?? '';
+    };
 
     // Filtramos por título, categoría o resumen
     // Buscamos siempre en AMBOS idiomas: datos originales (ES) + traducciones (EN)
@@ -47,10 +46,10 @@ export const useSearch = (overrideQuery?: string) => {
       if (matchesOriginal) return true;
 
       // 2. Búsqueda en traducciones EN (siempre, sin importar idioma activo)
-      const enTitle = tEn(`articles.${article.id}.title`, { defaultValue: '' });
-      const enSummary = tEn(`articles.${article.id}.summary`, { defaultValue: '' });
+      const enTitle = getEnVal(`data.articles.${article.id}.title`);
+      const enSummary = getEnVal(`data.articles.${article.id}.summary`);
       const categoryKey = article.category?.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-      const enCategory = tEn(`categories.${categoryKey}.label`, { defaultValue: '' });
+      const enCategory = getEnVal(`data.categories.${categoryKey}.label`);
 
       return (
         (enTitle && matchesSearchQuery(enTitle, query)) ||
@@ -58,7 +57,7 @@ export const useSearch = (overrideQuery?: string) => {
         (enSummary && matchesSearchQuery(enSummary, query))
       );
     });
-  }, [query, tEn]);
+  }, [query, translator]);
 
   return {
     query,

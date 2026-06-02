@@ -17,6 +17,38 @@
 
 import fs from 'fs';
 import path from 'path';
+
+const compileMergedMessages = (locale: string, dataObject: any) => {
+  const sourceLocalesDir = path.join(process.cwd(), 'src', 'i18n', 'locales', locale);
+  const targetMessagesDir = path.join(process.cwd(), 'messages');
+  
+  if (!fs.existsSync(targetMessagesDir)) {
+    fs.mkdirSync(targetMessagesDir, { recursive: true });
+  }
+
+  const merged: Record<string, any> = {
+    data: dataObject
+  };
+
+  if (fs.existsSync(sourceLocalesDir)) {
+    fs.readdirSync(sourceLocalesDir).forEach(file => {
+      if (file.endsWith('.json')) {
+        const ns = path.basename(file, '.json');
+        try {
+          const content = JSON.parse(fs.readFileSync(path.join(sourceLocalesDir, file), 'utf-8'));
+          merged[ns] = content;
+        } catch (e) {
+          console.error(`Error parsing source message file ${file}:`, e);
+        }
+      }
+    });
+  }
+
+  const targetPath = path.join(targetMessagesDir, `${locale}.json`);
+  fs.writeFileSync(targetPath, JSON.stringify(merged, null, 2), 'utf-8');
+  console.log(`Compiled and merged next-intl messages to ${targetPath}`);
+};
+
 import {
   newsArticles,
   opinionArticles,
@@ -101,12 +133,9 @@ const extractData = () => {
     };
   });
 
-  // Write ES JSON
-  const esPath = path.join(process.cwd(), 'public', 'locales', 'es', 'data.json');
-  fs.writeFileSync(esPath, JSON.stringify(data, null, 2), 'utf-8');
-  console.log(`Extracted ES data to ${esPath}`);
+  compileMergedMessages('es', data);
 
-  // Generate EN JSON (mock translation with some real ones)
+  // Generate EN JSON (with real translations and fallback)
   const enData = {
     articles: {} as Record<string, any>,
     categories: {} as Record<string, any>,
@@ -224,10 +253,6 @@ const extractData = () => {
         'Polish hammer thrower Anita Włodarczyk broke her own world record with a throw of 82.98 meters, extending her dominance in the discipline.',
         'The high jump also had its glorious moment with Sweden\'s Armand Duplantis, who cleared 6.23 meters to set a new world record and leave everyone in awe.'
       ]
-    },
-    'clima-tormenta': {
-      title: 'Tropical Storm Approaches the Caribbean and Alerts Several Countries',
-      summary: 'Meteorological authorities issue preventive alerts as a tropical storm with the potential to become a hurricane approaches.'
     },
     'justicia-fraude': {
       title: 'Former Official Detained for Massive Financial Fraud',
@@ -685,9 +710,7 @@ const extractData = () => {
     };
   });
 
-  const enPath = path.join(process.cwd(), 'public', 'locales', 'en', 'data.json');
-  fs.writeFileSync(enPath, JSON.stringify(enData, null, 2), 'utf-8');
-  console.log(`Generated EN data to ${enPath}`);
+  compileMergedMessages('en', enData);
 };
 
 extractData();

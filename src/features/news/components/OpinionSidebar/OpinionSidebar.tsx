@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { opinionArticles, type OpinionArticle } from '../../../../data';
 import { useArticleTranslator } from '../../hooks/useArticleTranslation';
 
@@ -13,7 +13,7 @@ interface OpinionSidebarProps {
 /** Representa una barra lateral editorial reusable para home y categorias. */
 export const OpinionSidebar = ({ title, articles: rawArticles = opinionArticles }: OpinionSidebarProps) => {
   const translateArticle = useArticleTranslator();
-  const { t } = useTranslation('home');
+  const t = useTranslations('home');
   
   const articles = rawArticles.map(translateArticle);
 
