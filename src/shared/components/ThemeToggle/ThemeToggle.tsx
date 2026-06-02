@@ -24,9 +24,6 @@ export const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
-  const selectedOption = options.find((option) => option.value === theme) ?? options[2];
-  const selectedLabel = t(selectedOption.labelKey);
-  const resolvedThemeLabel = mounted ? t(`theme.options.${resolvedTheme}`) : '';
 
   useEffect(() => {
     setMounted(true);
@@ -54,6 +51,14 @@ export const ThemeToggle = () => {
     };
   }, []);
 
+  if (!mounted) {
+    return null;
+  }
+
+  const selectedOption = options.find((option) => option.value === theme) ?? options[2];
+  const selectedLabel = t(selectedOption.labelKey);
+  const resolvedThemeLabel = t(`theme.options.${resolvedTheme}`);
+
   const handleSelect = (nextTheme: ThemePreference) => {
     setTheme(nextTheme);
     setIsOpen(false);
@@ -63,9 +68,7 @@ export const ThemeToggle = () => {
     <div
       ref={rootRef}
       className="theme-toggle"
-      aria-label={mounted
-        ? t('theme.selectorLabel', { preference: selectedLabel, applied: resolvedThemeLabel })
-        : t('theme.menuLabel')}
+      aria-label={t('theme.selectorLabel', { preference: selectedLabel, applied: resolvedThemeLabel })}
     >
       <button
         type="button"
@@ -73,9 +76,7 @@ export const ThemeToggle = () => {
         aria-haspopup="menu"
         aria-expanded={isOpen}
         aria-controls={menuId}
-        aria-label={mounted
-          ? t('theme.triggerLabel', { preference: selectedLabel, applied: resolvedThemeLabel })
-          : t('theme.menuLabel')}
+        aria-label={t('theme.triggerLabel', { preference: selectedLabel, applied: resolvedThemeLabel })}
         onClick={() => setIsOpen((currentValue) => !currentValue)}
       >
         {iconByTheme[theme]}
@@ -99,12 +100,10 @@ export const ThemeToggle = () => {
             onClick={() => handleSelect(option.value)}
             role="menuitemradio"
             aria-checked={theme === option.value}
-            aria-label={mounted
-              ? t(option.value === 'system' ? 'theme.useSystemLabel' : 'theme.useThemeLabel', {
-                  theme: t(option.labelKey),
-                  applied: resolvedThemeLabel,
-                })
-              : t('theme.menuLabel')}
+            aria-label={t(
+              option.value === 'system' ? 'theme.useSystemLabel' : 'theme.useThemeLabel',
+              { theme: t(option.labelKey), applied: resolvedThemeLabel },
+            )}
           >
             {iconByTheme[option.value]}
             <span className="theme-toggle-label">{t(option.labelKey)}</span>
