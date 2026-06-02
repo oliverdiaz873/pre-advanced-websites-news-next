@@ -741,6 +741,13 @@
         "latestTitle": "Mas en Justicia",
         "sidebarTitle": "Opinion",
         "featuredSectionTitle": "Justicia"
+      },
+      "opinion": {
+        "label": "Opinión",
+        "description": "Análisis, columnas y perspectivas de expertos sobre los temas que marcan la agenda pública.",
+        "latestTitle": "Más en Opinión",
+        "sidebarTitle": "Opinión",
+        "featuredSectionTitle": "Opinión"
       }
     }
   },
