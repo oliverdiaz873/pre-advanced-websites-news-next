@@ -1,7 +1,6 @@
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { createTranslator } from 'next-intl';
-import enMessages from '../../../../messages/en.json';
 import { newsArticles, opinionArticles } from '../../../data';
 import { hasSearchQuery, matchesSearchQuery } from '../../../shared/utils/searchUtils';
 
@@ -11,33 +10,39 @@ import { hasSearchQuery, matchesSearchQuery } from '../../../shared/utils/search
  * Filtra los datos centralizados basándose en el parámetro 'q' de la URL.
  * Búsqueda bilingüe: siempre busca en AMBOS idiomas (ES + EN),
  * independientemente del idioma activo, para una experiencia profesional.
+ * 
+ * El diccionario EN se carga dinámicamente solo cuando hay una query activa
+ * para evitar incluir ~91KB en el bundle inicial del cliente.
  */
 export const useSearch = (overrideQuery?: string) => {
   const searchParams = useSearchParams();
   const query = overrideQuery !== undefined ? overrideQuery : (searchParams.get('q') || '');
+  const [enTranslator, setEnTranslator] = useState<((key: string) => string) | null>(null);
 
-  // Obtenemos traductores fijos para el idioma inglés de forma síncrona
-  const translator = useMemo(() => {
-    return createTranslator({ locale: 'en', messages: enMessages }) as unknown as (key: string) => string;
-  }, []);
+  useEffect(() => {
+    if (hasSearchQuery(query)) {
+      let cancelled = false;
+      import('../../../../messages/en.json').then((mod) => {
+        if (cancelled) return;
+        setEnTranslator(() => createTranslator({ locale: 'en', messages: mod.default }) as (key: string) => string);
+      });
+      return () => { cancelled = true; };
+    } else {
+      setEnTranslator(null);
+    }
+  }, [query]);
 
   const results = useMemo(() => {
-    if (!hasSearchQuery(query)) return [];
+    if (!hasSearchQuery(query) || !enTranslator) return [];
 
-    // Combinamos todas las fuentes de datos para buscar en todo el periódico
     const allContent = [
       ...newsArticles,
       ...opinionArticles
     ];
 
-    const getEnVal = (key: string) => {
-      return translator(key) ?? '';
-    };
+    const getEnVal = (key: string) => enTranslator(key) ?? '';
 
-    // Filtramos por título, categoría o resumen
-    // Buscamos siempre en AMBOS idiomas: datos originales (ES) + traducciones (EN)
     return allContent.filter(article => {
-      // 1. Búsqueda en datos originales (español hardcoded)
       const matchesOriginal =
         matchesSearchQuery(article.title, query) ||
         matchesSearchQuery(article.category, query) ||
@@ -45,7 +50,6 @@ export const useSearch = (overrideQuery?: string) => {
 
       if (matchesOriginal) return true;
 
-      // 2. Búsqueda en traducciones EN (siempre, sin importar idioma activo)
       const enTitle = getEnVal(`data.articles.${article.id}.title`);
       const enSummary = getEnVal(`data.articles.${article.id}.summary`);
       const categoryKey = article.category?.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -57,7 +61,7 @@ export const useSearch = (overrideQuery?: string) => {
         (enSummary && matchesSearchQuery(enSummary, query))
       );
     });
-  }, [query, translator]);
+  }, [query, enTranslator]);
 
   return {
     query,

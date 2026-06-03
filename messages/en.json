@@ -926,5 +926,19 @@
     "foundCount": "{count, plural, =1 {1 related article found.} other {{count} related articles found.}}",
     "noActiveSearch": "What are you looking for?",
     "useSearchHint": "Use the search bar to find the latest news"
+  },
+  "system": {
+    "loading": "Loading...",
+    "error": {
+      "title": "Something went wrong",
+      "description": "An unexpected error occurred. Please try again.",
+      "retry": "Try again",
+      "backToHome": "Back to home"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you're looking for doesn't exist or has been moved.",
+      "backToHome": "Back to home"
+    }
   }
 }
