@@ -1,10 +1,9 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { useCategory, RecentNewsSidebar, FeaturedNewsSection, LatestNewsSection } from '@/features/news';
 import { NewsLayout } from '@/shared/layouts';
-import { SEO } from '@/shared/components';
 import { useCategoryTranslation } from '@/features/news/hooks/useCategoryTranslation';
 
 
@@ -49,10 +48,6 @@ export const Category = () => {
 
   return (
     <>
-      <SEO 
-        title={content.label}
-        description={content.description}
-      />
       <NewsLayout
         className="category-layout"
         sidebar={

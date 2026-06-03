@@ -2,17 +2,24 @@ import type { Metadata } from 'next';
 import { categoryContent } from '@/data/categories';
 import { Category } from '../../_components/CategoryPageClient';
 
+import { getTranslations } from 'next-intl/server';
+
 type PageProps = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const content = categoryContent[slug];
+  const { locale, slug } = await params;
+  const t = await getTranslations({ locale, namespace: 'data.categories' });
+  const tMeta = await getTranslations({ locale, namespace: 'metadata.category' });
+
+  const hasCategory = t.has(`${slug}.label`);
+  const label = hasCategory ? t(`${slug}.label`) : undefined;
+  const description = hasCategory ? t(`${slug}.description`) : undefined;
 
   return {
-    title: content?.label ?? 'Categoria no encontrada',
-    description: content?.description ?? 'La categoria solicitada no existe.',
+    title: label ?? tMeta('notFound'),
+    description: description ?? tMeta('notFoundDescription'),
   };
 }
 

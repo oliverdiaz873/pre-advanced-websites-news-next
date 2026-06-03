@@ -2,10 +2,16 @@ import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { Search } from '../_components/SearchPageClient';
 
-export const metadata: Metadata = {
-  title: 'Busqueda',
-  description: 'Busca noticias y opiniones publicadas en NewsHub.',
-};
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata.search' });
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 export default function Page() {
   return (

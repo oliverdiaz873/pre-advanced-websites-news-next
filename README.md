@@ -55,6 +55,15 @@ This project is part of the Pre-Advanced Websites series, designed to:
 - Learn server-side rendering and static generation strategies
 - Understand production-ready web application architecture
 
+## Internationalization (i18n)
+This project implements internationalization (i18n) using `next-intl` and Next.js 16 routing.
+
+### Architecture & Pipeline
+1. **Source Translations**: Static UI translations live inside `src/i18n/locales/{locale}/*.json` (e.g. `common.json`, `navbar.json`, `metadata.json`). Dynamic article content and categories live in `src/data/`.
+2. **Compilation Step (`npm run build:locales`)**: This script merges static translation JSONs with dynamic data and produces the final consolidated dictionaries in `messages/{locale}.json` consumed by `next-intl` at runtime.
+3. **Automation**: The script `build:locales` runs automatically before `npm run dev` and `npm run build`.
+4. **Routing**: All client-side navigation uses the localized `Link` component from `@/i18n/routing` instead of standard `next/link` to preserve the user's selected locale and enable fast client-side transitions.
+
 ## License
 
 This project is licensed under the MIT License.  

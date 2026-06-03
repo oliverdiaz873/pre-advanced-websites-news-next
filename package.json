@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run build:locales && next dev",
+    "build": "npm run build:locales && next build",
     "start": "next start",
     "lint": "eslint",
     "type-check": "tsc --noEmit",

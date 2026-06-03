@@ -3,7 +3,6 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 import { LegalLayout } from '@/shared/layouts'
-import { SEO } from '@/shared/components'
 
 export const Privacy: React.FC = () => {
   const t = useTranslations('legal')
@@ -17,10 +16,6 @@ export const Privacy: React.FC = () => {
 
   return (
     <>
-      <SEO 
-        title={t('privacy.title')}
-        description={t('privacy.intro')}
-      />
       <LegalLayout title={t('privacy.title')} date={t('privacy.date')}>
       <p>{t('privacy.intro')}</p>
       {sections.map(section => (

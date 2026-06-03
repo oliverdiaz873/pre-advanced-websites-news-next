@@ -25,40 +25,56 @@ type PageProps = {
   params: Promise<{ locale: string; category: string; slug: string }>;
 };
 
+import { getTranslations } from 'next-intl/server';
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug, category } = await params;
+  const { locale, slug, category } = await params;
   
   console.log('=== METADATA GENERATION DEBUG ===');
+  console.log('locale:', locale);
   console.log('slug:', slug);
   console.log('category:', category);
   console.log('allArticles length:', allArticles.length);
-  console.log('all hrefs:', allArticles.map(a => a.href));
 
   const article = allArticles.find((item) => item.href.endsWith(`/${slug}`) || item.id === slug);
 
   console.log('article found:', article);
   console.log('=== END DEBUG ===');
 
+  const tMeta = await getTranslations({ locale, namespace: 'metadata.article' });
+
+  if (!article) {
+    return {
+      title: tMeta('notFound'),
+      description: tMeta('notFoundDescription'),
+    };
+  }
+
+  const tArticles = await getTranslations({ locale, namespace: 'data.articles' });
+  const articleId = article.id;
+  
+  const hasTitle = tArticles.has(`${articleId}.title`);
+  const title = hasTitle ? tArticles(`${articleId}.title`) : article.title;
+  
+  const hasSummary = tArticles.has(`${articleId}.summary`);
+  const summary = hasSummary ? tArticles(`${articleId}.summary`) : article.summary;
+
   return {
-    title: article?.title ?? 'Noticia no encontrada',
-    description: article?.summary ?? 'La noticia solicitada no existe.',
-    openGraph: article
-      ? {
-          type: 'article',
-          title: article.title,
-          description: article.summary,
-          images: [article.imageUrl],
-          publishedTime: article.datetime,
-        }
-      : undefined,
-    twitter: article
-      ? {
-          card: 'summary_large_image',
-          title: article.title,
-          description: article.summary,
-          images: [article.imageUrl],
-        }
-      : undefined,
+    title,
+    description: summary,
+    openGraph: {
+      type: 'article',
+      title,
+      description: summary,
+      images: [article.imageUrl],
+      publishedTime: article.datetime,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: summary,
+      images: [article.imageUrl],
+    },
   };
 }
 

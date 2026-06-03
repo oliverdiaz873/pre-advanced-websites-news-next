@@ -714,13 +714,6 @@
         "latestTitle": "More in Justice",
         "sidebarTitle": "Opinion",
         "featuredSectionTitle": "Justice"
-      },
-      "opinion": {
-        "label": "Opinion",
-        "description": "[EN] Análisis, columnas y perspectivas de expertos sobre los temas que marcan la agenda pública.",
-        "latestTitle": "More in Opinion",
-        "sidebarTitle": "Opinion",
-        "featuredSectionTitle": "Opinion"
       }
     }
   },
@@ -850,6 +843,38 @@
           "email": "contacto@newshub.com"
         }
       ]
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "Home",
+      "description": "The most important news of the world, politics, economy, and sports in one place."
+    },
+    "layout": {
+      "siteName": "NewsHub",
+      "description": "Stay informed with the latest international news, politics, economy, sports, and more."
+    },
+    "search": {
+      "title": "Search",
+      "description": "Search for news and opinions published in NewsHub."
+    },
+    "legal": {
+      "privacy": {
+        "title": "Privacy Policy",
+        "description": "Privacy policy of NewsHub."
+      },
+      "terms": {
+        "title": "Terms of Use",
+        "description": "Terms of use of NewsHub."
+      }
+    },
+    "category": {
+      "notFound": "Category not found",
+      "notFoundDescription": "The requested category does not exist."
+    },
+    "article": {
+      "notFound": "Article not found",
+      "notFoundDescription": "The requested article does not exist."
     }
   },
   "navbar": {

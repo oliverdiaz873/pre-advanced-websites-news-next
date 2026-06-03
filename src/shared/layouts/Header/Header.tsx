@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { MenuIcon, CloseIcon } from '../../components/icons';
 import logoImg from '../../../assets/images/logo/logo.jpg';
 import { DesktopNav, TabletNav, MobileNav } from '../../../features/navigation/components';

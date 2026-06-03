@@ -1,5 +1,10 @@
 import { redirect } from '@/i18n/routing';
 
-export default function SaludRedirect() {
-  redirect({ href: '/category/salud', locale: 'es' });
+export default async function SaludRedirect({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  redirect({ href: '/category/salud', locale: locale as 'es' | 'en' });
 }

@@ -1,7 +1,6 @@
 'use client';
 
 import { useHome } from '@/features/news';
-import { SEO } from '@/shared/components';
 import {
   BreakingNewsBanner,
   FeaturedNewsSection,
@@ -26,10 +25,6 @@ export const Home = () => {
 
   return (
     <>
-      <SEO 
-        title="Inicio" 
-        description="Las noticias más importantes del mundo, política, economía y deportes en un solo lugar."
-      />
       <main className="home-main min-h-[calc(100vh-200px)] px-4 py-0 pb-8 md:px-[0.1rem] lg:px-4 lg:pb-12">
       <div className="mx-auto mt-3 max-w-[1600px]">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">

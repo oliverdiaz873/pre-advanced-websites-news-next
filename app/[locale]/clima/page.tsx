@@ -1,5 +1,10 @@
 import { redirect } from '@/i18n/routing';
 
-export default function ClimaRedirect() {
-  redirect({ href: '/category/clima', locale: 'es' });
+export default async function ClimaRedirect({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  redirect({ href: '/category/clima', locale: locale as 'es' | 'en' });
 }

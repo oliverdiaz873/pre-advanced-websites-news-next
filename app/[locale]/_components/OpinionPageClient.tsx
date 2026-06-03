@@ -1,11 +1,10 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { Breadcrumb } from '@/features/navigation/components';
 import { RecentNewsSidebar, ArticleDetail, useOpinion } from '@/features/news';
 import { NewsLayout } from '@/shared/layouts';
-import { SEO } from '@/shared/components';
 import { useArticleTranslator } from '@/features/news/hooks/useArticleTranslation';
 
 /**
@@ -45,13 +44,6 @@ export const Opinion = () => {
 
   return (
     <>
-      <SEO 
-        title={article.title}
-        description={article.summary}
-        imageUrl={article.imageUrl}
-        type="article"
-        datePublished={article.datetime}
-      />
       <Breadcrumb 
         home={t('breadcrumbHome')}
         category={t('opinion.breadcrumbCategory')}

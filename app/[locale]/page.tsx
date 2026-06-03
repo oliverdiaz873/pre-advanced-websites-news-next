@@ -1,10 +1,16 @@
 import type { Metadata } from 'next';
 import { Home } from './_components/HomePageClient';
 
-export const metadata: Metadata = {
-  title: 'Inicio',
-  description: 'Las noticias mas importantes del mundo, politica, economia y deportes en un solo lugar.',
-};
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata.home' });
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 export default function Page() {
   return <Home />;

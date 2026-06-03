@@ -1,12 +1,12 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { SearchIcon } from '@/shared/components/icons';
 
 import { NewsLayout } from '@/shared/layouts';
 import { useSearch } from '@/features/news/hooks/useSearch';
-import { EmptyState, SEO } from '@/shared/components';
+import { EmptyState } from '@/shared/components';
 import { useArticleTranslator } from '@/features/news/hooks/useArticleTranslation';
 
 /**
@@ -21,10 +21,6 @@ export const Search = () => {
 
   return (
     <>
-      <SEO 
-        title={hasQuery ? `${t('resultsFor')} "${query}"` : t('noActiveSearch')}
-        description={hasQuery ? `${t('foundCount', { count })} para la búsqueda: ${query}` : t('useSearchHint')}
-      />
       <NewsLayout>
       <div className="container mx-auto pt-1 pb-2">
         {hasQuery ? (

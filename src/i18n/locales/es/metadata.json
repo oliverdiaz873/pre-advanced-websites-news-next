@@ -1,0 +1,32 @@
+{
+  "home": {
+    "title": "Inicio",
+    "description": "Las noticias más importantes del mundo, política, economía y deportes en un solo lugar."
+  },
+  "layout": {
+    "siteName": "NewsHub",
+    "description": "Mantente informado con las últimas noticias internacionales, política, economía, deportes y más."
+  },
+  "search": {
+    "title": "Búsqueda",
+    "description": "Busca noticias y opiniones publicadas en NewsHub."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Política de privacidad",
+      "description": "Política de privacidad de NewsHub."
+    },
+    "terms": {
+      "title": "Términos de uso",
+      "description": "Términos de uso de NewsHub."
+    }
+  },
+  "category": {
+    "notFound": "Categoría no encontrada",
+    "notFoundDescription": "La categoría solicitada no existe."
+  },
+  "article": {
+    "notFound": "Noticia no encontrada",
+    "notFoundDescription": "La noticia solicitada no existe."
+  }
+}

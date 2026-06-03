@@ -23,31 +23,36 @@ import '@/shared/layouts/Footer/Footer.css';
 import '@/shared/layouts/Header/Header.css';
 import '@/shared/components/ThemeToggle/ThemeToggle.css';
 
-const siteName = 'NewsHub';
-const defaultDescription =
-  'Mantente informado con las ultimas noticias internacionales, politica, economia, deportes y mas.';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://newshub.example.com'),
-  title: {
-    default: siteName,
-    template: `%s | ${siteName}`,
-  },
-  description: defaultDescription,
-  openGraph: {
-    type: 'website',
-    siteName,
-    title: siteName,
-    description: defaultDescription,
-    images: ['/images/logo/logo.jpg'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteName,
-    description: defaultDescription,
-    images: ['/images/logo/logo.jpg'],
-  },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata.layout' });
+  const siteName = t('siteName');
+  const description = t('description');
+
+  return {
+    metadataBase: new URL('https://newshub.example.com'),
+    title: {
+      default: siteName,
+      template: `%s | ${siteName}`,
+    },
+    description,
+    openGraph: {
+      type: 'website',
+      siteName,
+      title: siteName,
+      description,
+      images: ['/images/logo/logo.jpg'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: siteName,
+      description,
+      images: ['/images/logo/logo.jpg'],
+    },
+  };
+}
 
 export default async function RootLayout({
   children,

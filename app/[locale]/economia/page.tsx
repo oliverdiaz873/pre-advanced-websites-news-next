@@ -1,5 +1,10 @@
 import { redirect } from '@/i18n/routing';
 
-export default function EconomiaRedirect() {
-  redirect({ href: '/category/economia', locale: 'es' });
+export default async function EconomiaRedirect({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  redirect({ href: '/category/economia', locale: locale as 'es' | 'en' });
 }

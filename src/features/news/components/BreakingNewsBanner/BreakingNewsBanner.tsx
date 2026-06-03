@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { featuredPrimary, featuredGrid, latestNews } from '../../../../data';
 import { useArticleTranslator } from '../../hooks/useArticleTranslation';
 import { BreakingNewsBadge } from './BreakingNewsBadge';
