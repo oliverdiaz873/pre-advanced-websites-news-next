@@ -22,12 +22,22 @@ const allArticles: FullNewsArticle[] = [
 ];
 
 type PageProps = {
-  params: Promise<{ category: string; slug: string }>;
+  params: Promise<{ locale: string; category: string; slug: string }>;
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, category } = await params;
+  
+  console.log('=== METADATA GENERATION DEBUG ===');
+  console.log('slug:', slug);
+  console.log('category:', category);
+  console.log('allArticles length:', allArticles.length);
+  console.log('all hrefs:', allArticles.map(a => a.href));
+
   const article = allArticles.find((item) => item.href.endsWith(`/${slug}`) || item.id === slug);
+
+  console.log('article found:', article);
+  console.log('=== END DEBUG ===');
 
   return {
     title: article?.title ?? 'Noticia no encontrada',
