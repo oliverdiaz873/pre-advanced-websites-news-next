@@ -38,6 +38,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: `%s | ${siteName}`,
     },
     description,
+    icons: {
+      icon: [
+        { url: '/favicon16x16.jpg', sizes: '16x16', type: 'image/jpeg' },
+        { url: '/favicon32x32.jpg', sizes: '32x32', type: 'image/jpeg' },
+        { url: '/favicon48x48.jpg', sizes: '48x48', type: 'image/jpeg' },
+      ],
+      shortcut: { url: '/favicon32x32.jpg', type: 'image/jpeg' },
+      apple: { url: '/favicon48x48.jpg', sizes: '48x48', type: 'image/jpeg' },
+    },
     openGraph: {
       type: 'website',
       siteName,
