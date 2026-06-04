@@ -55,7 +55,7 @@ export const TabletNav = () => {
               href={homeItem.path}
               onClick={() => setIsOpen(false)}
               className={
-                `block rounded px-2 py-1.5 text-[14px] text-black transition-all duration-300 dark:text-[var(--color-text-primary)] ${
+                `block rounded px-2 py-1.5 text-[14px] font-sans text-black transition-all duration-300 dark:text-[var(--color-text-primary)] ${
                   pathname === homeItem.path
                     ? 'bg-[#ebebeb] text-[#dc3545] dark:bg-[#ebebeb] dark:text-black'
                     : 'hover:text-[#dc3545] dark:hover:text-[#dc3545]'
@@ -74,7 +74,7 @@ export const TabletNav = () => {
             aria-expanded={isOpen}
             aria-controls={menuId}
             onClick={() => setIsOpen((v) => !v)}
-            className="block rounded bg-transparent px-2 py-1.5 text-[14px] text-black transition-all duration-300 hover:text-[#dc3545] dark:text-[var(--color-text-primary)] dark:hover:text-[#dc3545]"
+            className="block rounded bg-transparent px-2 py-1.5 font-sans text-[14px] text-black transition-all duration-300 hover:text-[#dc3545] dark:text-[var(--color-text-primary)] dark:hover:text-[#dc3545]"
           >
             {t('categories')} <span className="text-[0.75em] opacity-80">▼</span>
           </button>
@@ -93,7 +93,7 @@ export const TabletNav = () => {
                   role="menuitem"
                   onClick={() => setIsOpen(false)}
                   className={
-                    `block rounded px-3 py-2 text-[14px] transition-all duration-200 ${
+                    `block rounded px-3 py-2 text-[14px] font-sans transition-all duration-200 ${
                       pathname === item.path
                         ? 'bg-[#ebebeb] text-[#dc3545] dark:bg-[#ebebeb] dark:text-black'
                         : 'text-black hover:bg-black/5 hover:text-[#dc3545] dark:text-[var(--color-text-primary)] dark:hover:bg-white/10 dark:hover:text-[#dc3545]'

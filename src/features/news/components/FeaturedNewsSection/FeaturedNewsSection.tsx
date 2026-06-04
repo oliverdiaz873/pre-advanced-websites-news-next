@@ -69,7 +69,7 @@ export const FeaturedNewsSection = ({ content }: FeaturedNewsSectionProps) => {
   const [secondary1, secondary2, secondary3] = sectionContent.secondary;
 
   return (
-    <section className="rounded-lg bg-white p-4 shadow-[0_2px_4px_rgba(0,0,0,0.1)] dark:bg-[var(--color-surface-base)]">
+    <section className="rounded-lg bg-white p-4 shadow-[0_2px_4px_rgba(0,0,0,0.1)] dark:bg-[var(--color-surface-base)] font-sans">
       <h2 className="section-title-home section-title-main mb-4">{sectionContent.title}</h2>
 
       <div className="mb-2">

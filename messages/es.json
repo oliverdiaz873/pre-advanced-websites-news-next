@@ -953,19 +953,5 @@
     "foundCount": "{count, plural, =1 {Se encontró 1 noticia relacionada.} other {Se encontraron {count} noticias relacionadas.}}",
     "noActiveSearch": "¿Qué estás buscando?",
     "useSearchHint": "Usa el buscador para encontrar las últimas noticias"
-  },
-  "system": {
-    "loading": "Cargando...",
-    "error": {
-      "title": "Algo salió mal",
-      "description": "Ocurrió un error inesperado. Por favor, intenta de nuevo.",
-      "retry": "Reintentar",
-      "backToHome": "Volver al inicio"
-    },
-    "notFound": {
-      "title": "Página no encontrada",
-      "description": "La página que buscas no existe o ha sido movida.",
-      "backToHome": "Volver al inicio"
-    }
   }
 }

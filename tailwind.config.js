@@ -8,7 +8,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        primary: ['var(--font-domine)'],
+        base: ['var(--font-inter)'],
+      },
+    },
   },
   plugins: [
     tailwindcssAnimate,

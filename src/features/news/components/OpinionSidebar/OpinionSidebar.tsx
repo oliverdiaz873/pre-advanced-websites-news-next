@@ -20,7 +20,7 @@ export const OpinionSidebar = ({ title, articles: rawArticles = opinionArticles 
   const sectionTitle = title ?? t('opinion');
 
   return (
-    <aside>
+    <aside className="font-sans">
       <section className="rounded-lg border-l border-[#ddd] bg-white p-6 shadow-[0_2px_4px_rgba(0,0,0,0.1)] dark:border-[var(--color-border-subtle)] dark:bg-[var(--color-surface-elevated)]">
         <h3 className="section-title-home section-title-sidebar mb-3">{sectionTitle}</h3>
 

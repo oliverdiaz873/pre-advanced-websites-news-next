@@ -23,7 +23,7 @@ export const MobileNav = ({ onItemClick }: { onItemClick?: () => void }) => {
               href={item.path}
               onClick={onItemClick}
               className={
-                `block rounded-lg px-4 py-3 text-[16px] text-black transition-all duration-300 dark:text-[var(--color-text-primary)] ${
+                `block rounded-lg px-4 py-3 text-[16px] font-sans text-black transition-all duration-300 dark:text-[var(--color-text-primary)] ${
                   pathname === item.path
                     ? 'bg-[#ebebeb] text-[#dc3545] dark:bg-[#ebebeb] dark:text-black'
                     : 'hover:text-[#dc3545] dark:hover:text-[#dc3545]'

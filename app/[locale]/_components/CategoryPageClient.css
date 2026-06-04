@@ -9,7 +9,7 @@
 
 .category-title {
   color: #111827;
-  font-family: var(--font-family-base);
+  font-family: var(--font-inter);
   font-size: clamp(2.2rem, 4vw, 3.5rem);
   font-weight: 700;
   line-height: 1;

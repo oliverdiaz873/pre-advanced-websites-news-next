@@ -59,7 +59,7 @@ export const LanguageSelector = () => {
         aria-expanded={isOpen}
       >
         <WorldIcon className="w-4 h-4 shrink-0" />
-        <span className="uppercase" style={{ fontSize: '13px', letterSpacing: '0.05em' }}>{currentLanguage.code}</span>
+        <span className="uppercase" style={{ fontFamily: 'var(--font-domine)', fontSize: '13px', letterSpacing: '0.05em' }}>{currentLanguage.code}</span>
         <svg 
           className={`w-3 h-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
           style={{ fill: 'none' }}
@@ -87,7 +87,7 @@ export const LanguageSelector = () => {
                 }`}
                 role="menuitem"
               >
-                <span style={{ fontSize: '13px', letterSpacing: '0.05em' }}>{lang.nativeName}</span>
+                <span style={{ fontFamily: 'var(--font-domine)', fontSize: '13px', letterSpacing: '0.05em' }}>{lang.nativeName}</span>
 
                 {locale === lang.code && (
                   <svg className="w-4 h-4" style={{ fill: 'none' }} stroke="currentColor" viewBox="0 0 24 24">

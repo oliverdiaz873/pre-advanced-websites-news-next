@@ -27,7 +27,7 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({ article }) => {
   const [firstParagraph, ...restParagraphs] = article.content || [];
 
   return (
-    <div className="article-wrapper shadow-sm mb-8 bg-white dark:bg-gray-900 rounded-[10px] p-[20px] md:p-[30px]">
+    <div className="article-wrapper font-sans shadow-sm mb-8 bg-white dark:bg-gray-900 rounded-[10px] p-[20px] md:p-[30px]">
       <article className="featured-article mb-4">
         <div className="flex flex-col lg:flex-row items-start gap-8">
           <div className="content order-2 lg:order-1 flex-[0_0_40%] max-w-full lg:max-w-[40%]">

@@ -7,7 +7,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Theme } from './_components/Theme';
-import '@/styles/fonts.css';
+import { domine, inter } from '@/shared/config/fonts';
 import '@/theme/theme.css';
 import '@/styles/index.css';
 import './_components/HomePageClient.css';
@@ -71,7 +71,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+      <html lang={locale} suppressHydrationWarning className={`${domine.variable} ${inter.variable}`}>
       <body>
         <Theme />
 
