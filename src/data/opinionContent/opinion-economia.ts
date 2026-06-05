@@ -1,14 +1,14 @@
 import type { ArticleContent } from '../newsModels';
 
 export const opinionEconomiaContent: ArticleContent = {
-  id: 'opinion_economia',
+  id: 'opinion-economia',
   title: 'Hacia donde va la economia global?',
   href: '/opiniones/opinion-economia',
   date: '3 de octubre de 2025',
   datetime: '2025-10-03',
   category: 'Opinion',
   summary: 'Analizamos los factores que marcaran el rumbo economico en los proximos anos.',
-  imageUrl: '/images/opiniones/opinion_economia.jpg',
+  imageUrl: '/images/opiniones/opinion-economia.jpg',
   alt: 'Hacia donde va la economia global?',
   breadcrumb: {
     home: 'Inicio',

@@ -6,7 +6,7 @@ import type { OpinionArticle } from './newsModels';
  */
 export const opinionArticles: OpinionArticle[] = [
   {
-    id: 'opinion_politica',
+    id: 'opinion-politica',
     title: 'La democracia y el resto de la transparencia',
     href: '/opiniones/opinion-politica',
     category: 'Opinión',
@@ -19,20 +19,20 @@ export const opinionArticles: OpinionArticle[] = [
     datetime: '2025-10-04',
   },
   {
-    id: 'opinion_economia',
+    id: 'opinion-economia',
     title: 'Hacia dónde va la economía global?',
     href: '/opiniones/opinion-economia',
     category: 'Opinión',
     slug: 'opinion-economia',
     summary:
       'Analizamos los factores que marcarán el rumbo económico en los próximos años.',
-    imageUrl: '/images/opiniones/opinion_economia.jpg',
+    imageUrl: '/images/opiniones/opinion-economia.jpg',
     alt: 'Hacia dónde va la economía global?',
     date: '3 de octubre de 2025',
     datetime: '2025-10-03',
   },
   {
-    id: 'opinion_salud',
+    id: 'opinion-salud',
     title: 'La importancia de la salud preventiva',
     href: '/opiniones/opinion-salud',
     category: 'Opinión',

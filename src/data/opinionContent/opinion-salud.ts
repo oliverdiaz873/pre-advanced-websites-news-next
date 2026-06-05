@@ -1,7 +1,7 @@
 import type { ArticleContent } from '../newsModels';
 
 export const opinionSaludContent: ArticleContent = {
-  id: 'opinion_salud',
+  id: 'opinion-salud',
   title: 'La importancia de la salud preventiva',
   href: '/opiniones/opinion-salud',
   date: '2 de octubre de 2025',

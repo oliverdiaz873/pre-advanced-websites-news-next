@@ -554,7 +554,7 @@
           "Expertos en fenómenos meteorológicos advierten sobre la posibilidad de nuevos eventos severos en las próximas horas debido a las condiciones atmosféricas inestables en la región."
         ]
       },
-      "justicia_tribunal_supremo": {
+      "justicia-tribunal-supremo": {
         "title": "Tribunal Supremo confirma sentencia histórica en caso de corrupción",
         "summary": "El Tribunal Supremo ha confirmado la sentencia dictada en un caso de corrupción política que ha conmocionado al país, estableciendo un precedente importante en la lucha contra la impunidad.",
         "category": "Justicia",
@@ -569,7 +569,7 @@
           "Expertos legales consideran que este fallo fortalecerá los mecanismos de prevención de la corrupción y servirá como disuasivo para futuros funcionarios públicos."
         ]
       },
-      "justicia_condena_criminal": {
+      "justicia-condena-criminal": {
         "title": "Condenan a cadena perpetua a líder de organización criminal internacional",
         "summary": "El líder de una organización criminal internacional ha sido condenado a cadena perpetua tras un largo proceso judicial que se extendió por varios años.",
         "category": "Justicia",
@@ -585,7 +585,7 @@
           "Mientras tanto, las autoridades continúan investigando y monitoreando las operaciones de la organización para asegurar que no queden cabos sueltos que puedan permitir la continuidad de actividades ilícitas."
         ]
       },
-      "justicia_fiscalia_empresa": {
+      "justicia-fiscalia-empresa": {
         "title": "Fiscalía inicia juicio contra empresa por evasión fiscal millonaria",
         "summary": "La Fiscalía General ha iniciado un juicio contra una importante empresa nacional acusada de evasión fiscal millonaria, lo que podría derivar en sanciones históricas.",
         "category": "Justicia",
@@ -598,7 +598,7 @@
           "Se espera que las próximas semanas sean decisivas para determinar el futuro de la compañía y el impacto de este caso en el sector empresarial."
         ]
       },
-      "justicia_juez_homicidio_multiple": {
+      "justicia-juez-homicidio-multiple": {
         "title": "Juez ordena prisión preventiva para acusado de homicidio múltiple",
         "summary": "El juez del caso ha dictado prisión preventiva contra el acusado, considerando necesario asegurar su presencia en el juicio debido a la gravedad de los cargos y el riesgo de fuga.",
         "category": "Justicia",
@@ -611,7 +611,7 @@
           "La comunidad sigue atenta al desarrollo de los acontecimientos, esperando que se haga justicia para las víctimas y sus familias."
         ]
       },
-      "opinion_politica": {
+      "opinion-politica": {
         "title": "La democracia y el reto de la transparencia",
         "summary": "La confianza ciudadana depende cada vez mas de instituciones abiertas y responsables.",
         "category": "Opinion",
@@ -622,7 +622,7 @@
           "Es imperativo que nuestras instituciones adopten tecnologias abiertas y procesos de auditoria ciudadana. Una democracia que teme a la transparencia es una democracia que duda de su propio valor. El reto es enorme, pero el costo de la opacidad es, sencillamente, inasumible para una sociedad que aspira a ser verdaderamente libre."
         ]
       },
-      "opinion_economia": {
+      "opinion-economia": {
         "title": "Hacia donde va la economia global?",
         "summary": "Analizamos los factores que marcaran el rumbo economico en los proximos anos.",
         "category": "Opinion",
@@ -633,7 +633,7 @@
           "A largo plazo, la sostenibilidad sera el motor principal del valor economico. Aquellos paises y empresas que no logren adaptar sus modelos de negocio a los limites del planeta se veran marginados. La economia global del futuro no sera solo digital, sera fundamentalmente regenerativa o no sera."
         ]
       },
-      "opinion_salud": {
+      "opinion-salud": {
         "title": "La importancia de la salud preventiva",
         "summary": "Invertir en prevencion es fundamental para mantener una poblacion saludable y reducir gastos sanitarios.",
         "category": "Opinion",

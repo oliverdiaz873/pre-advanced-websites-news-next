@@ -68,7 +68,7 @@ export const sidebarNewsByCategory = {
       date: '4 de octubre de 2025',
       datetime: '2025-10-04',
       summary: 'El Consejo de Seguridad se reúne para discutir medidas de desescalada ante el aumento de tensiones regionales.',
-      imageUrl: '/images/news/internacional/israel_and_iran.jpg',
+      imageUrl: '/images/news/internacional/israel-and-iran.jpg',
       alt: 'ONU convoca sesión de emergencia por crisis en Medio Oriente',
     }),
     createNewsArticle({
@@ -307,7 +307,7 @@ export const sidebarNewsByCategory = {
       alt: 'Exfuncionario niega cargos de fraude durante audiencia',
     }),
     createNewsArticle({
-      id: 'justicia_tribunal_supremo',
+      id: 'justicia-tribunal-supremo',
       title: 'Sentencia del Tribunal Supremo senta precedente legal importante',
       href: '/news/justicia/tribunal-supremo-confirma-sentencia',
       category: 'Justicia',
@@ -318,7 +318,7 @@ export const sidebarNewsByCategory = {
       alt: 'Sentencia del Tribunal Supremo senta precedente legal importante',
     }),
     createNewsArticle({
-      id: 'justicia_fiscalia_empresa',
+      id: 'justicia-fiscalia-empresa',
       title: 'Caso de evasión fiscal podría llevar a reforma tributaria',
       href: '/news/justicia/fiscalia-inicia-juicio-empresa-evasion-fiscal-millonaria',
       category: 'Justicia',

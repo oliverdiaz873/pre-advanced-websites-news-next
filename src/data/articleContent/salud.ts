@@ -35,7 +35,7 @@ export const saludArticles: FullNewsArticle[] = [
         alt: 'Contaminación del aire y salud'
       },
       {
-    id: 'salud-corazon',
+        id: 'salud-corazon',
         title: 'Nueva terapia cardiovascular promete mejorar la salud del corazón',
         href: '/news/salud/nueva-terapia-cardiovascular-mejora-salud-corazon',
         category: 'Salud',

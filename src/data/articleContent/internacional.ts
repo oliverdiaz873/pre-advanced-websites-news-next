@@ -46,7 +46,7 @@ export const internacionalArticles: FullNewsArticle[] = [
         date: '3 de octubre de 2025',
         datetime: '2025-10-03',
         summary: 'La región se mantiene en alerta ante el aumento de la retórica hostil.',
-        imageUrl: '/images/news/internacional/israel_and_iran.jpg',
+        imageUrl: '/images/news/internacional/israel-and-iran.jpg',
         alt: 'Crecen las tensiones entre Israel e Irán'
       }
     ],
@@ -103,7 +103,7 @@ export const internacionalArticles: FullNewsArticle[] = [
         date: '3 de octubre de 2025',
         datetime: '2025-10-03',
         summary: 'La región se mantiene en alerta ante el aumento de la retórica hostil.',
-        imageUrl: '/images/news/internacional/israel_and_iran.jpg',
+        imageUrl: '/images/news/internacional/israel-and-iran.jpg',
         alt: 'Crecen las tensiones entre Israel e Irán'
       }
     ],
@@ -121,7 +121,7 @@ export const internacionalArticles: FullNewsArticle[] = [
     date: '3 de octubre de 2025',
     datetime: '2025-10-03',
     summary: 'La región del Medio Oriente se mantiene en alerta máxima ante el aumento de las tensiones diplomáticas y militares entre Israel e Irán, con amenazas mutuas que preocupan a la comunidad internacional.',
-    imageUrl: '/images/news/internacional/israel_and_iran.jpg',
+    imageUrl: '/images/news/internacional/israel-and-iran.jpg',
     alt: 'Crecen las tensiones entre Israel e Irán',
     content: [
       'Las tensiones entre Israel e Irán han alcanzado su punto más alto en los últimos años, con ambos países intercambiando acusaciones y amenazas que han puesto a toda la región en estado de alerta.',

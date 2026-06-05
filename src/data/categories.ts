@@ -52,7 +52,7 @@ const politicaArticles: NewsArticle[] = [
     date: '4 de octubre de 2025',
     datetime: '2025-10-04',
     summary: 'Líderes mundiales se reunirán para discutir temas de seguridad global y cooperación económica en la cumbre anual.',
-    imageUrl: '/images/news/politica/casa_blanca.jpg',
+    imageUrl: '/images/news/politica/casa-blanca.jpg',
     alt: 'Casa Blanca Confirma Cumbre Internacional para Esta Semana',
   }),
   createNewsArticle({
@@ -99,7 +99,7 @@ const internacionalArticles: NewsArticle[] = [
     date: '4 de octubre de 2025',
     datetime: '2025-10-04',
     summary: 'La comunidad internacional expresa preocupación ante el escalation de tensiones entre Israel e Irán, con llamados a la moderación.',
-    imageUrl: '/images/news/internacional/israel_and_iran.jpg',
+    imageUrl: '/images/news/internacional/israel-and-iran.jpg',
     alt: 'Israel e Irán: Crecen las Tensiones en Medio de Conflictos Regionales',
   }),
   createNewsArticle({
@@ -450,7 +450,7 @@ const justiciaArticles: NewsArticle[] = [
     alt: 'Detienen a exfuncionario acusado de fraude financiero millonario',
   }),
   createNewsArticle({
-    id: 'justicia_tribunal_supremo',
+    id: 'justicia-tribunal-supremo',
     title: 'Tribunal Supremo confirma sentencia en caso de corrupción política',
     href: '/news/justicia/tribunal-supremo-confirma-sentencia',
     category: 'Justicia',
@@ -461,7 +461,7 @@ const justiciaArticles: NewsArticle[] = [
     alt: 'Tribunal Supremo confirma sentencia en caso de corrupción política',
   }),
   createNewsArticle({
-    id: 'justicia_condena_criminal',
+    id: 'justicia-condena-criminal',
     title: 'Condenan a cadena perpetua a líder de organización criminal internacional',
     href: '/news/justicia/condenan-cadena-perpetua-lider-organizacion-criminal',
     category: 'Justicia',
@@ -472,7 +472,7 @@ const justiciaArticles: NewsArticle[] = [
     alt: 'Condenan a cadena perpetua a líder de organización criminal internacional',
   }),
   createNewsArticle({
-    id: 'justicia_fiscalia_empresa',
+    id: 'justicia-fiscalia-empresa',
     title: 'Fiscalía inicia juicio contra empresa por evasión fiscal millonaria',
     href: '/news/justicia/fiscalia-inicia-juicio-empresa-evasion-fiscal-millonaria',
     category: 'Justicia',
@@ -483,7 +483,7 @@ const justiciaArticles: NewsArticle[] = [
     alt: 'Fiscalía inicia juicio contra empresa por evasión fiscal millonaria',
   }),
   createNewsArticle({
-    id: 'justicia_juez_homicidio_multiple',
+    id: 'justicia-juez-homicidio-multiple',
     title: 'Juez ordena prisión preventiva para acusado de homicidio múltiple',
     href: '/news/justicia/juez-ordena-prision-preventiva-acusado-homicidio-multiple',
     category: 'Justicia',

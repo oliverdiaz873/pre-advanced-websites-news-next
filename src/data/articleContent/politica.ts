@@ -35,7 +35,7 @@ export const politicaArticles: FullNewsArticle[] = [
         date: '3 de octubre de 2025',
         datetime: '2025-10-03',
         summary: 'La Casa Blanca confirma cumbre internacional para esta semana para abordar temas globales.',
-        imageUrl: '/images/news/politica/casa_blanca.jpg',
+        imageUrl: '/images/news/politica/casa-blanca.jpg',
         alt: 'Casa Blanca Confirma Cumbre Internacional'
       },
       {
@@ -64,7 +64,7 @@ export const politicaArticles: FullNewsArticle[] = [
     date: '3 de octubre de 2025',
     datetime: '2025-10-03',
     summary: 'La Casa Blanca confirma cumbre internacional para esta semana para abordar temas globales incluyendo cambio climático y seguridad económica.',
-    imageUrl: '/images/news/politica/casa_blanca.jpg',
+    imageUrl: '/images/news/politica/casa-blanca.jpg',
     alt: 'Casa Blanca Confirma Cumbre Internacional',
     content: [
       'La Casa Blanca ha confirmado oficialmente la realización de una cumbre internacional que se llevará a cabo esta semana, con la participación de líderes de más de 50 países para abordar los desafíos más urgentes a nivel global.',
@@ -158,7 +158,7 @@ export const politicaArticles: FullNewsArticle[] = [
         date: '3 de octubre de 2025',
         datetime: '2025-10-03',
         summary: 'La Casa Blanca confirma cumbre internacional para esta semana para abordar temas globales.',
-        imageUrl: '/images/news/politica/casa_blanca.jpg',
+        imageUrl: '/images/news/politica/casa-blanca.jpg',
         alt: 'Casa Blanca Confirma Cumbre Internacional'
       }
     ],
@@ -209,7 +209,7 @@ export const politicaArticles: FullNewsArticle[] = [
         date: '4 de octubre de 2025',
         datetime: '2025-10-04',
         summary: 'La Casa Blanca confirma cumbre internacional para esta semana para abordar temas globales.',
-        imageUrl: '/images/news/politica/casa_blanca.jpg',
+        imageUrl: '/images/news/politica/casa-blanca.jpg',
         alt: 'Casa Blanca Confirma Cumbre Internacional'
       }
     ],
@@ -327,7 +327,7 @@ export const politicaArticles: FullNewsArticle[] = [
         date: '4 de octubre de 2025',
         datetime: '2025-10-04',
         summary: 'La Casa Blanca confirma cumbre internacional para esta semana para abordar temas globales.',
-        imageUrl: '/images/news/politica/casa_blanca.jpg',
+        imageUrl: '/images/news/politica/casa-blanca.jpg',
         alt: 'Casa Blanca Confirma Cumbre Internacional'
       }
     ],

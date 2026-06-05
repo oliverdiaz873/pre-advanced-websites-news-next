@@ -666,7 +666,7 @@ const extractData = () => {
         'Meanwhile, citizens are advised to avoid traveling through the area during night hours and report any suspicious activity to the local emergency number. This event has reopened the debate on urban security and crime prevention policies.'
       ]
     },
-    'justicia_tribunal_supremo': {
+    'justicia-tribunal-supremo': {
       title: 'Supreme Court Confirms Landmark Sentence in Corruption Case',
       summary: 'The Supreme Court has confirmed the sentence handed down in a political corruption case that has shocked the country, setting an important precedent in the fight against impunity.',
       alt: 'Judges entering the Supreme Court for a landmark ruling',
@@ -680,7 +680,7 @@ const extractData = () => {
         'Legal experts believe that this ruling will strengthen corruption prevention mechanisms and serve as a deterrent for future public officials.'
       ]
     },
-    'justicia_condena_criminal': {
+    'justicia-condena-criminal': {
       title: 'Leader of International Criminal Organization Sentenced to Life Imprisonment',
       summary: 'The leader of an international criminal organization has been sentenced to life imprisonment after a long judicial process that spanned several years.',
       alt: 'Courtroom during the sentencing of an international criminal leader',
@@ -695,7 +695,7 @@ const extractData = () => {
         'Meanwhile, authorities continue to investigate and monitor the organization\'s operations to ensure that no loose ends remain that could allow illegal activities to continue.'
       ]
     },
-    'justicia_fiscalia_empresa': {
+    'justicia-fiscalia-empresa': {
       title: 'Prosecutor\'s Office Launches Trial Against Company for Million-Dollar Tax Evasion',
       summary: 'The Attorney General\'s Office has initiated a trial against a major national company accused of million-dollar tax evasion, which could lead to historic sanctions.',
       alt: 'Corporate building with prosecutor office investigators entering',
@@ -707,7 +707,7 @@ const extractData = () => {
         'The coming weeks are expected to be decisive in determining the future of the company and the impact of this case on the business sector.'
       ]
     },
-    'justicia_juez_homicidio_multiple': {
+    'justicia-juez-homicidio-multiple': {
       title: 'Judge Orders Preventive Detention for Multiple Homicide Suspect',
       summary: 'The judge in the case has ordered preventive detention for the accused, considering it necessary to ensure his presence at the trial due to the gravity of the charges and the flight risk.',
       alt: 'Judge reviewing case files for a multiple homicide suspect',
@@ -719,7 +719,7 @@ const extractData = () => {
         'The community remains attentive to the development of events, hoping for justice for the victims and their families.'
       ]
     },
-    'opinion_politica': {
+    'opinion-politica': {
       title: 'Democracy and the Challenge of Transparency',
       summary: 'Citizen trust increasingly depends on open and accountable institutions.',
       alt: 'Illustration of democratic institutions and transparency concepts',
@@ -729,7 +729,7 @@ const extractData = () => {
         'It is imperative that our institutions adopt open technologies and citizen audit processes. A democracy that fears transparency is a democracy that doubts its own value. The challenge is enormous, but the cost of opacity is, quite simply, unacceptable for a society that aspires to be truly free.'
       ]
     },
-    'opinion_economia': {
+    'opinion-economia': {
       title: 'Where is the Global Economy Heading?',
       summary: 'We analyze the factors that will mark the economic course in the coming years.',
       alt: 'Visual representation of global economic trends and AI technology',
@@ -739,7 +739,7 @@ const extractData = () => {
         'In the long term, sustainability will be the main driver of economic value. Those countries and companies that fail to adapt their business models to the planet\'s limits will find themselves marginalized. The global economy of the future will not only be digital; it will be fundamentally regenerative or it will not be at all.'
       ]
     },
-    'opinion_salud': {
+    'opinion-salud': {
       title: 'The Importance of Preventive Health',
       summary: 'Investing in prevention is fundamental to maintaining a healthy population and reducing healthcare costs.',
       alt: 'Illustration of preventive healthcare and medical checkups',

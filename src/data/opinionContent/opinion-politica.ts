@@ -1,7 +1,7 @@
 import type { ArticleContent } from '../newsModels';
 
 export const opinionPoliticaContent: ArticleContent = {
-  id: 'opinion_politica',
+  id: 'opinion-politica',
   title: 'La democracia y el reto de la transparencia',
   href: '/opiniones/opinion-politica',
   date: '4 de octubre de 2025',
