@@ -38,7 +38,7 @@ export const Footer = () => {
         {/* Enlaces legales */}
         <div className="footer-links">
           <Link href="/legal/privacy" title={t('privacyPolicy')}>{t('privacyPolicy')}</Link>
-          <span className="text-[#ccc] mx-1">|</span>
+          <span className="mx-2 w-px h-4 bg-gray-400 inline-block align-middle" />
           <Link href="/legal/terms" title={t('termsOfUse')}>{t('termsOfUse')}</Link>
         </div>
       </div>
