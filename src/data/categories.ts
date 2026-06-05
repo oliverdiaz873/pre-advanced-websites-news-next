@@ -243,7 +243,7 @@ const saludArticles: NewsArticle[] = [
     alt: 'La contaminación del aire aumenta el riesgo de enfermedades respiratorias',
   }),
   createNewsArticle({
-    id: 'salud-cardiovascular',
+    id: 'salud-corazon',
     title: 'Nueva terapia cardiovascular promete mejorar la salud del corazón',
     href: '/news/salud/nueva-terapia-cardiovascular-mejora-salud-corazon',
     category: 'Salud',

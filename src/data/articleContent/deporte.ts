@@ -116,7 +116,7 @@ export const deporteArticles: FullNewsArticle[] = [
     }
   },
   {
-    id: 'deporte-baseball',
+    id: 'deporte-mlb',
     title: 'Los Mets vencen a los Braves en un partido decisivo de la MLB',
     href: '/news/deporte/mets-vencen-braves-partido-decisivo-mlb',
     category: 'Deporte',
@@ -263,7 +263,7 @@ export const deporteArticles: FullNewsArticle[] = [
         alt: 'Los Lakers vencen a los Celtics 112-107 en un emocionante partido de la NBA'
       },
       {
-        id: 'deporte-espana-final',
+        id: 'deporte-espana-alemania',
         title: 'España se clasifica para la final del Mundial de Fútbol',
         href: '/news/deporte/espana-clasifica-final-mundial-futbol',
         category: 'Deporte',
@@ -281,7 +281,7 @@ export const deporteArticles: FullNewsArticle[] = [
     }
   },
   {
-    id: 'deporte-espana-final',
+    id: 'deporte-espana-alemania',
     title: 'España se clasifica para la final del Mundial de Fútbol tras vencer a Alemania',
     href: '/news/deporte/espana-clasifica-final-mundial-futbol',
     category: 'Deporte',

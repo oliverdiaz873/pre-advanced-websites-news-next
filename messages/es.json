@@ -389,17 +389,17 @@
           "En conclusión, el incremento del PIB del 3,5% refleja un trimestre de dinamismo económico, impulsado tanto por la confianza de los consumidores como por la decisión de las empresas de fortalecer su capacidad productiva y su presencia en el mercado."
         ]
       },
-      "salud-cardiovascular": {
-        "title": "Avances en medicina: nueva terapia promete mejorar la salud cardiovascular",
-        "summary": "Un nuevo avance en medicina ha generado expectativas en la comunidad científica y entre los pacientes: una terapia innovadora promete mejorar la salud cardiovascular y reducir los riesgos asociados a enfermedades del corazón.",
+      "salud-corazon": {
+        "title": "Nueva terapia cardiovascular promete mejorar la salud del corazón",
+        "summary": "Investigadores médicos han desarrollado una innovadora terapia cardiovascular que promete revolucionar el tratamiento de enfermedades del corazón y mejorar la calidad de vida de millones de pacientes.",
         "category": "Salud",
-        "alt": "Salud Cardiovascular",
+        "alt": "Nueva terapia cardiovascular promete mejorar la salud del corazón",
         "content": [
-          "Los estudios iniciales muestran que la terapia puede ayudar a fortalecer el músculo cardíaco, mejorar la circulación y disminuir la inflamación en los vasos sanguíneos. Los investigadores destacan que este tratamiento podría complementar las estrategias tradicionales como dieta, ejercicio y medicamentos.",
-          "Los ensayos clínicos se encuentran en fases avanzadas, y los primeros resultados indican mejoras significativas en la presión arterial y la función cardíaca de los participantes. Los científicos aseguran que la seguridad del tratamiento ha sido una prioridad durante todo el proceso de investigación.",
-          "Especialistas en cardiología consideran que esta terapia podría cambiar la forma en que se abordan enfermedades como la insuficiencia cardíaca y la hipertensión, ofreciendo una alternativa que trabaja directamente sobre los factores fisiológicos que afectan el corazón.",
-          "A pesar del optimismo, los expertos advierten que aún se requieren estudios a largo plazo para confirmar la eficacia y seguridad del tratamiento antes de que pueda implementarse de forma masiva en el sistema de salud. No obstante, la comunidad médica ve con esperanza los avances alcanzados hasta ahora.",
-          "En conclusión, la nueva terapia cardiovascular representa un paso importante en la medicina moderna, ofreciendo la posibilidad de mejorar la calidad de vida de millones de personas y marcando un hito significativo en la investigación sobre la salud del corazón."
+          "La nueva terapia, desarrollada después de una década de investigación, utiliza células madre y técnicas de ingeniería genética para regenerar el tejido cardíaco dañado por infartos y otras enfermedades cardiovasculares.",
+          "Los ensayos clínicos iniciales han mostrado resultados prometedores, con pacientes experimentando mejoras significativas en la función cardíaca y una reducción en los síntomas de insuficiencia cardíaca.",
+          "Los cardiólogos destacan que esta terapia podría reducir la necesidad de trasplantes de corazón y otros procedimientos invasivos, ofreciendo una alternativa menos riesgosa y más accesible para los pacientes.",
+          "Las autoridades sanitarias están evaluando la aprobación de la terapia, que podría estar disponible para el público general en los próximos dos años después de completar las fases finales de los ensayos clínicos.",
+          "Los investigadores también están explorando aplicaciones de esta tecnología para otras enfermedades degenerativas, abriendo nuevas posibilidades en el campo de la medicina regenerativa."
         ]
       },
       "salud-mental": {
@@ -428,17 +428,48 @@
           "En conclusión, reducir el consumo de azúcares no es solo una elección dietética, sino una medida preventiva clave para proteger la salud metabólica, mejorar la calidad de vida y disminuir la incidencia de enfermedades crónicas en la población mundial."
         ]
       },
+      "salud-cardiovascular": {
+        "title": "Avances en medicina: nueva terapia promete mejorar la salud cardiovascular",
+        "summary": "Un nuevo avance en medicina ha generado expectativas en la comunidad científica y entre los pacientes: una terapia innovadora promete mejorar la salud cardiovascular y reducir los riesgos asociados a enfermedades del corazón.",
+        "category": "Salud",
+        "alt": "Salud Cardiovascular",
+        "content": [
+          "Los estudios iniciales muestran que la terapia puede ayudar a fortalecer el músculo cardíaco, mejorar la circulación y disminuir la inflamación en los vasos sanguíneos. Los investigadores destacan que este tratamiento podría complementar las estrategias tradicionales como dieta, ejercicio y medicamentos.",
+          "Los ensayos clínicos se encuentran en fases avanzadas, y los primeros resultados indican mejoras significativas en la presión arterial y la función cardíaca de los participantes. Los científicos aseguran que la seguridad del tratamiento ha sido una prioridad durante todo el proceso de investigación.",
+          "Especialistas en cardiología consideran que esta terapia podría cambiar la forma en que se abordan enfermedades como la insuficiencia cardíaca y la hipertensión, ofreciendo una alternativa que trabaja directamente sobre los factores fisiológicos que afectan el corazón.",
+          "A pesar del optimismo, los expertos advierten que aún se requieren estudios a largo plazo para confirmar la eficacia y seguridad del tratamiento antes de que pueda implementarse de forma masiva en el sistema de salud. No obstante, la comunidad médica ve con esperanza los avances alcanzados hasta ahora.",
+          "En conclusión, la nueva terapia cardiovascular representa un paso importante en la medicina moderna, ofreciendo la posibilidad de mejorar la calidad de vida de millones de personas y marcando un hito significativo en la investigación sobre la salud del corazón."
+        ]
+      },
       "deporte-espana-alemania": {
         "title": "España se clasifica para la final del Mundial de Fútbol tras vencer a Alemania",
-        "summary": "La selección española logró un histórico triunfo ante Alemania con gol de Pedri en los últimos minutos, asegurando su lugar en la gran final.",
+        "summary": "España se clasificó para la final del Mundial de Fútbol tras vencer a Alemania en un emocionante partido lleno de intensidad y momentos memorables. Desde el inicio, ambos equipos mostraron un alto nivel de juego, manteniendo a los aficionados al borde de sus asientos.",
         "category": "Deporte",
-        "alt": "España se clasifica para la final del Mundial de Fútbol tras vencer a Alemania"
+        "alt": "España se clasifica para la final del Mundial de Fútbol tras vencer a Alemania",
+        "content": [
+          "El primer tiempo estuvo marcado por la presión ofensiva de Alemania, que generó varias oportunidades de gol, pero la defensa española se mantuvo firme, con destacadas intervenciones del portero y una coordinación impecable en la línea defensiva.",
+          "En la segunda mitad, España logró imponer su ritmo de juego. El gol decisivo llegó gracias a una jugada colectiva que culminó con un remate preciso de un jugador destacado, desatando la euforia en la grada y marcando la diferencia en el marcador.",
+          "Además de la anotación clave, otros jugadores españoles se destacaron por su desempeño, mostrando gran visión de juego y contribuyendo a mantener la posesión del balón en momentos cruciales del encuentro.",
+          "El equipo alemán no bajó los brazos y buscó el empate hasta los últimos minutos, generando ocasiones peligrosas, pero la solidez de la defensa española y la rapidez en los contraataques permitieron mantener la ventaja y asegurar la clasificación.",
+          "Con esta victoria, España asegura su lugar en la final del Mundial, donde se enfrentará a su rival en un partido que promete ser histórico y que atraerá la atención de millones de aficionados alrededor del mundo.",
+          "El entrenador del equipo español destacó la disciplina, el trabajo en equipo y la concentración de sus jugadores, resaltando que el triunfo es fruto del esfuerzo colectivo y de la preparación estratégica que realizaron durante el torneo. España se prepara para disputar la final con el objetivo de coronarse campeón del mundo."
+        ]
       },
       "deporte-mlb": {
         "title": "Los Mets vencen a los Braves en un partido decisivo de la MLB",
-        "summary": "Los New York Mets se impusieron 5-3 ante los Atlanta Braves en un juego emocionante que definió la serie de playoffs.",
+        "summary": "Los Mets lograron una victoria impresionante sobre los Braves en un partido decisivo de la MLB, que mantuvo a los fanáticos al borde de sus asientos hasta el último out.",
         "category": "Deporte",
-        "alt": "Los Mets vencen a los Braves en un partido decisivo de la MLB"
+        "alt": "Los Mets vencen a los Braves en un partido decisivo de la MLB",
+        "content": [
+          "El partido comenzó con ambos equipos mostrando un juego sólido en la ofensiva y defensiva, pero fueron los Mets quienes lograron abrir el marcador en la tercera entrada gracias a un home run de su estrella principal.",
+          "Los Braves intentaron reaccionar, conectando hits importantes en la quinta y sexta entrada, pero la excelente actuación del pitcher abridor de los Mets mantuvo a raya a los bateadores rivales.",
+          "En la séptima entrada, los Mets ampliaron su ventaja con una jugada estratégica de doble robo y un sencillo oportuno, asegurando un margen cómodo antes del cierre del juego.",
+          "El bullpen de los Mets demostró solidez, cerrando el partido sin permitir carreras adicionales y asegurando la victoria con un marcador final de 5-3.",
+          "Con este triunfo, los Mets fortalecen sus aspiraciones de llegar a la postemporada y colocan presión sobre los Braves en la clasificación de la división.",
+          "Los fanáticos celebraron con entusiasmo, mientras los jugadores de los Mets destacaron el esfuerzo colectivo y la concentración que mantuvieron durante todo el partido.",
+          "Los Braves, aunque decepcionados, prometieron recuperarse en los próximos encuentros y luchar hasta el final por mantener sus opciones en la temporada.",
+          "Este partido quedará como uno de los momentos más memorables de la temporada regular, mostrando el talento y la determinación de ambos equipos en la MLB."
+        ]
       },
       "deporte-natacion": {
         "title": "La selección estadounidense domina el relevo 4x100 metros en el Mundial de Natación",
@@ -524,60 +555,21 @@
         ]
       },
       "justicia_tribunal_supremo": {
-        "title": "Tribunal Supremo confirma sentencia en caso de corrupción política",
-        "summary": "La máxima instancia judicial ratifica la condena contra el político implicado en el caso de desviación de fondos públicos.",
+        "title": "Tribunal Supremo confirma sentencia histórica en caso de corrupción",
+        "summary": "El Tribunal Supremo ha confirmado la sentencia dictada en un caso de corrupción política que ha conmocionado al país, estableciendo un precedente importante en la lucha contra la impunidad.",
         "category": "Justicia",
-        "alt": "Tribunal Supremo confirma sentencia en caso de corrupción política"
+        "alt": "Tribunal Supremo confirma sentencia histórica en caso de corrupción",
+        "content": [
+          "La decisión del máximo tribunal del país fue unánime y ratifica las condenas impuestas por tribunales inferiores contra varios funcionarios de alto nivel involucrados en actos de corrupción.",
+          "El caso, que se ha extendido por más de tres años, ha sido uno de los más mediáticos de la última década, revelando una red de sobornos y favoritismo que afectó la adjudicación de contratos públicos por millones de dólares.",
+          "Los magistrados del Tribunal Supremo destacaron en su fallo la importancia de mantener la integridad de la función pública y sendear un mensaje claro sobre las consecuencias de la corrupción.",
+          "Organizaciones de la sociedad civil han celebrado la decisión, considerándola una victoria para el estado de derecho y un paso fundamental en la consolidación de instituciones democráticas fuertes.",
+          "Los abogados defensores han anunciado que presentarán recursos internacionales, argumentando violaciones al debido proceso durante las diferentes etapas del juicio.",
+          "El gobierno ha destacado que esta sentencia demuestra la independencia del poder judicial y el compromiso de las instituciones con la transparencia y la rendición de cuentas.",
+          "Expertos legales consideran que este fallo fortalecerá los mecanismos de prevención de la corrupción y servirá como disuasivo para futuros funcionarios públicos."
+        ]
       },
       "justicia_condena_criminal": {
-        "title": "Condenan a cadena perpetua a líder de organización criminal internacional",
-        "summary": "El tribunal impone la máxima pena por delitos de narcotráfico, lavado de dinero y organización criminal a nivel internacional.",
-        "category": "Justicia",
-        "alt": "Condenan a cadena perpetua a líder de organización criminal internacional"
-      },
-      "justicia_fiscalia_empresa": {
-        "title": "Fiscalía inicia juicio contra empresa por evasión fiscal millonaria",
-        "summary": "La compañía enfrenta cargos por no declarar más de 50 millones en ingresos durante los últimos cinco ejercicios fiscales.",
-        "category": "Justicia",
-        "alt": "Fiscalía inicia juicio contra empresa por evasión fiscal millonaria"
-      },
-      "justicia_juez_homicidio_multiple": {
-        "title": "Juez ordena prisión preventiva para acusado de homicidio múltiple",
-        "summary": "El sospechoso permanecerá detenido mientras se prepara el juicio por los tres asesinatos ocurridos en la última semana.",
-        "category": "Justicia",
-        "alt": "Juez ordena prisión preventiva para acusado de homicidio múltiple"
-      },
-      "deporte-baseball": {
-        "title": "Los Mets vencen a los Braves en un partido decisivo de la MLB",
-        "summary": "Los Mets lograron una victoria impresionante sobre los Braves en un partido decisivo de la MLB, que mantuvo a los fanáticos al borde de sus asientos hasta el último out.",
-        "category": "Deporte",
-        "alt": "Los Mets vencen a los Braves en un partido decisivo de la MLB",
-        "content": [
-          "El partido comenzó con ambos equipos mostrando un juego sólido en la ofensiva y defensiva, pero fueron los Mets quienes lograron abrir el marcador en la tercera entrada gracias a un home run de su estrella principal.",
-          "Los Braves intentaron reaccionar, conectando hits importantes en la quinta y sexta entrada, pero la excelente actuación del pitcher abridor de los Mets mantuvo a raya a los bateadores rivales.",
-          "En la séptima entrada, los Mets ampliaron su ventaja con una jugada estratégica de doble robo y un sencillo oportuno, asegurando un margen cómodo antes del cierre del juego.",
-          "El bullpen de los Mets demostró solidez, cerrando el partido sin permitir carreras adicionales y asegurando la victoria con un marcador final de 5-3.",
-          "Con este triunfo, los Mets fortalecen sus aspiraciones de llegar a la postemporada y colocan presión sobre los Braves en la clasificación de la división.",
-          "Los fanáticos celebraron con entusiasmo, mientras los jugadores de los Mets destacaron el esfuerzo colectivo y la concentración que mantuvieron durante todo el partido.",
-          "Los Braves, aunque decepcionados, prometieron recuperarse en los próximos encuentros y luchar hasta el final por mantener sus opciones en la temporada.",
-          "Este partido quedará como uno de los momentos más memorables de la temporada regular, mostrando el talento y la determinación de ambos equipos en la MLB."
-        ]
-      },
-      "deporte-espana-final": {
-        "title": "España se clasifica para la final del Mundial de Fútbol tras vencer a Alemania",
-        "summary": "España se clasificó para la final del Mundial de Fútbol tras vencer a Alemania en un emocionante partido lleno de intensidad y momentos memorables. Desde el inicio, ambos equipos mostraron un alto nivel de juego, manteniendo a los aficionados al borde de sus asientos.",
-        "category": "Deporte",
-        "alt": "España se clasifica para la final del Mundial de Fútbol tras vencer a Alemania",
-        "content": [
-          "El primer tiempo estuvo marcado por la presión ofensiva de Alemania, que generó varias oportunidades de gol, pero la defensa española se mantuvo firme, con destacadas intervenciones del portero y una coordinación impecable en la línea defensiva.",
-          "En la segunda mitad, España logró imponer su ritmo de juego. El gol decisivo llegó gracias a una jugada colectiva que culminó con un remate preciso de un jugador destacado, desatando la euforia en la grada y marcando la diferencia en el marcador.",
-          "Además de la anotación clave, otros jugadores españoles se destacaron por su desempeño, mostrando gran visión de juego y contribuyendo a mantener la posesión del balón en momentos cruciales del encuentro.",
-          "El equipo alemán no bajó los brazos y buscó el empate hasta los últimos minutos, generando ocasiones peligrosas, pero la solidez de la defensa española y la rapidez en los contraataques permitieron mantener la ventaja y asegurar la clasificación.",
-          "Con esta victoria, España asegura su lugar en la final del Mundial, donde se enfrentará a su rival en un partido que promete ser histórico y que atraerá la atención de millones de aficionados alrededor del mundo.",
-          "El entrenador del equipo español destacó la disciplina, el trabajo en equipo y la concentración de sus jugadores, resaltando que el triunfo es fruto del esfuerzo colectivo y de la preparación estratégica que realizaron durante el torneo. España se prepara para disputar la final con el objetivo de coronarse campeón del mundo."
-        ]
-      },
-      "justicia-criminal": {
         "title": "Condenan a cadena perpetua a líder de organización criminal internacional",
         "summary": "El líder de una organización criminal internacional ha sido condenado a cadena perpetua tras un largo proceso judicial que se extendió por varios años.",
         "category": "Justicia",
@@ -593,22 +585,7 @@
           "Mientras tanto, las autoridades continúan investigando y monitoreando las operaciones de la organización para asegurar que no queden cabos sueltos que puedan permitir la continuidad de actividades ilícitas."
         ]
       },
-      "justicia-tribunal": {
-        "title": "Tribunal Supremo confirma sentencia histórica en caso de corrupción",
-        "summary": "El Tribunal Supremo ha confirmado la sentencia dictada en un caso de corrupción política que ha conmocionado al país, estableciendo un precedente importante en la lucha contra la impunidad.",
-        "category": "Justicia",
-        "alt": "Tribunal Supremo confirma sentencia histórica en caso de corrupción",
-        "content": [
-          "La decisión del máximo tribunal del país fue unánime y ratifica las condenas impuestas por tribunales inferiores contra varios funcionarios de alto nivel involucrados en actos de corrupción.",
-          "El caso, que se ha extendido por más de tres años, ha sido uno de los más mediáticos de la última década, revelando una red de sobornos y favoritismo que afectó la adjudicación de contratos públicos por millones de dólares.",
-          "Los magistrados del Tribunal Supremo destacaron en su fallo la importancia de mantener la integridad de la función pública y sendear un mensaje claro sobre las consecuencias de la corrupción.",
-          "Organizaciones de la sociedad civil han celebrado la decisión, considerándola una victoria para el estado de derecho y un paso fundamental en la consolidación de instituciones democráticas fuertes.",
-          "Los abogados defensores han anunciado que presentarán recursos internacionales, argumentando violaciones al debido proceso durante las diferentes etapas del juicio.",
-          "El gobierno ha destacado que esta sentencia demuestra la independencia del poder judicial y el compromiso de las instituciones con la transparencia y la rendición de cuentas.",
-          "Expertos legales consideran que este fallo fortalecerá los mecanismos de prevención de la corrupción y servirá como disuasivo para futuros funcionarios públicos."
-        ]
-      },
-      "justicia-empresa": {
+      "justicia_fiscalia_empresa": {
         "title": "Fiscalía inicia juicio contra empresa por evasión fiscal millonaria",
         "summary": "La Fiscalía General ha iniciado un juicio contra una importante empresa nacional acusada de evasión fiscal millonaria, lo que podría derivar en sanciones históricas.",
         "category": "Justicia",
@@ -621,7 +598,7 @@
           "Se espera que las próximas semanas sean decisivas para determinar el futuro de la compañía y el impacto de este caso en el sector empresarial."
         ]
       },
-      "justicia-homicidio-multiple": {
+      "justicia_juez_homicidio_multiple": {
         "title": "Juez ordena prisión preventiva para acusado de homicidio múltiple",
         "summary": "El juez del caso ha dictado prisión preventiva contra el acusado, considerando necesario asegurar su presencia en el juicio debido a la gravedad de los cargos y el riesgo de fuga.",
         "category": "Justicia",

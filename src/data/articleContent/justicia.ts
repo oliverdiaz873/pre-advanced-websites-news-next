@@ -2,7 +2,7 @@ import type { FullNewsArticle } from '../newsModels';
 
 export const justiciaArticles: FullNewsArticle[] = [
   {
-    id: 'justicia-criminal',
+    id: 'justicia_condena_criminal',
     title: 'Condenan a cadena perpetua a líder de organización criminal internacional',
     href: '/news/justicia/condenan-cadena-perpetua-lider-organizacion-criminal',
     category: 'Justicia',
@@ -41,7 +41,7 @@ export const justiciaArticles: FullNewsArticle[] = [
         alt: 'Detienen a exfuncionario acusado de fraude financiero millonario'
       },
       {
-        id: 'justicia-tribunal',
+        id: 'justicia_tribunal_supremo',
         title: 'Tribunal Supremo confirma sentencia',
         href: '/news/justicia/tribunal-supremo-confirma-sentencia',
         category: 'Justicia',
@@ -83,7 +83,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     ],
     relatedNews: [
       {
-        id: 'justicia-criminal',
+        id: 'justicia_condena_criminal',
         title: 'Condenan a cadena perpetua a líder criminal',
         href: '/news/justicia/condenan-cadena-perpetua-lider-organizacion-criminal',
         category: 'Justicia',
@@ -94,7 +94,7 @@ export const justiciaArticles: FullNewsArticle[] = [
         alt: 'Condenan a cadena perpetua a líder criminal'
       },
       {
-        id: 'justicia-tribunal',
+        id: 'justicia_tribunal_supremo',
         title: 'Tribunal Supremo confirma sentencia',
         href: '/news/justicia/tribunal-supremo-confirma-sentencia',
         category: 'Justicia',
@@ -112,7 +112,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     }
   },
   {
-    id: 'justicia-tribunal',
+    id: 'justicia_tribunal_supremo',
     title: 'Tribunal Supremo confirma sentencia histórica en caso de corrupción',
     href: '/news/justicia/tribunal-supremo-confirma-sentencia',
     category: 'Justicia',
@@ -138,7 +138,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     ],
     relatedNews: [
       {
-        id: 'justicia-criminal',
+        id: 'justicia_condena_criminal',
         title: 'Condenan a cadena perpetua a líder criminal',
         href: '/news/justicia/condenan-cadena-perpetua-lider-organizacion-criminal',
         category: 'Justicia',
@@ -191,7 +191,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     ],
     relatedNews: [
       {
-        id: 'justicia-criminal',
+        id: 'justicia_condena_criminal',
         title: 'Condenan a cadena perpetua a líder criminal',
         href: '/news/justicia/condenan-cadena-perpetua-lider-organizacion-criminal',
         category: 'Justicia',
@@ -220,7 +220,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     }
   },
   {
-    id: 'justicia-empresa',
+    id: 'justicia_fiscalia_empresa',
     title: 'Fiscalía inicia juicio contra empresa por evasión fiscal millonaria',
     href: '/news/justicia/fiscalia-inicia-juicio-empresa-evasion-fiscal-millonaria',
     category: 'Justicia',
@@ -242,7 +242,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     ],
     relatedNews: [
       {
-        id: 'justicia-criminal',
+        id: 'justicia_condena_criminal',
         title: 'Condenan a cadena perpetua a líder criminal',
         href: '/news/justicia/condenan-cadena-perpetua-lider-organizacion-criminal',
         category: 'Justicia',
@@ -271,7 +271,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     }
   },
   {
-    id: 'justicia-homicidio-multiple',
+    id: 'justicia_juez_homicidio_multiple',
     title: 'Juez ordena prisión preventiva para acusado de homicidio múltiple',
     href: '/news/justicia/juez-ordena-prision-preventiva-acusado-homicidio-multiple',
     category: 'Justicia',
@@ -293,7 +293,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     ],
     relatedNews: [
       {
-        id: 'justicia-criminal',
+        id: 'justicia_condena_criminal',
         title: 'Condenan a cadena perpetua a líder criminal',
         href: '/news/justicia/condenan-cadena-perpetua-lider-organizacion-criminal',
         category: 'Justicia',

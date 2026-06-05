@@ -35,7 +35,7 @@ export const saludArticles: FullNewsArticle[] = [
         alt: 'Contaminación del aire y salud'
       },
       {
-        id: 'salud-cardiovascular',
+    id: 'salud-corazon',
         title: 'Nueva terapia cardiovascular promete mejorar la salud del corazón',
         href: '/news/salud/nueva-terapia-cardiovascular-mejora-salud-corazon',
         category: 'Salud',
@@ -86,7 +86,7 @@ export const saludArticles: FullNewsArticle[] = [
         alt: 'Resistencia a los antibióticos'
       },
       {
-        id: 'salud-cardiovascular',
+        id: 'salud-corazon',
         title: 'Nueva terapia cardiovascular promete mejorar la salud del corazón',
         href: '/news/salud/nueva-terapia-cardiovascular-mejora-salud-corazon',
         category: 'Salud',
@@ -104,9 +104,9 @@ export const saludArticles: FullNewsArticle[] = [
     }
   },
   {
-    id: 'salud-cardiovascular',
-    title: 'Nueva terapia cardiovascular promete mejorar la salud del corazón',
-    href: '/news/salud/nueva-terapia-cardiovascular-mejora-salud-corazon',
+        id: 'salud-corazon',
+        title: 'Nueva terapia cardiovascular promete mejorar la salud del corazón',
+        href: '/news/salud/nueva-terapia-cardiovascular-mejora-salud-corazon',
     category: 'Salud',
     date: '8 de octubre de 2025',
     datetime: '2025-10-08',

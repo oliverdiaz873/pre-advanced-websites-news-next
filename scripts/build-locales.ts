@@ -17,6 +17,31 @@
 
 import fs from 'fs';
 import path from 'path';
+import {
+  newsArticles,
+  opinionArticles,
+  opinionDetails,
+  categoryContent,
+} from '../src/data/index';
+
+// Import full articles from category files
+import { politicaArticles as fullPolitica } from '../src/data/articleContent/politica';
+import { deporteArticles as fullDeporte } from '../src/data/articleContent/deporte';
+import { economiaArticles as fullEconomia } from '../src/data/articleContent/economia';
+import { internacionalArticles as fullInternacional } from '../src/data/articleContent/internacional';
+import { justiciaArticles as fullJusticia } from '../src/data/articleContent/justicia';
+import { climaArticles as fullClima } from '../src/data/articleContent/clima';
+import { saludArticles as fullSalud } from '../src/data/articleContent/salud';
+
+const allFullArticles = [
+  ...fullPolitica,
+  ...fullDeporte,
+  ...fullEconomia,
+  ...fullInternacional,
+  ...fullJusticia,
+  ...fullClima,
+  ...fullSalud
+];
 
 const compileMergedMessages = (locale: string, dataObject: any) => {
   const sourceLocalesDir = path.join(process.cwd(), 'src', 'i18n', 'locales', locale);
@@ -49,32 +74,6 @@ const compileMergedMessages = (locale: string, dataObject: any) => {
   console.log(`Compiled and merged next-intl messages to ${targetPath}`);
 };
 
-import {
-  newsArticles,
-  opinionArticles,
-  opinionDetails,
-  categoryContent,
-} from '../src/data/index';
-
-// Import full articles from category files
-import { politicaArticles as fullPolitica } from '../src/data/articleContent/politica';
-import { deporteArticles as fullDeporte } from '../src/data/articleContent/deporte';
-import { economiaArticles as fullEconomia } from '../src/data/articleContent/economia';
-import { internacionalArticles as fullInternacional } from '../src/data/articleContent/internacional';
-import { justiciaArticles as fullJusticia } from '../src/data/articleContent/justicia';
-import { climaArticles as fullClima } from '../src/data/articleContent/clima';
-import { saludArticles as fullSalud } from '../src/data/articleContent/salud';
-
-const allFullArticles = [
-  ...fullPolitica,
-  ...fullDeporte,
-  ...fullEconomia,
-  ...fullInternacional,
-  ...fullJusticia,
-  ...fullClima,
-  ...fullSalud
-];
-
 const extractData = () => {
   const data = {
     articles: {} as Record<string, any>,
@@ -84,6 +83,12 @@ const extractData = () => {
   // Helper to add an article to the data object
   const addArticle = (article: any) => {
     if (!article || !article.id) return;
+
+    if (data.articles[article.id]) {
+      if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
+        console.warn(`[build-locales] Collision: article "${article.id}" already exists. Applying priority rules.`);
+      }
+    }
     
     // Si ya existe y tiene content, no sobreescribimos con una versión que no tenga content
     if (data.articles[article.id]?.content && !article.content) {
@@ -112,16 +117,26 @@ const extractData = () => {
   Object.values(opinionDetails).forEach(addArticle);
 
   // 2. Scan all category content for any missed articles (sidebar, etc.)
+  // Only add articles not already collected from primary sources
   Object.values(categoryContent).forEach((cat) => {
-    // Add articles from featured section
-    addArticle(cat.featuredSection.primary);
-    cat.featuredSection.secondary.forEach(addArticle);
-    cat.featuredSection.grid.forEach(addArticle);
-    
-    // Add articles from latest and sidebar
-    cat.latestNews.forEach(addArticle);
-    cat.sidebarNews.forEach(addArticle);
-    cat.opinionArticles.forEach(addArticle);
+    if (cat.featuredSection.primary?.id && !data.articles[cat.featuredSection.primary.id]) {
+      addArticle(cat.featuredSection.primary);
+    }
+    cat.featuredSection.secondary
+      .filter(a => a?.id && !data.articles[a.id])
+      .forEach(addArticle);
+    cat.featuredSection.grid
+      .filter(a => a?.id && !data.articles[a.id])
+      .forEach(addArticle);
+    cat.latestNews
+      .filter(a => a?.id && !data.articles[a.id])
+      .forEach(addArticle);
+    cat.sidebarNews
+      .filter(a => a?.id && !data.articles[a.id])
+      .forEach(addArticle);
+    cat.opinionArticles
+      .filter(a => a?.id && !data.articles[a.id])
+      .forEach(addArticle);
 
     // Extract category metadata
     data.categories[cat.slug] = {
@@ -145,6 +160,7 @@ const extractData = () => {
     'internacional-guerra': {
       title: 'The war in Ukraine comes to an end',
       summary: 'After years of conflict, the war in Ukraine has ended, marking a historic moment for the region and the international community.',
+      alt: 'Ukrainian and international leaders signing a peace agreement document',
       content: [
         'The peace agreement was signed after intense negotiations between the involved parties, with mediation from international organizations and leaders from several countries seeking to end the violence and suffering of the civilian population.',
         'The President of Ukraine declared that the nation will begin a process of reconstruction and reconciliation, emphasizing the need for unity and cooperation to overcome the challenges arising from the conflict.',
@@ -160,6 +176,7 @@ const extractData = () => {
       title: 'Rising inflation impacts markets',
       summary:
         'A sustained rise in inflation is rattling financial markets and squeezing household purchasing power. Prices for essential goods and services keep climbing, forcing businesses and families to tighten budgets. Analysts warn that without effective policy measures, the trend could persist and weigh on investment, jobs, and economic stability in the medium term.',
+      alt: 'Financial market screens showing rising inflation graphs and data',
       content: [
         'According to recent reports, annual inflation in major economies has exceeded analysts\' expectations, driven by rising costs for energy, food, and transport. In several European countries, prices recorded their highest increase in over a year.',
         'International stock markets reacted with volatility. The S&P 500 fell more than 1%, while the Euro Stoxx 50 and Japan\'s Nikkei recorded similar declines. Investors fear that central banks may delay interest rate cuts.',
@@ -172,6 +189,7 @@ const extractData = () => {
     'economia-bolsa': {
       title: 'Stock Market Closes Higher After Session of Investor Optimism',
       summary: 'The stock market closed higher this Thursday, driven by renewed optimism among investors and the release of positive financial results from several leading companies.',
+      alt: 'Stock market board displaying S&P 500 and Nasdaq positive numbers',
       content: [
         'The S&P 500 index rose 1.2%, while the Dow Jones and Nasdaq recorded increases of 1% and 1.5% respectively. This behavior reflects investor confidence in economic stability and short-term corporate earnings prospects.',
         'Analysts point out that the combination of monetary stimulus, progress in trade agreements, and the reduction of political uncertainties has contributed to the market recovery. Additionally, the technology sector led gains, with several companies exceeding analyst expectations.',
@@ -182,6 +200,7 @@ const extractData = () => {
     'politica-ley-ambiental': {
       title: 'Historical Approval: Congress Gives Green Light to Environmental Protection Law',
       summary: 'In a historic session, the National Congress approved by a broad majority the Environmental Protection Law, a regulation that establishes drastic measures to combat climate change and protect the country\'s ecosystems.',
+      alt: 'Congress members voting on the environmental protection law',
       content: [
         'The vote had broad support from legislators, who highlighted the importance of this law to face the challenges of climate change and protect critical ecosystems for future generations.',
         'The new regulation establishes strict measures for the preservation of forests, rivers, seas, and protected areas, as well as regulations on polluting emissions and responsible waste management.',
@@ -194,6 +213,7 @@ const extractData = () => {
     'politica-encuesta': {
       title: 'Polls Reveal Increase in President\'s Popularity',
       summary: 'The latest public opinion polls show a significant increase in the president\'s popularity, reflecting growing support from citizens for his policies and government management.',
+      alt: 'Graph showing rising presidential approval ratings in public opinion polls',
       content: [
         'According to data collected by several polling firms, the leader\'s approval rating has risen several percentage points compared to recent months, indicating a positive perception of his performance.',
         'Political analysts attribute this increase to recent government initiatives in key areas such as economy, health, and education, as well as the effective communication of achievements in media and social networks.',
@@ -206,6 +226,7 @@ const extractData = () => {
     'salud-antibioticos': {
       title: 'Growing Concern Over Antibiotic Resistance Worldwide',
       summary: 'Antibiotic resistance continues to be a growing threat to public health worldwide, generating concern among scientists and health authorities.',
+      alt: 'Microscope image of antibiotic-resistant bacteria',
       content: [
         'Experts warn that the excessive and inadequate use of antibiotics has accelerated the emergence of resistant bacteria, which makes it difficult to treat common infections and increases the risk of serious complications.',
         'International organizations have urged the implementation of stricter policies to control antibiotic prescription, as well as promoting awareness campaigns about their responsible use.',
@@ -217,6 +238,7 @@ const extractData = () => {
     'deporte-equipo-local': {
       title: 'Great Victory for the Local Team in an Exciting Football Match',
       summary: 'In a night full of emotion, the local team achieved an impressive victory against its main rival, consolidating its position as one of the favorites.',
+      alt: 'Local football team celebrating their victory on the field',
       content: [
         'With a final score of 3-1, the team showed an excellent offensive performance and a solid defense that prevented any attempt at a comeback by the adversary. The team coach highlighted the unity and commitment of the squad as keys to success.',
         'Fans celebrated for hours in the streets, while social media was filled with messages of support and pride. Sports analysts agreed that this victory could mark a turning point in the season, strengthening team morale and fan confidence.',
@@ -227,6 +249,7 @@ const extractData = () => {
     'deporte-nba': {
       title: 'Lakers Defeat Celtics 112-107 in Thrilling NBA Matchup',
       summary: 'The Los Angeles Lakers defeated the Boston Celtics 112-107 in a game filled with excitement and spectacular plays that kept fans on the edge of their seats.',
+      alt: 'LeBron James of the Lakers shooting against the Celtics defense',
       content: [
         'The game began with unusual intensity from the first quarter, with both teams exchanging plays and showing why they are considered two of the greatest franchises in NBA history.',
         'LeBron James was the standout figure for the Lakers, contributing 28 points, 8 rebounds, and 7 assists in a performance that proves he is still at the top of his game.',
@@ -234,9 +257,10 @@ const extractData = () => {
         'The third quarter was decisive, with the Lakers imposing their defensive rhythm and achieving a 32-24 run that gave them a comfortable lead for the final period.'
       ]
     },
-    'deporte-espana-final': {
+    'deporte-espana-alemania': {
       title: 'Spain Qualifies for World Cup Final After Defeating Germany',
       summary: 'Spain secured its place in the World Cup final after defeating Germany in an intense match filled with memorable moments.',
+      alt: 'Spanish soccer team celebrating qualification for the World Cup final',
       content: [
         'The first half was marked by Germany\'s offensive pressure, but the Spanish defense held firm with outstanding saves from the goalkeeper and impeccable defensive coordination.',
         'In the second half, Spain managed to impose its rhythm. The decisive goal came from a collective play that ended with a precise strike from a star player, sparking euphoria in the stands.',
@@ -247,6 +271,7 @@ const extractData = () => {
     'deporte-atletas': {
       title: 'Athletes Break World Records in International Championship',
       summary: 'Athletes from different countries set new world records at the international athletics championship, surpassing marks that had stood for years.',
+      alt: 'Athletes breaking world records at the international championship',
       content: [
         'The Olympic Stadium witnessed historic moments when three athletes managed to overcome world records that seemed unbeatable, marking a milestone in modern athletics history.',
         'In the 100-meter dash, Jamaican sprinter Devon Allen ran in 9.58 seconds, equaling the world mark and demonstrating extraordinary speed.',
@@ -257,6 +282,7 @@ const extractData = () => {
     'justicia-fraude': {
       title: 'Former Official Detained for Massive Financial Fraud',
       summary: 'Authorities arrested a former public official this Friday accused of participating in a financial fraud scheme that allegedly diverted millions of dollars from state funds.',
+      alt: 'Handcuffed former official being led by authorities',
       content: [
         'The detention occurred after an extensive investigation led by the specialized economic crimes prosecutor\'s office. According to the preliminary report, the former official allegedly used a network of shell companies to divert resources intended for social development programs.',
         'Authorities claim that the money was transferred to offshore accounts and used for the purchase of luxury properties. The detainee was moved to a preventive detention center, where he will remain in custody while charges are formalized.',
@@ -266,6 +292,7 @@ const extractData = () => {
     'clima-huracan': {
       title: 'Hurricane Strengthens in the Atlantic, Threatening the East Coast',
       summary: 'Authorities have issued evacuation alerts as a Category 3 hurricane approaches the coast with sustained winds exceeding 200 km/h.',
+      alt: 'Satellite image of a hurricane approaching the coast',
       content: [
         'The hurricane, which formed several days ago in the central Atlantic, has rapidly gained strength due to high sea temperatures and favorable atmospheric conditions. Meteorologists from the National Hurricane Center reported that the system could intensify further in the coming hours.',
         'Sustained winds already exceed 200 kilometers per hour, with even stronger gusts in areas near the eye of the hurricane. The phenomenon is moving northwest at an approximate speed of 20 kilometers per hour, dangerously approaching the US East Coast.',
@@ -275,6 +302,7 @@ const extractData = () => {
     'politica-protestas': {
       title: 'Protests Over Corruption',
       summary: 'Corruption protests have intensified in several cities across the country over the last few days, gathering thousands of citizens demanding transparency and accountability from the authorities.',
+      alt: 'Crowd of protesters marching with banners in the streets',
       content: [
         'Protesters are marching through main avenues with banners and slogans, denouncing recent cases of embezzlement and requesting impartial investigations.',
         'Security forces have deployed operations to maintain order, although some isolated clashes between protesters and police have been reported.',
@@ -286,6 +314,7 @@ const extractData = () => {
     'politica-casa-blanca': {
       title: 'White House Confirms International Summit',
       summary: 'The White House confirms an international summit for this week to address global issues, including climate change and economic security.',
+      alt: 'White House building hosting the international summit',
       content: [
         'The White House has officially confirmed an international summit to be held this week, with the participation of leaders from over 50 countries to address the most urgent global challenges.',
         'The main agenda items include climate change, economic security, cooperation in public health, and geopolitical stability in conflict regions.',
@@ -298,6 +327,7 @@ const extractData = () => {
     'politica-senado': {
       title: 'Senate Debates New Constitutional Reform Proposal',
       summary: 'The Senate of the Republic began debating a new constitutional reform proposal this week that seeks to introduce significant changes to the country\'s political structure.',
+      alt: 'Senate chamber during the constitutional reform debate',
       content: [
         'The initiative, presented by a group of legislators from different parties, proposes adjustments in key areas such as the distribution of power, transparency in public management, and the strengthening of citizen participation mechanisms.',
         'During the plenary session, several senators expressed their positions regarding the scope of the reform. Some highlighted the importance of modernizing the Constitution to adapt it to the current demands of society, while others warned of the risk of altering fundamental articles without the necessary political consensus.',
@@ -313,6 +343,7 @@ const extractData = () => {
     'politica-debate': {
       title: 'Presidential Debate: Candidates Confront Their Proposals Before the Country',
       summary: 'The long-awaited presidential debate took place last night, bringing together the leading candidates aspiring to hold the country\'s highest office. The event, broadcast nationwide, allowed aspirants to present and confront their proposals before millions of citizens.',
+      alt: 'Presidential candidates debating on stage during the televised event',
       content: [
         'From the start, the debate was marked by an energetic tone and moments of tension, especially on economic and social issues. The candidates exchanged criticisms but also took the opportunity to present concrete solutions to the country\'s current challenges.',
         'On economic matters, the positions were diverse. While some candidates proposed reducing taxes to encourage investment and employment, others emphasized the need to strengthen social programs and increase tax collection from higher-income sectors.',
@@ -326,6 +357,7 @@ const extractData = () => {
     'internacional-israel-iran': {
       title: 'Tensions Rise Between Israel and Iran',
       summary: 'The Middle East region remains on high alert as diplomatic and military tensions between Israel and Iran increase, with mutual threats concerning the international community.',
+      alt: 'Map of the Middle East highlighting Israel and Iran',
       content: [
         'Tensions between Israel and Iran have reached their highest point in recent years, with both countries exchanging accusations and threats that have put the entire region on alert.',
         'Diplomatic sources indicate that the conflict has intensified following alleged attacks on strategic facilities and the development of military programs that both nations consider direct threats to their national security.',
@@ -339,6 +371,7 @@ const extractData = () => {
     'internacional-otan': {
       title: 'NATO Announces New Military Exercises in Eastern Europe',
       summary: 'The North Atlantic Treaty Organization (NATO) has confirmed the deployment of troops and the conduct of joint maneuvers on its eastern borders, in response to current geopolitical instability.',
+      alt: 'NATO military troops and equipment in Eastern Europe',
       content: [
         'The Secretary-General of the alliance stated that these exercises aim to strengthen the defensive capacity of member countries and deter any possible external threat. Thousands of soldiers from different nations will participate, along with air and naval units.',
         'The drills will include tactical operations, cyber defense, and rapid deployment logistics. These maneuvers are expected to be the largest in the last decade in the region, sending a clear message of unity and readiness.',
@@ -350,6 +383,7 @@ const extractData = () => {
     'internacional-union-europea': {
       title: 'European Union Promotes Renewable Energy with Ambitious New Directives',
       summary: 'The European Union has approved a series of directives aimed at accelerating the transition to sustainable energy sources, with the goal of drastically reducing carbon emissions over the next decade.',
+      alt: 'European Union flags with renewable energy wind turbines',
       content: [
         'The plan, known as "European Green Deal 2.0", sets mandatory targets for member states to increase the share of solar, wind, and hydroelectric power in their energy mix. The gradual phase-out of fossil fuel subsidies is also envisioned.',
         'European leaders highlighted the urgency of these measures in the face of the global climate crisis. "There is no time to lose," said the President of the European Commission, emphasizing that investment in clean energy will also generate millions of jobs and strengthen the continent\'s energy security.',
@@ -361,6 +395,7 @@ const extractData = () => {
     'internacional-china-usa': {
       title: 'New Talks Between China and the United States Mark a Turning Point in International Politics',
       summary: 'New talks between China and the United States have marked a significant shift in international politics, aiming to improve bilateral relations and address recent economic and diplomatic conflicts.',
+      alt: 'Chinese and American flags representing bilateral talks',
       content: [
         'The leaders of both countries met in a high-level diplomatic encounter, where they discussed key issues such as trade, regional security, climate change, and technological cooperation.',
         'Official sources indicated that the negotiations were constructive, highlighting the willingness of both nations to find solutions that avoid tensions and promote global stability.',
@@ -374,6 +409,7 @@ const extractData = () => {
     'internacional-accidente': {
       title: 'Tragedy on German Highway: Serious Accident Causes Chaos and Mourning',
       summary: 'A serious multi-vehicle accident on a highway near Berlin has left a tragic toll and caused a traffic jam several kilometers long, putting the focus on road safety on the famous Autobahns.',
+      alt: 'German highway with multiple vehicles involved in an accident',
       content: [
         'According to police reports, the accident involved more than 15 vehicles, including two cargo trucks, and occurred under adverse weather conditions that reduced visibility on the road.',
         'Rescue teams and firefighters quickly arrived at the scene to treat the injured, some of whom were transported by helicopter to nearby hospitals due to the severity of their injuries. Authorities have confirmed several fatalities, although the exact number has not been specified.',
@@ -385,6 +421,7 @@ const extractData = () => {
     'economia-dolar': {
       title: 'Dollar Hits Yearly High Against Other Currencies',
       summary: 'The US dollar has reached its highest level of the year against major world currencies, driven by global uncertainty and monetary policy expectations.',
+      alt: 'US dollar bills and global currency exchange rate charts',
       content: [
         'The dollar index, which measures the performance of the US currency against a basket of six major currencies, has risen 2.3% in the last week, positioning itself at its highest level since January.',
         'Analysts attribute this strengthening to multiple factors, including persistent inflation that could lead the Federal Reserve to keep interest rates high for longer than expected.',
@@ -397,6 +434,7 @@ const extractData = () => {
     'economia-euro': {
       title: 'Euro Hits Six-Month High Against the Dollar',
       summary: 'The euro reached its highest value against the dollar in the last six months this Thursday, surpassing the 1.12 dollar barrier for the first time since April. This strengthening of the European currency reflects a change in global economic dynamics and an increase in market confidence in the stability of the eurozone.',
+      alt: 'Euro coins and banknotes with dollar exchange rate graph',
       content: [
         'Analysts attribute this rebound to a combination of factors, including signals of a possible pause in interest rate hikes by the US Federal Reserve. The economic slowdown in the North American country has reduced the demand for the dollar as a safe-haven asset, which has favored the euro\'s recovery in international markets.',
         'At the same time, recent data from the European economy has shown a slight improvement in industrial activity and business confidence indices. Countries such as Germany, France, and Spain have presented stronger indicators than expected, which has boosted optimism about growth in the eurozone in the coming months.',
@@ -410,6 +448,7 @@ const extractData = () => {
     'economia-petroleo': {
       title: 'Oil Prices Record Strong Rally, Worrying Consumers and Businesses',
       summary: 'Oil prices saw a sharp rally this Thursday, reaching levels not seen in recent months and causing concern among both consumers and businesses globally. This increase is attributed to a combination of factors, including geopolitical tensions in producing regions and supply restrictions by some OPEC member countries.',
+      alt: 'Oil barrels and rising price chart on a financial display',
       content: [
         'Analysts indicate that the rise in crude oil could have a significant impact on transportation costs and the prices of goods and services, directly affecting family budgets. Fuels, which represent an essential expense in many economies, could see increases in the short term, increasing the pressure on citizens\' purchasing power.',
         'On the business side, transportation, logistics, and production companies are facing an increase in their operational costs. Several companies have begun to adjust prices and review supply contracts to mitigate the effects of the oil increase on their profit margins.',
@@ -421,6 +460,7 @@ const extractData = () => {
     'economia-pib': {
       title: 'GDP Grows 3.5% in the Last Quarter Driven by Consumption and Investment',
       summary: 'The Gross Domestic Product (GDP) grew 3.5% in the last quarter, according to data published by the government, driven mainly by an increase in domestic consumption and private investment.',
+      alt: 'GDP growth bar chart showing 3.5 percent increase',
       content: [
         'Household spending showed a positive trend, with an increase in demand for durable goods and services, reflecting consumer confidence in the economy. This growth in consumption contributed significantly to the overall progress of the GDP.',
         'For its part, business investment also experienced a notable increase. Companies have increased their spending on infrastructure, technology, and operations expansion, which has generated a multiplier effect on employment and production.',
@@ -431,6 +471,7 @@ const extractData = () => {
     'salud-contaminacion': {
       title: 'Air Pollution Increases the Risk of Respiratory Diseases',
       summary: 'Air pollution has become a growing problem affecting the health of millions of people worldwide, aggravating pre-existing conditions and creating new health problems in the general population.',
+      alt: 'Industrial chimneys emitting smoke covering a city skyline',
       content: [
         'Recent studies indicate that prolonged exposure to atmospheric pollutants significantly increases the risk of developing respiratory diseases, including asthma, bronchitis, and other chronic lung conditions.',
         'Public health experts warn that fine particles and toxic gases in the air can damage the respiratory system and weaken the body\'s defenses against viral and bacterial infections.',
@@ -442,6 +483,7 @@ const extractData = () => {
     'salud-cardiovascular': {
       title: 'Medical Advances: New Therapy Promises to Improve Cardiovascular Health',
       summary: 'A new breakthrough in medicine has raised expectations in the scientific community and among patients: an innovative therapy promises to improve cardiovascular health and reduce the risks associated with heart disease.',
+      alt: 'Medical professionals reviewing a patient heart scan',
       content: [
         'Initial studies show that the therapy can help strengthen the heart muscle, improve circulation, and decrease inflammation in blood vessels. Researchers highlight that this treatment could complement traditional strategies such as diet, exercise, and medication.',
         'Clinical trials are in advanced stages, and early results indicate significant improvements in the blood pressure and cardiac function of participants. Scientists assure that the safety of the treatment has been a priority throughout the research process.',
@@ -450,9 +492,22 @@ const extractData = () => {
         'In conclusion, the new cardiovascular therapy represents an important step in modern medicine, offering the possibility of improving the quality of life for millions of people and marking a significant milestone in heart health research.'
       ]
     },
+    'salud-corazon': {
+      title: 'New Cardiovascular Therapy Promises to Improve Heart Health',
+      summary: 'Medical researchers have developed an innovative cardiovascular therapy that promises to revolutionize the treatment of heart diseases and improve the quality of life for millions of patients.',
+      alt: 'New cardiovascular therapy promises to improve heart health',
+      content: [
+        'The new therapy, developed after a decade of research, uses stem cells and genetic engineering techniques to regenerate cardiac tissue damaged by heart attacks and other cardiovascular diseases.',
+        'Initial clinical trials have shown promising results, with patients experiencing significant improvements in cardiac function and a reduction in heart failure symptoms.',
+        'Cardiologists highlight that this therapy could reduce the need for heart transplants and other invasive procedures, offering a less risky and more accessible alternative for patients.',
+        'Health authorities are evaluating the approval of the therapy, which could be available to the general public within the next two years after completing the final phases of clinical trials.',
+        'Researchers are also exploring applications of this technology for other degenerative diseases, opening new possibilities in the field of regenerative medicine.'
+      ]
+    },
     'salud-mental': {
       title: 'Mental Health Becomes a Priority Amid Rising Stress and Anxiety',
       summary: 'The increase in stress and anxiety among the population has turned mental health into a priority for both health authorities and society in general, driving new support and awareness strategies.',
+      alt: 'Person meditating in a calm environment promoting mental well-being',
       content: [
         'Experts point out that factors such as intense work life, economic uncertainty, and rapid social changes have increased anxiety levels, affecting the quality of life and emotional well-being of millions of people.',
         'Mental health professionals recommend implementing prevention programs in schools and workplaces, promoting healthy habits such as exercise and mindfulness, and facilitating access to psychological therapies.',
@@ -464,6 +519,7 @@ const extractData = () => {
     'salud-azucar': {
       title: 'Excessive Sugar Consumption Increases the Risk of Metabolic Diseases',
       summary: 'Excessive consumption of added sugars has become a critical public health problem, affecting millions of people worldwide and contributing to the rise of serious chronic diseases.',
+      alt: 'Various sugary foods and drinks displayed on a table',
       content: [
         'Recent studies, validated by multiple health institutions, show that a high intake of added sugars is directly related to a higher risk of developing complex metabolic diseases, such as type 2 diabetes, severe obesity, and metabolic syndrome.',
         'Experts warn that frequent consumption of sugary drinks, sweets, and ultra-processed foods can quickly alter blood glucose levels and affect insulin function, creating a resistance that contributes to long-term health deterioration.',
@@ -472,9 +528,10 @@ const extractData = () => {
         'In conclusion, reducing sugar consumption is not just a dietary choice but a key preventive measure to protect metabolic health, improve quality of life, and decrease the incidence of chronic diseases in the global population.'
       ]
     },
-    'deporte-baseball': {
+    'deporte-mlb': {
       title: 'Mets Beat Braves in Decisive MLB Match',
       summary: 'The Mets scored an impressive victory over the Braves in a decisive MLB match, which kept fans on the edge of their seats until the final out.',
+      alt: 'Mets pitcher throwing the ball in a packed baseball stadium',
       content: [
         'The game began with both teams showing solid offensive and defensive play, but it was the Mets who managed to open the scoring in the third inning thanks to a home run by their main star.',
         'The Braves tried to react, connecting with important hits in the fifth and sixth innings, but the excellent performance of the Mets\' starting pitcher kept the rival hitters at bay.',
@@ -489,6 +546,7 @@ const extractData = () => {
     'deporte-natacion': {
       title: 'US Team Dominates 4x100m Relay at World Aquatics Championships',
       summary: 'The US team established itself as the main protagonist in the 4x100 meter relay at the World Aquatics Championships, dominating the competition from start to finish and taking the gold medal with an impressive time.',
+      alt: 'US relay team celebrating their gold medal victory in the pool',
       content: [
         'The team, composed of four elite swimmers, showed perfect coordination and precise relay exchanges, making their superiority over rivals from around the world clear.',
         'From the start to the final leg, the Americans maintained the lead, with each swimmer delivering a standout performance that contributed to the team\'s personal record and decisive victory.',
@@ -504,6 +562,7 @@ const extractData = () => {
     'clima-tormenta': {
       title: 'Tropical Storm Approaches the Caribbean, Alerting Several Countries',
       summary: 'A tropical storm is approaching the Caribbean, generating alerts in several countries in the region. Meteorologists have issued warnings for the population to prepare for possible heavy rains.',
+      alt: 'Satellite image of a tropical storm over the Caribbean Sea',
       content: [
         'A tropical storm is approaching the Caribbean, generating alerts in several countries in the region. Meteorologists have issued warnings for the population to prepare for possible heavy rains.',
         'Meteorological authorities have issued evacuation warnings and recommended citizens take security measures, especially in low-lying coastal areas. The storm is expected to weaken in the coming hours.',
@@ -515,6 +574,7 @@ const extractData = () => {
     'clima-calor': {
       title: 'Extreme Heat Wave Affects Several Regions of the Country',
       summary: 'Maximum temperatures exceed 40 degrees in several provinces, generating health risk alerts.',
+      alt: 'Thermometer showing extreme high temperature in a city landscape',
       content: [
         'A historic heatwave is affecting much of Europe, causing record temperatures in several cities.',
         'Authorities have issued alerts to take extreme precautions, especially for the elderly and people with chronic diseases.',
@@ -527,6 +587,7 @@ const extractData = () => {
     'clima-inundaciones': {
       title: 'Floods Affect Thousands of People in the South',
       summary: 'Torrential rains have caused rivers to overflow, affecting entire communities.',
+      alt: 'Flooded streets in a South American city after torrential rains',
       content: [
         'Heavy rains have hit several regions of South America in recent days, causing severe flooding that has affected thousands of people and left significant material damage.',
         'The countries hardest hit by the intense rainfall are Brazil, Argentina, Paraguay, Bolivia, and Peru, where river overflows, landslides, and road closures have been reported.',
@@ -545,6 +606,7 @@ const extractData = () => {
     'clima-nevadas': {
       title: 'Historic Snowfall Paralyzes the North of the Country',
       summary: 'The heaviest snowfall in decades has left several northern populations isolated.',
+      alt: 'Snow-covered roads and buildings in northern Europe',
       content: [
         'Intense snowfall is affecting northern Europe, causing significant transportation disruptions and posing risks to the population in several regions.',
         'Heavy snow precipitation has accumulated in large quantities on roads, streets, and highways, forcing authorities to implement temporary closures to ensure driver safety.',
@@ -561,6 +623,7 @@ const extractData = () => {
     'clima-tornado': {
       title: 'Tornado Causes Serious Damage in the Center of the Country',
       summary: 'An F3 category tornado has left a trail of destruction in several inland communities, causing significant material damage and affecting hundreds of families.',
+      alt: 'F3 tornado touching down in a residential area',
       content: [
         'A powerful F3 category tornado hit several communities in the center of the country, leaving a trail of destruction that has affected more than 500 families and caused damage estimated in millions of dollars.',
         'Civil protection authorities have deployed rescue and humanitarian assistance teams to the hardest-hit areas, where numerous homes have been destroyed or severely damaged.',
@@ -570,9 +633,30 @@ const extractData = () => {
         'Experts in meteorological phenomena warn of the possibility of new severe events in the coming hours due to unstable atmospheric conditions in the region.'
       ]
     },
+    'clima-tormenta-atlantico': {
+      title: 'Tropical Storm Intensifies in the Atlantic',
+      summary: 'A tropical storm is intensifying in the Atlantic, generating alerts in several Caribbean islands. Authorities issue preparedness warnings.',
+      alt: 'Tropical storm intensifies in the Atlantic'
+    },
+    'clima-calor-europa': {
+      title: 'Record Heat Wave Affects Southern Europe',
+      summary: 'Historical temperatures are recorded in Spain, Italy, and Greece. Authorities implement emergency plans for extreme heat.',
+      alt: 'Record heat wave affects Southern Europe'
+    },
+    'clima-inundaciones-asia': {
+      title: 'Floods Cause Evacuations in Asia',
+      summary: 'Intense monsoons cause massive flooding in Southeast Asia. Thousands of people are evacuated to safe zones.',
+      alt: 'Floods cause evacuations in Asia'
+    },
+    'clima-huracan-costa': {
+      title: 'Category 4 Hurricane Approaches the East Coast',
+      summary: 'A powerful category 4 hurricane approaches the east coast of the US with winds of up to 230 km/h. Mandatory evacuations are ordered.',
+      alt: 'Category 4 hurricane approaches the east coast'
+    },
     'justicia-homicidio': {
       title: 'Homicide Investigation Underway in City Center',
       summary: 'Local police have launched an investigation following a homicide that occurred in the city center during the early hours of Friday, generating alarm in the community.',
+      alt: 'Police cordoning off a city street during a homicide investigation',
       content: [
         'Authorities reported that the incident took place near the intersection of the main avenues, in an area with high commercial activity. Witnesses present at the scene recounted hearing screams and gunshots before the first emergency teams arrived.',
         'Officers found the victim with serious injuries and confirmed his death at the scene. Law enforcement forces have cordoned off the area to preserve evidence and allow experts to conduct corresponding proceedings.',
@@ -582,9 +666,10 @@ const extractData = () => {
         'Meanwhile, citizens are advised to avoid traveling through the area during night hours and report any suspicious activity to the local emergency number. This event has reopened the debate on urban security and crime prevention policies.'
       ]
     },
-    'justicia-tribunal': {
+    'justicia_tribunal_supremo': {
       title: 'Supreme Court Confirms Landmark Sentence in Corruption Case',
       summary: 'The Supreme Court has confirmed the sentence handed down in a political corruption case that has shocked the country, setting an important precedent in the fight against impunity.',
+      alt: 'Judges entering the Supreme Court for a landmark ruling',
       content: [
         'The decision of the country\'s highest court was unanimous and ratifies the convictions imposed by lower courts against several high-level officials involved in acts of corruption.',
         'The case, which has lasted more than three years, has been one of the most high-profile of the last decade, revealing a network of bribes and favoritism that affected the awarding of public contracts worth millions of dollars.',
@@ -595,9 +680,10 @@ const extractData = () => {
         'Legal experts believe that this ruling will strengthen corruption prevention mechanisms and serve as a deterrent for future public officials.'
       ]
     },
-    'justicia-criminal': {
+    'justicia_condena_criminal': {
       title: 'Leader of International Criminal Organization Sentenced to Life Imprisonment',
       summary: 'The leader of an international criminal organization has been sentenced to life imprisonment after a long judicial process that spanned several years.',
+      alt: 'Courtroom during the sentencing of an international criminal leader',
       content: [
         'The sentence was handed down by a specialized court for organized crime offenses, after conclusive evidence was presented linking the accused to illegal activities worldwide, including drug trafficking, money laundering, and corruption.',
         'During the trial, testimony from former members of the organization and financial evidence were presented, demonstrating the scale of the illegal operations led by the convicted individual.',
@@ -609,9 +695,10 @@ const extractData = () => {
         'Meanwhile, authorities continue to investigate and monitor the organization\'s operations to ensure that no loose ends remain that could allow illegal activities to continue.'
       ]
     },
-    'justicia-empresa': {
+    'justicia_fiscalia_empresa': {
       title: 'Prosecutor\'s Office Launches Trial Against Company for Million-Dollar Tax Evasion',
       summary: 'The Attorney General\'s Office has initiated a trial against a major national company accused of million-dollar tax evasion, which could lead to historic sanctions.',
+      alt: 'Corporate building with prosecutor office investigators entering',
       content: [
         'According to preliminary reports, the company allegedly failed to declare significant income for several years, causing economic harm to the State. The case was opened following an investigation by the specialized financial crimes unit.',
         'During the initial hearing, company representatives denied the accusations, assuring that all accounting records comply with current regulations. However, the Prosecutor\'s Office presented documents and evidence showing the alleged evasion.',
@@ -620,9 +707,10 @@ const extractData = () => {
         'The coming weeks are expected to be decisive in determining the future of the company and the impact of this case on the business sector.'
       ]
     },
-    'justicia-homicidio-multiple': {
+    'justicia_juez_homicidio_multiple': {
       title: 'Judge Orders Preventive Detention for Multiple Homicide Suspect',
       summary: 'The judge in the case has ordered preventive detention for the accused, considering it necessary to ensure his presence at the trial due to the gravity of the charges and the flight risk.',
+      alt: 'Judge reviewing case files for a multiple homicide suspect',
       content: [
         'The decision was made after a hearing where compelling evidence was presented linking the accused to several homicides that occurred in the city during recent months. The prosecutor argued that the defendant\'s freedom would represent a danger to society.',
         'The defense of the accused stated that they will respect the judge\'s decision but announced they will file legal appeals to request a review of the measure. Meanwhile, the accused will remain in a maximum-security detention center.',
@@ -634,6 +722,7 @@ const extractData = () => {
     'opinion_politica': {
       title: 'Democracy and the Challenge of Transparency',
       summary: 'Citizen trust increasingly depends on open and accountable institutions.',
+      alt: 'Illustration of democratic institutions and transparency concepts',
       content: [
         'In today\'s complex political landscape, transparency has consolidated itself not only as an ethical requirement but as the fundamental pillar supporting the legitimacy of modern democracies. Citizen trust in their representatives and institutions has been eroded by years of opacity and lack of accountability, creating a gap that can only be closed with light and honesty.',
         'True transparency goes beyond publishing documents on web portals; it implies a real will to expose decision-making processes to public scrutiny. When governments hide the reasons behind their policies or the details of their spending, they foster a climate of suspicion that fuels populism and political disaffection.',
@@ -643,6 +732,7 @@ const extractData = () => {
     'opinion_economia': {
       title: 'Where is the Global Economy Heading?',
       summary: 'We analyze the factors that will mark the economic course in the coming years.',
+      alt: 'Visual representation of global economic trends and AI technology',
       content: [
         'We find ourselves at an unprecedented turning point in contemporary economic history. Globalization, as we knew it, is being redefined by geopolitical tensions, the energy transition, and the massive emergence of artificial intelligence. These factors are not only changing what we produce, but how and where we do it.',
         'Inflation, although it seems to be under control in some regions, has left a deep mark on the cost structure of companies and family budgets. The great challenge for central banks will be to navigate this new environment without stifling the growth necessary to finance the transition to a green economy.',
@@ -652,6 +742,7 @@ const extractData = () => {
     'opinion_salud': {
       title: 'The Importance of Preventive Health',
       summary: 'Investing in prevention is fundamental to maintaining a healthy population and reducing healthcare costs.',
+      alt: 'Illustration of preventive healthcare and medical checkups',
       content: [
         'The global healthcare system has historically been focused on the cure, reacting to disease once it manifests. However, the true medical revolution of the 21st century lies in prevention. Investing in preventive health is not just a matter of individual well-being; it is a survival strategy for public health systems.',
         'Every euro invested in vaccination campaigns, early detection, and the promotion of healthy habits saves thousands of euros in chronic treatments and complex hospitalizations. Technology today allows us to monitor our health in real-time, offering us a unique opportunity to intervene before the damage is irreversible.',

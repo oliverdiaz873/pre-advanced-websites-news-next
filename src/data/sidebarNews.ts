@@ -213,7 +213,7 @@ export const sidebarNewsByCategory = {
       alt: 'LeBron James lidera victoria de los Lakers',
     }),
     createNewsArticle({
-      id: 'deporte-espana-final',
+      id: 'deporte-espana-alemania',
       title: 'España hacia la final del Mundial',
       href: '/news/deporte/espana-clasifica-final-mundial-futbol',
       category: 'Deporte',
@@ -307,7 +307,7 @@ export const sidebarNewsByCategory = {
       alt: 'Exfuncionario niega cargos de fraude durante audiencia',
     }),
     createNewsArticle({
-      id: 'justicia-tribunal',
+      id: 'justicia_tribunal_supremo',
       title: 'Sentencia del Tribunal Supremo senta precedente legal importante',
       href: '/news/justicia/tribunal-supremo-confirma-sentencia',
       category: 'Justicia',
@@ -318,7 +318,7 @@ export const sidebarNewsByCategory = {
       alt: 'Sentencia del Tribunal Supremo senta precedente legal importante',
     }),
     createNewsArticle({
-      id: 'justicia-empresa',
+      id: 'justicia_fiscalia_empresa',
       title: 'Caso de evasión fiscal podría llevar a reforma tributaria',
       href: '/news/justicia/fiscalia-inicia-juicio-empresa-evasion-fiscal-millonaria',
       category: 'Justicia',
