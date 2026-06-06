@@ -33,7 +33,7 @@ export const Breadcrumb = ({ home, category, categoryPath, current }: Breadcrumb
             >
               {home}
             </Link>
-            <span className="mx-2 text-gray-400 select-none">/</span>
+            <span className="mx-2 text-xs text-gray-400 select-none">/</span>
           </li>
           <li className="flex items-center flex-shrink-0">
             <Link 
@@ -42,7 +42,7 @@ export const Breadcrumb = ({ home, category, categoryPath, current }: Breadcrumb
             >
               {category}
             </Link>
-            <span className="mx-2 text-gray-400 select-none">/</span>
+            <span className="mx-2 text-xs text-gray-400 select-none">/</span>
           </li>
           <li className="text-gray-500 dark:text-[#adb5bd] truncate min-w-0" aria-current="page">
             {current}
