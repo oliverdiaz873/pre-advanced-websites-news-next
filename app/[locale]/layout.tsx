@@ -14,8 +14,6 @@ import './_components/HomePageClient.css';
 import './_components/CategoryPageClient.css';
 import './_components/ArticlePageClient.css';
 import './_components/OpinionPageClient.css';
-import '@/features/news/components/RecentNewsSidebar/RecentNewsSidebar.css';
-import '@/features/news/components/OpinionSidebar/OpinionSidebar.css';
 import '@/features/news/components/BreakingNewsBanner/BreakingNewsBanner.css';
 import '@/shared/layouts/LegalLayout/LegalLayout.css';
 import '@/shared/layouts/Footer/Footer.css';

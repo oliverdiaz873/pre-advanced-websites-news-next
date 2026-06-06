@@ -26,7 +26,8 @@ html[data-theme='dark'] .section-title-home {
 
 .news-card-home img,
 .featured-article-home img,
-.opinion-card-home img {
+.recent-news-card img,
+.opinion-card img {
   transition: all 0.3s ease;
 }
 
@@ -38,7 +39,8 @@ html[data-theme='dark'] .section-title-home {
 .news-card-home:hover h3,
 .news-card-home:hover h4,
 .featured-article-home:hover h3,
-.opinion-card-home:hover h4 {
+.recent-news-card:hover h4,
+.opinion-card:hover h4 {
   color: #dc3545;
 }
 

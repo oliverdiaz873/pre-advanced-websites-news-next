@@ -4,6 +4,7 @@ import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import type { NewsArticle } from '../../../../data';
 import { useArticleTranslator } from '../../hooks/useArticleTranslation';
+import './RecentNewsSidebar.css';
 
 interface RecentNewsSidebarProps {
   title?: string;
@@ -39,7 +40,7 @@ export const RecentNewsSidebar = ({ title, articles: rawArticles }: RecentNewsSi
           {recentArticles.map((article) => (
             <article
               key={article.id}
-              className="opinion-card-home rounded-lg p-2 transition-all duration-300 hover:translate-x-[5px]"
+              className="recent-news-card rounded-lg p-2 transition-all duration-300 hover:translate-x-[5px]"
             >
               <Link href={article.href} className="block text-inherit no-underline">
                 <img
