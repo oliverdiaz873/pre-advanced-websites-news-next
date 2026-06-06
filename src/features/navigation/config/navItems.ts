@@ -1,3 +1,7 @@
+/**
+ * Configuración central del menú de navegación del sitio (Navbar/Sidebar).
+ * Cada item contiene nameKey (clave para i18n) y path (ruta de navegación).
+ */
 export interface NavItem {
   nameKey: string;
   path: string;
