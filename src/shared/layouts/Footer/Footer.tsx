@@ -1,6 +1,4 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { FacebookIcon, TwitterIcon, InstagramIcon } from '../../components/icons';
 
@@ -10,8 +8,8 @@ import { FacebookIcon, TwitterIcon, InstagramIcon } from '../../components/icons
  * Componente de pie de página global.
  * Contiene derechos reservados, redes sociales y enlaces legales.
  */
-export const Footer = () => {
-  const t = useTranslations('footer');
+export const Footer = async () => {
+  const t = await getTranslations('footer');
 
   return (
     <footer className="w-full bg-[rgba(0,0,0,0.85)] text-white py-5 md:pt-4 md:pb-6 lg:pt-5 lg:px-7 lg:pb-7 text-center">

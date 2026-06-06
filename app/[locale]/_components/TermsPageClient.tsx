@@ -1,11 +1,8 @@
-'use client';
-
-import React from 'react'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { LegalLayout } from '@/shared/layouts';
 
-export const Terms: React.FC = () => {
-  const t = useTranslations('legal')
+export async function Terms() {
+  const t = await getTranslations('legal');
   
   const sections = t.raw('terms.sections') as Array<{
     id: string
