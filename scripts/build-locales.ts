@@ -148,6 +148,15 @@ const extractData = () => {
     };
   });
 
+  // Add opinion category (used for search/article filtering, not a full editorial section)
+  data.categories.opinion = {
+    label: 'Opinión',
+    description: 'Artículos de opinión y análisis de columnistas expertos en diversas áreas.',
+    latestTitle: 'Más en Opinión',
+    sidebarTitle: 'Opinion',
+    featuredSectionTitle: 'Opinión',
+  };
+
   compileMergedMessages('es', data);
 
   // Generate EN JSON (with real translations and fallback)

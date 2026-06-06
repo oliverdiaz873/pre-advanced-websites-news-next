@@ -718,6 +718,13 @@
         "latestTitle": "Mas en Justicia",
         "sidebarTitle": "Opinion",
         "featuredSectionTitle": "Justicia"
+      },
+      "opinion": {
+        "label": "Opinión",
+        "description": "Artículos de opinión y análisis de columnistas expertos en diversas áreas.",
+        "latestTitle": "Más en Opinión",
+        "sidebarTitle": "Opinion",
+        "featuredSectionTitle": "Opinión"
       }
     }
   },

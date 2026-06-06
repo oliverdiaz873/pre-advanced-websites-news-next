@@ -691,6 +691,13 @@
         "latestTitle": "More in Justice",
         "sidebarTitle": "Opinion",
         "featuredSectionTitle": "Justice"
+      },
+      "opinion": {
+        "label": "Opinion",
+        "description": "[EN] Artículos de opinión y análisis de columnistas expertos en diversas áreas.",
+        "latestTitle": "More in Opinion",
+        "sidebarTitle": "Opinion",
+        "featuredSectionTitle": "Opinion"
       }
     }
   },
