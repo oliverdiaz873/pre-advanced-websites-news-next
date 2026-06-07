@@ -1,7 +1,7 @@
 .breaking-news {
   position: relative;
   overflow: hidden;
-  animation: pulse 2s infinite;
+  animation: breaking-news-pulse 2s infinite;
 }
 
 .breaking-news-content {
@@ -28,7 +28,7 @@
   font-size: 15px;
 }
 
-@keyframes pulse {
+@keyframes breaking-news-pulse {
   0%,
   100% {
     opacity: 1;
