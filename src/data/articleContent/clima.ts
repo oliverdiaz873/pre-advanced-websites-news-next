@@ -10,7 +10,7 @@ export const climaArticles: FullNewsArticle[] = [
     datetime: '2025-10-11',
     summary: 'Una tormenta tropical se aproxima al Caribe, generando alertas en varios países de la región. Los meteorólogos han emitido avisos para que la población se prepare ante posibles lluvias intensas.',
     imageUrl: '/images/news/clima/tormenta.jpg',
-    alt: 'Tormenta tropical se aproxima al Caribe y alerta a varios países',
+    alt: 'Imagen satelital de una tormenta tropical sobre el mar Caribe',
     content: [
       'Una tormenta tropical se aproxima al Caribe, generando alertas en varios países de la región. Los meteorólogos han emitido avisos para que la población se prepare ante posibles lluvias intensas.',
       
@@ -32,7 +32,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Las temperaturas máximas superan los 40 grados en varias provincias, generando alertas por riesgos para la salud.',
         imageUrl: '/images/news/clima/calor.jpg',
-        alt: 'Ola de calor extremo afecta a varias regiones del país'
+        alt: 'Termómetro marcando temperatura extrema en un paisaje urbano'
       },
       {
         id: 'clima-tornado',
@@ -43,7 +43,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-10',
         summary: 'Un tornado de categoría F3 ha dejado un rastro de destrucción en varias comunidades del interior.',
         imageUrl: '/images/news/clima/tornado.jpg',
-        alt: 'Tornado causa graves daños en el centro del país'
+        alt: 'Tornado F3 tocando tierra en una zona residencial'
       }
     ],
     breadcrumb: {
@@ -61,7 +61,7 @@ export const climaArticles: FullNewsArticle[] = [
     datetime: '2025-10-11',
     summary: 'Las temperaturas máximas superan los 40 grados en varias provincias, generando alertas por riesgos para la salud.',
     imageUrl: '/images/news/clima/calor.jpg',
-    alt: 'Ola de calor extremo afecta a varias regiones del país',
+    alt: 'Termómetro marcando temperatura extrema en un paisaje urbano',
     content: [
       'Una ola de calor histórica afecta a gran parte de Europa, provocando temperaturas récord en varias ciudades.',
       
@@ -85,7 +85,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Una tormenta tropical se aproxima al Caribe, generando alertas en varios países de la región.',
         imageUrl: '/images/news/clima/tormenta.jpg',
-        alt: 'Tormenta tropical se aproxima al Caribe'
+        alt: 'Imagen satelital de una tormenta tropical sobre el mar Caribe'
       },
       {
         id: 'clima-tornado',
@@ -96,7 +96,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-10',
         summary: 'Un tornado de categoría F3 ha dejado un rastro de destrucción en varias comunidades del interior.',
         imageUrl: '/images/news/clima/tornado.jpg',
-        alt: 'Tornado causa graves daños en el centro del país'
+        alt: 'Tornado F3 tocando tierra en una zona residencial'
       }
     ],
     breadcrumb: {
@@ -114,7 +114,7 @@ export const climaArticles: FullNewsArticle[] = [
     datetime: '2025-10-10',
     summary: 'Un tornado de categoría F3 ha dejado un rastro de destrucción en varias comunidades del interior, causando daños materiales significativos y afectando a cientos de familias.',
     imageUrl: '/images/news/clima/tornado.jpg',
-    alt: 'Tornado causa graves daños en el centro del país',
+    alt: 'Tornado F3 tocando tierra en una zona residencial',
     content: [
       'Un poderoso tornado de categoría F3 azotó varias comunidades del centro del país, dejando un rastro de destrucción que ha afectado a más de 500 familias y causado daños estimados en millones de dólares.',
       
@@ -138,7 +138,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Una tormenta tropical se aproxima al Caribe, generando alertas en varios países de la región.',
         imageUrl: '/images/news/clima/tormenta.jpg',
-        alt: 'Tormenta tropical se aproxima al Caribe'
+        alt: 'Imagen satelital de una tormenta tropical sobre el mar Caribe'
       },
       {
         id: 'clima-calor',
@@ -149,7 +149,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Las temperaturas máximas superan los 40 grados en varias provincias, generando alertas por riesgos para la salud.',
         imageUrl: '/images/news/clima/calor.jpg',
-        alt: 'Ola de calor extremo afecta a varias regiones'
+        alt: 'Termómetro marcando temperatura extrema en un paisaje urbano'
       }
     ],
     breadcrumb: {
@@ -165,9 +165,9 @@ export const climaArticles: FullNewsArticle[] = [
     category: 'Clima',
     date: '11 de octubre de 2025',
     datetime: '2025-10-11',
-    summary: 'Las autoridades han emitido alertas de evacuación ante la aproximación de un huracán categoría 2.',
+    summary: 'Las autoridades han emitido alertas de evacuación ante la aproximación de un huracán categoría 3.',
     imageUrl: '/images/news/clima/ciclon.jpg',
-    alt: 'Huracán se forma en el Atlántico y amenaza la costa este',
+    alt: 'Imagen satelital de un huracán aproximándose a la costa',
     content: [
       'El huracán, que se formó hace varios días en el Atlántico central, ha ganado fuerza rápidamente debido a las altas temperaturas del mar y a las condiciones atmosféricas favorables. Los meteorólogos del Centro Nacional de Huracanes de Estados Unidos informaron que el sistema alcanzó categoría 3 durante la madrugada y podría intensificarse aún más en las próximas horas.',
       
@@ -199,7 +199,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Las temperaturas máximas superan los 40 grados en varias provincias, generando alertas por riesgos para la salud.',
         imageUrl: '/images/news/clima/calor.jpg',
-        alt: 'Ola de calor extremo afecta a varias regiones del país'
+        alt: 'Termómetro marcando temperatura extrema en un paisaje urbano'
       },
       {
         id: 'clima-tornado',
@@ -210,7 +210,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-10',
         summary: 'Un tornado de categoría F3 ha dejado un rastro de destrucción en varias comunidades del interior.',
         imageUrl: '/images/news/clima/tornado.jpg',
-        alt: 'Tornado causa graves daños en el centro del país'
+        alt: 'Tornado F3 tocando tierra en una zona residencial'
       }
     ],
     breadcrumb: {
@@ -228,7 +228,7 @@ export const climaArticles: FullNewsArticle[] = [
     datetime: '2025-10-11',
     summary: 'Las lluvias torrenciales han causado desbordamiento de ríos, afectando a comunidades enteras.',
     imageUrl: '/images/news/clima/inundacion.jpg',
-    alt: 'Inundaciones afectan a miles de personas en el sur',
+    alt: 'Calles inundadas en una ciudad sudamericana tras lluvias torrenciales',
     content: [
       'Fuertes lluvias han azotado en los últimos días a varias regiones de Sudamérica, provocando graves inundaciones que han afectado a miles de personas y dejado importantes daños materiales.',
       
@@ -264,7 +264,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Las temperaturas máximas superan los 40 grados en varias provincias, generando alertas por riesgos para la salud.',
         imageUrl: '/images/news/clima/calor.jpg',
-        alt: 'Ola de calor extremo afecta a varias regiones del país'
+        alt: 'Termómetro marcando temperatura extrema en un paisaje urbano'
       },
       {
         id: 'clima-tornado',
@@ -275,7 +275,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-10',
         summary: 'Un tornado de categoría F3 ha dejado un rastro de destrucción en varias comunidades del interior.',
         imageUrl: '/images/news/clima/tornado.jpg',
-        alt: 'Tornado causa graves daños en el centro del país'
+        alt: 'Tornado F3 tocando tierra en una zona residencial'
       }
     ],
     breadcrumb: {
@@ -293,7 +293,7 @@ export const climaArticles: FullNewsArticle[] = [
     datetime: '2025-10-11',
     summary: 'Las nevadas más intensas en décadas han dejado incomunicadas a varias poblaciones del norte.',
     imageUrl: '/images/news/clima/winter.jpg',
-    alt: 'Nevadas históricas paralizan el norte del país',
+    alt: 'Carreteras y edificios cubiertos de nieve en el norte de Europa',
     content: [
       'Nevadas intensas están afectando el norte de Europa, causando interrupciones significativas en el transporte y generando riesgos para la población en varias regiones.',
       
@@ -325,7 +325,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Las temperaturas máximas superan los 40 grados en varias provincias, generando alertas por riesgos para la salud.',
         imageUrl: '/images/news/clima/calor.jpg',
-        alt: 'Ola de calor extremo afecta a varias regiones del país'
+        alt: 'Termómetro marcando temperatura extrema en un paisaje urbano'
       },
       {
         id: 'clima-tornado',
@@ -336,7 +336,7 @@ export const climaArticles: FullNewsArticle[] = [
         datetime: '2025-10-10',
         summary: 'Un tornado de categoría F3 ha dejado un rastro de destrucción en varias comunidades del interior.',
         imageUrl: '/images/news/clima/tornado.jpg',
-        alt: 'Tornado causa graves daños en el centro del país'
+        alt: 'Tornado F3 tocando tierra en una zona residencial'
       }
     ],
     breadcrumb: {

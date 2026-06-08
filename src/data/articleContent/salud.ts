@@ -265,7 +265,7 @@ export const saludArticles: FullNewsArticle[] = [
     datetime: '2025-10-09',
     summary: 'El consumo excesivo de azúcares añadidos se ha convertido en un problema crítico de salud pública, afectando a millones de personas en todo el mundo y contribuyendo al aumento de enfermedades crónicas graves.',
     imageUrl: '/images/news/salud/azucar.jpg',
-    alt: 'El consumo excesivo de azúcares aumenta el riesgo de enfermedades metabólicas',
+    alt: 'Variedad de alimentos y bebidas azucaradas sobre una mesa',
     content: [
       'Estudios recientes, validados por múltiples instituciones sanitarias, muestran que una ingesta elevada de azúcares añadidos está directamente relacionada con un mayor riesgo de desarrollar enfermedades metabólicas complejas, como diabetes tipo 2, obesidad severa y síndrome metabólico.',
 

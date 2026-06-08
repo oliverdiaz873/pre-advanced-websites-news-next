@@ -10,7 +10,7 @@ export const deporteArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'Los Lakers de Los Ángeles derrotaron a los Boston Celtics 112-107 en un partido lleno de emoción y jugadas espectaculares que mantuvo a los fanáticos al borde de sus asientos.',
     imageUrl: '/images/news/deporte/NBA.jpg',
-    alt: 'Los Lakers vencen a los Celtics 112-107 en un emocionante partido de la NBA',
+    alt: 'LeBron James de los Lakers lanzando contra la defensa de los Celtics',
     content: [
       'El partido comenzó con una intensidad inusual desde el primer cuarto, con ambos equipos intercambiando jugadas y mostrando por qué son considerados dos de los mejores franchises de la historia de la NBA.',
       
@@ -67,7 +67,7 @@ export const deporteArticles: FullNewsArticle[] = [
     datetime: '2025-10-03',
     summary: 'Atletas de diferentes países establecieron nuevas plusmarcas mundiales en el campeonato internacional de atletismo, superando marcas que llevaban años vigentes.',
     imageUrl: '/images/news/deporte/atletas.jpg',
-    alt: 'Atletas Rompen Récords Mundiales en Campeonato Internacional',
+    alt: 'Atletas rompiendo récords mundiales en el campeonato internacional',
     content: [
       'El estadio olímpico fue testigo de momentos históricos cuando tres atletas lograron superar récords mundiales que parecían imbatibles, marcando un hito en la historia del atletismo moderno.',
       
@@ -124,7 +124,7 @@ export const deporteArticles: FullNewsArticle[] = [
     datetime: '2025-10-07',
     summary: 'Los Mets lograron una victoria impresionante sobre los Braves en un partido decisivo de la MLB, que mantuvo a los fanáticos al borde de sus asientos hasta el último out.',
     imageUrl: '/images/news/deporte/baseball.jpg',
-    alt: 'Los Mets vencen a los Braves en un partido decisivo de la MLB',
+    alt: 'Lanzador de los Mets tirando la pelota en un estadio de béisbol lleno',
     content: [
       'El partido comenzó con ambos equipos mostrando un juego sólido en la ofensiva y defensiva, pero fueron los Mets quienes lograron abrir el marcador en la tercera entrada gracias a un home run de su estrella principal.',
       
@@ -152,7 +152,7 @@ export const deporteArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Los Lakers lograron una victoria impresionante sobre los Celtics en un partido decisivo de la NBA.',
         imageUrl: '/images/news/deporte/NBA.jpg',
-        alt: 'Los Lakers vencen a los Celtics 112-107 en un emocionante partido de la NBA'
+        alt: 'LeBron James de los Lakers lanzando contra la defensa de los Celtics'
       },
       {
         id: 'deporte-equipo-local',
@@ -181,7 +181,7 @@ export const deporteArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'La selección estadounidense se consagró como la gran protagonista en el relevo 4x100 metros del Mundial de Natación, dominando la competencia de principio a fin y llevándose la medalla de oro con un tiempo impresionante.',
     imageUrl: '/images/news/deporte/natacion.jpg',
-    alt: 'La selección estadounidense domina el relevo 4x100 metros en el Mundial de Natación',
+    alt: 'Equipo de relevos estadounidense celebrando la medalla de oro en la piscina',
     content: [
       'El equipo, compuesto por cuatro nadadores de élite, mostró una coordinación perfecta y relevos precisos, dejando claro su superioridad frente a rivales de todo el mundo.',
       
@@ -211,7 +211,7 @@ export const deporteArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Los Lakers lograron una victoria impresionante sobre los Celtics en un partido decisivo de la NBA.',
         imageUrl: '/images/news/deporte/NBA.jpg',
-        alt: 'Los Lakers vencen a los Celtics 112-107 en un emocionante partido de la NBA'
+        alt: 'LeBron James de los Lakers lanzando contra la defensa de los Celtics'
       },
       {
         id: 'deporte-atletas',
@@ -222,7 +222,7 @@ export const deporteArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Atletas de diferentes países establecen nuevas marcas mundiales en varias disciplinas.',
         imageUrl: '/images/news/deporte/atletas.jpg',
-        alt: 'Atletas Rompen Récords Mundiales en Campeonato Internacional'
+        alt: 'Atletas rompiendo récords mundiales en el campeonato internacional'
       }
     ],
     breadcrumb: {
@@ -260,7 +260,7 @@ export const deporteArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Los Lakers lograron una victoria impresionante sobre los Celtics en un partido decisivo de la NBA.',
         imageUrl: '/images/news/deporte/NBA.jpg',
-        alt: 'Los Lakers vencen a los Celtics 112-107 en un emocionante partido de la NBA'
+        alt: 'LeBron James de los Lakers lanzando contra la defensa de los Celtics'
       },
       {
         id: 'deporte-espana-alemania',
@@ -289,7 +289,7 @@ export const deporteArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'España se clasificó para la final del Mundial de Fútbol tras vencer a Alemania en un emocionante partido lleno de intensidad y momentos memorables. Desde el inicio, ambos equipos mostraron un alto nivel de juego, manteniendo a los aficionados al borde de sus asientos.',
     imageUrl: '/images/news/deporte/spain-germany.jpg',
-    alt: 'España se clasifica para la final del Mundial de Fútbol tras vencer a Alemania',
+    alt: 'Selección española de fútbol celebrando la clasificación a la final del Mundial',
     content: [
       'El primer tiempo estuvo marcado por la presión ofensiva de Alemania, que generó varias oportunidades de gol, pero la defensa española se mantuvo firme, con destacadas intervenciones del portero y una coordinación impecable en la línea defensiva.',
       
@@ -313,7 +313,7 @@ export const deporteArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Los Lakers lograron una victoria impresionante sobre los Celtics en un partido decisivo de la NBA.',
         imageUrl: '/images/news/deporte/NBA.jpg',
-        alt: 'Los Lakers vencen a los Celtics 112-107 en un emocionante partido de la NBA'
+        alt: 'LeBron James de los Lakers lanzando contra la defensa de los Celtics'
       },
       {
         id: 'deporte-equipo-local',

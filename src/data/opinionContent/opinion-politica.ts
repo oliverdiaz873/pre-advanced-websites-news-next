@@ -9,7 +9,7 @@ export const opinionPoliticaContent: ArticleContent = {
   category: 'Opinion',
   summary: 'La confianza ciudadana depende cada vez mas de instituciones abiertas y responsables.',
   imageUrl: '/images/news/politica/congreso.avif',
-  alt: 'La democracia y el reto de la transparencia',
+  alt: 'Ilustración de instituciones democráticas y conceptos de transparencia',
   breadcrumb: {
     home: 'Inicio',
     category: 'Opinion',

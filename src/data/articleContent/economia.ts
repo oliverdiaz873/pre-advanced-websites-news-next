@@ -10,7 +10,7 @@ export const economiaArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'La bolsa de valores cerró en alza este jueves, impulsada por un renovado optimismo entre los inversores y la publicación de resultados financieros positivos de varias empresas líderes.',
     imageUrl: '/images/news/economia/bolsa-de-valores.avif',
-    alt: 'La bolsa de valores cierra en alza tras jornada de optimismo inversor',
+    alt: 'Pantalla de la bolsa mostrando números positivos del S&P 500 y Nasdaq',
     content: [
       'El índice S&P 500 subió un 1,2%, mientras que el Dow Jones y el Nasdaq registraron incrementos del 1% y 1,5% respectivamente. Este comportamiento refleja la confianza de los inversores en la estabilidad económica y en las perspectivas de ganancias corporativas a corto plazo.',
       
@@ -41,7 +41,7 @@ export const economiaArticles: FullNewsArticle[] = [
         datetime: '2025-10-03',
         summary: 'La moneda estadounidense se fortalece significativamente ante la incertidumbre global y la política monetaria.',
         imageUrl: '/images/news/economia/dolar.avif',
-        alt: 'Dólar alcanza máximo del año frente a otras monedas'
+        alt: 'Billetes de dólar estadounidense y gráficos de tipo de cambio global'
       }
     ],
     breadcrumb: {
@@ -60,7 +60,7 @@ export const economiaArticles: FullNewsArticle[] = [
     summary:
       'El aumento sostenido de la inflación genera incertidumbre en los mercados financieros y afecta el poder adquisitivo de los ciudadanos. Los precios de productos básicos y servicios esenciales continúan incrementándose, obligando a empresas y familias a ajustar presupuestos. Analistas advierten que, de no implementarse políticas económicas efectivas, esta tendencia podría persistir, impactando la inversión, el empleo y la estabilidad económica del país a mediano plazo.',
     imageUrl: '/images/news/economia/inflacion.jpg',
-    alt: 'Incremento de la inflación impacta a los mercados',
+    alt: 'Pantallas financieras mostrando gráficos de inflación y datos de mercado',
     content: [
       'Según los informes más recientes, la inflación anual en las principales economías ha superado las expectativas de los analistas, impulsada por el aumento en los costos de la energía, los alimentos y el transporte. En varios países europeos, los precios registraron su mayor alza en más de un año, mientras que en Estados Unidos la tasa inflacionaria se mantiene por encima del objetivo del 2% establecido por la Reserva Federal.',
       
@@ -97,7 +97,7 @@ export const economiaArticles: FullNewsArticle[] = [
         datetime: '2025-10-03',
         summary: 'La moneda estadounidense se fortalece significativamente ante la incertidumbre global y la política monetaria.',
         imageUrl: '/images/news/economia/dolar.avif',
-        alt: 'Dólar alcanza máximo del año frente a otras monedas'
+        alt: 'Billetes de dólar estadounidense y gráficos de tipo de cambio global'
       }
     ],
     breadcrumb: {
@@ -115,7 +115,7 @@ export const economiaArticles: FullNewsArticle[] = [
     datetime: '2025-10-03',
     summary: 'El dólar estadounidense ha alcanzado su máximo nivel del año frente a las principales divisas mundiales, impulsado por la incertidumbre global y las expectativas de política monetaria.',
     imageUrl: '/images/news/economia/dolar.avif',
-    alt: 'Dólar alcanza máximo del año frente a otras monedas',
+    alt: 'Billetes de dólar estadounidense y gráficos de tipo de cambio global',
     content: [
       'El índice del dólar, que mide el rendimiento de la moneda estadounidense frente a una cesta de seis divisas importantes, ha subido un 2.3% en la última semana, posicionándose en su nivel más alto desde enero.',
       
@@ -150,7 +150,7 @@ export const economiaArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'La inflación vuelve a ocupar el centro de atención con nuevos datos que muestran incremento sostenido de precios.',
         imageUrl: '/images/news/economia/inflacion.jpg',
-        alt: 'Incremento de la inflación impacta a los mercados'
+        alt: 'Pantallas financieras mostrando gráficos de inflación y datos de mercado'
       }
     ],
     breadcrumb: {
@@ -168,7 +168,7 @@ export const economiaArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'El euro alcanzó este jueves su valor más alto frente al dólar en los últimos seis meses, superando la barrera de los 1,12 dólares por primera vez desde abril. Este fortalecimiento de la moneda europea refleja un cambio en la dinámica económica global y un aumento de la confianza de los mercados en la estabilidad de la zona euro.',
     imageUrl: '/images/news/economia/euro.jpg',
-    alt: 'El euro alcanza su valor más alto frente al dólar en seis meses',
+    alt: 'Monedas y billetes de euro con gráfico de tipo de cambio frente al dólar',
     content: [
       'Los analistas atribuyen este repunte a una combinación de factores, entre ellos las señales de una posible pausa en las subidas de tasas de interés por parte de la Reserva Federal de Estados Unidos. La desaceleración económica en el país norteamericano ha reducido la demanda del dólar como activo refugio, lo que ha favorecido la recuperación del euro en los mercados internacionales.',
       
@@ -194,7 +194,7 @@ export const economiaArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Los indicadores económicos muestran que la inflación continúa su tendencia alcista, afectando el poder adquisitivo.',
         imageUrl: '/images/news/economia/inflacion.jpg',
-        alt: 'Incremento de la inflación impacta a los mercados'
+        alt: 'Pantallas financieras mostrando gráficos de inflación y datos de mercado'
       },
       {
         id: 'economia-dolar',
@@ -205,7 +205,7 @@ export const economiaArticles: FullNewsArticle[] = [
         datetime: '2025-10-03',
         summary: 'La moneda estadounidense se fortalece significativamente ante la incertidumbre global y la política monetaria.',
         imageUrl: '/images/news/economia/dolar.avif',
-        alt: 'Dólar alcanza máximo del año frente a otras monedas'
+        alt: 'Billetes de dólar estadounidense y gráficos de tipo de cambio global'
       }
     ],
     breadcrumb: {
@@ -223,7 +223,7 @@ export const economiaArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'El precio del petróleo registró un fuerte repunte este jueves, alcanzando niveles no vistos en los últimos meses y generando preocupación tanto entre los consumidores como entre las empresas a nivel global. Este aumento se atribuye a una combinación de factores, incluyendo tensiones geopolíticas en regiones productoras y restricciones en la oferta por parte de algunos países miembros de la OPEP.',
     imageUrl: '/images/news/economia/petroleo.avif',
-    alt: 'Petróleo registra fuerte repunte y preocupa a consumidores y empresas',
+    alt: 'Barriles de petróleo y gráfico de precios en alza en una pantalla financiera',
     content: [
       'Los analistas indican que la subida del crudo podría tener un impacto significativo en los costos de transporte y en los precios de bienes y servicios, afectando directamente el presupuesto de las familias. Los combustibles, que representan un gasto esencial en muchas economías, podrían registrar incrementos en el corto plazo, aumentando la presión sobre el poder adquisitivo de los ciudadanos.',
       
@@ -245,7 +245,7 @@ export const economiaArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Los indicadores económicos muestran que la inflación continúa su tendencia alcista, afectando el poder adquisitivo.',
         imageUrl: '/images/news/economia/inflacion.jpg',
-        alt: 'Incremento de la inflación impacta a los mercados'
+        alt: 'Pantallas financieras mostrando gráficos de inflación y datos de mercado'
       },
       {
         id: 'economia-dolar',
@@ -256,7 +256,7 @@ export const economiaArticles: FullNewsArticle[] = [
         datetime: '2025-10-03',
         summary: 'La moneda estadounidense se fortalece significativamente ante la incertidumbre global y la política monetaria.',
         imageUrl: '/images/news/economia/dolar.avif',
-        alt: 'Dólar alcanza máximo del año frente a otras monedas'
+        alt: 'Billetes de dólar estadounidense y gráficos de tipo de cambio global'
       }
     ],
     breadcrumb: {
@@ -274,7 +274,7 @@ export const economiaArticles: FullNewsArticle[] = [
     datetime: '2025-10-09',
     summary: 'El Producto Interno Bruto (PIB) creció un 3,5% en el último trimestre, según los datos publicados por el gobierno, impulsado principalmente por un aumento en el consumo interno y en la inversión privada.',
     imageUrl: '/images/news/economia/pib.jpg',
-    alt: 'El PIB crece un 3,5% en el último trimestre impulsado por el consumo y la inversión',
+    alt: 'Gráfico de barras del PIB mostrando un incremento del 3,5%',
     content: [
       'El gasto de los hogares mostró un comportamiento positivo, con un incremento en la demanda de bienes duraderos y servicios, lo que refleja la confianza de los consumidores en la economía. Este crecimiento del consumo contribuyó significativamente al avance general del PIB.',
       
@@ -294,7 +294,7 @@ export const economiaArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Los indicadores económicos muestran que la inflación continúa su tendencia alcista, afectando el poder adquisitivo.',
         imageUrl: '/images/news/economia/inflacion.jpg',
-        alt: 'Incremento de la inflación impacta a los mercados'
+        alt: 'Pantallas financieras mostrando gráficos de inflación y datos de mercado'
       },
       {
         id: 'economia-dolar',
@@ -305,7 +305,7 @@ export const economiaArticles: FullNewsArticle[] = [
         datetime: '2025-10-03',
         summary: 'La moneda estadounidense se fortalece significativamente ante la incertidumbre global y la política monetaria.',
         imageUrl: '/images/news/economia/dolar.avif',
-        alt: 'Dólar alcanza máximo del año frente a otras monedas'
+        alt: 'Billetes de dólar estadounidense y gráficos de tipo de cambio global'
       }
     ],
     breadcrumb: {

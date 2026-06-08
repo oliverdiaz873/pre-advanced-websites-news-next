@@ -5,7 +5,7 @@
         "title": "Incremento de la inflación impacta a los mercados",
         "summary": "El aumento sostenido de la inflación genera incertidumbre en los mercados financieros y afecta el poder adquisitivo de los ciudadanos. Los precios de productos básicos y servicios esenciales continúan incrementándose, obligando a empresas y familias a ajustar presupuestos. Analistas advierten que, de no implementarse políticas económicas efectivas, esta tendencia podría persistir, impactando la inversión, el empleo y la estabilidad económica del país a mediano plazo.",
         "category": "Economía",
-        "alt": "Incremento de la inflación impacta a los mercados",
+        "alt": "Pantallas financieras mostrando gráficos de inflación y datos de mercado",
         "content": [
           "Según los informes más recientes, la inflación anual en las principales economías ha superado las expectativas de los analistas, impulsada por el aumento en los costos de la energía, los alimentos y el transporte. En varios países europeos, los precios registraron su mayor alza en más de un año, mientras que en Estados Unidos la tasa inflacionaria se mantiene por encima del objetivo del 2% establecido por la Reserva Federal.",
           "Las bolsas internacionales reaccionaron con volatilidad. El índice S&P 500 cayó más de un 1%, mientras que el Euro Stoxx 50 y el Nikkei japonés registraron descensos similares. Los inversores temen que los bancos centrales puedan retrasar los recortes de tasas de interés o incluso aplicar nuevas medidas restrictivas para contener el alza de precios.",
@@ -32,7 +32,7 @@
         "title": "La guerra de Ucrania llega a su fin",
         "summary": "Después de años de conflicto, la guerra en Ucrania ha llegado a su fin, marcando un momento histórico para la región y la comunidad internacional.",
         "category": "Internacional",
-        "alt": "La guerra de Ucrania llega a su fin",
+        "alt": "Líderes ucranianos e internacionales firmando un acuerdo de paz",
         "content": [
           "El acuerdo de paz fue firmado tras intensas negociaciones entre las partes involucradas, con mediación de organismos internacionales y líderes de varios países que buscaban poner fin a la violencia y el sufrimiento de la población civil.",
           "El presidente de Ucrania declaró que la nación iniciará un proceso de reconstrucción y reconciliación, enfatizando la necesidad de unidad y cooperación para superar los desafíos derivados del conflicto.",
@@ -48,7 +48,7 @@
         "title": "Protestas por corrupción",
         "summary": "Protestas por corrupción se han intensificado en varias ciudades del país durante los últimos días, reuniendo a miles de ciudadanos que exigen transparencia y rendición de cuentas por parte de las autoridades.",
         "category": "Política",
-        "alt": "Protestas por corrupción",
+        "alt": "Multitud de manifestantes marchando con pancartas en las calles",
         "content": [
           "Los manifestantes recorren las principales avenidas con pancartas y consignas, denunciando casos recientes de malversación de fondos y solicitando investigaciones imparciales.",
           "Las fuerzas de seguridad han desplegado operativos para mantener el orden, aunque se han reportado algunos enfrentamientos aislados entre manifestantes y la policía.",
@@ -74,7 +74,7 @@
         "title": "Investigan homicidio en el centro de la ciudad",
         "summary": "La policía local ha iniciado una investigación tras un homicidio ocurrido en el centro de la ciudad durante la madrugada del viernes, generando alarma en la comunidad.",
         "category": "Justicia",
-        "alt": "Investigan homicidio en el centro de la ciudad",
+        "alt": "Policía acordonando una calle durante la investigación de un homicidio",
         "content": [
           "Las autoridades informaron que el incidente tuvo lugar cerca de la intersección de las avenidas principales, en un área con alta actividad comercial. Testigos presentes en el lugar relataron haber escuchado gritos y detonaciones antes de que llegaran los primeros equipos de emergencia.",
           "Los oficiales encontraron a la víctima con heridas graves y confirmaron su fallecimiento en el sitio. Las fuerzas del orden han acordonado la zona para preservar la evidencia y permitir que los peritos realicen las diligencias correspondientes.",
@@ -86,9 +86,9 @@
       },
       "clima-huracan": {
         "title": "Huracán se forma en el Atlántico y amenaza la costa este",
-        "summary": "Las autoridades han emitido alertas de evacuación ante la aproximación de un huracán categoría 2.",
+        "summary": "Las autoridades han emitido alertas de evacuación ante la aproximación de un huracán categoría 3.",
         "category": "Clima",
-        "alt": "Huracán se forma en el Atlántico y amenaza la costa este",
+        "alt": "Imagen satelital de un huracán aproximándose a la costa",
         "content": [
           "El huracán, que se formó hace varios días en el Atlántico central, ha ganado fuerza rápidamente debido a las altas temperaturas del mar y a las condiciones atmosféricas favorables. Los meteorólogos del Centro Nacional de Huracanes de Estados Unidos informaron que el sistema alcanzó categoría 3 durante la madrugada y podría intensificarse aún más en las próximas horas.",
           "Los vientos sostenidos ya superan los 200 kilómetros por hora, con ráfagas aún más fuertes en las zonas cercanas al ojo del huracán. El fenómeno se desplaza hacia el noroeste a una velocidad aproximada de 20 kilómetros por hora, acercándose peligrosamente a la costa este estadounidense.",
@@ -106,7 +106,7 @@
         "title": "Detienen a exfuncionario acusado de fraude financiero millonario",
         "summary": "Las autoridades arrestaron este viernes a un exfuncionario público acusado de participar en un esquema de fraude financiero que habría desviado millones de dólares de fondos estatales.",
         "category": "Justicia",
-        "alt": "Detienen a exfuncionario acusado de fraude financiero millonario",
+        "alt": "Exfuncionario esposado siendo conducido por las autoridades",
         "content": [
           "La detención se produjo tras una extensa investigación encabezada por la fiscalía especializada en delitos económicos. De acuerdo con el informe preliminar, el exfuncionario presuntamente utilizó una red de empresas fantasma para desviar recursos destinados a programas de desarrollo social.",
           "Las autoridades afirman que el dinero fue transferido a cuentas en el extranjero y utilizado para la compra de propiedades de lujo. El detenido fue trasladado a un centro de detención preventiva, donde permanecerá bajo custodia mientras se formalizan los cargos.",
@@ -120,7 +120,7 @@
         "title": "La bolsa de valores cierra en alza tras jornada de optimismo inversor",
         "summary": "La bolsa de valores cerró en alza este jueves, impulsada por un renovado optimismo entre los inversores y la publicación de resultados financieros positivos de varias empresas líderes.",
         "category": "Economía",
-        "alt": "La bolsa de valores cierra en alza tras jornada de optimismo inversor",
+        "alt": "Pantalla de la bolsa mostrando números positivos del S&P 500 y Nasdaq",
         "content": [
           "El índice S&P 500 subió un 1,2%, mientras que el Dow Jones y el Nasdaq registraron incrementos del 1% y 1,5% respectivamente. Este comportamiento refleja la confianza de los inversores en la estabilidad económica y en las perspectivas de ganancias corporativas a corto plazo.",
           "Los analistas señalan que la combinación de estímulos monetarios, el avance en acuerdos comerciales y la reducción de incertidumbres políticas ha contribuido a la recuperación del mercado. Además, el sector tecnológico lideró las ganancias, con varias compañías superando las expectativas de los analistas.",
@@ -132,7 +132,7 @@
         "title": "Tormenta tropical se aproxima al Caribe y alerta a varios países",
         "summary": "Una tormenta tropical se aproxima al Caribe, generando alertas en varios países de la región. Los meteorólogos han emitido avisos para que la población se prepare ante posibles lluvias intensas.",
         "category": "Clima",
-        "alt": "Tormenta tropical se aproxima al Caribe y alerta a varios países",
+        "alt": "Imagen satelital de una tormenta tropical sobre el mar Caribe",
         "content": [
           "Una tormenta tropical se aproxima al Caribe, generando alertas en varios países de la región. Los meteorólogos han emitido avisos para que la población se prepare ante posibles lluvias intensas.",
           "Las autoridades meteorológicas han emitido advertencias de evacuación y han recomendado a los ciudadanos tomar medidas de seguridad, especialmente en zonas costeras bajas. Se espera que la tormenta se debilite en las próximas horas.",
@@ -145,7 +145,7 @@
         "title": "Los Lakers vencen a los Celtics 112-107 en un emocionante partido de la NBA",
         "summary": "Los Lakers de Los Ángeles derrotaron a los Boston Celtics 112-107 en un partido lleno de emoción y jugadas espectaculares que mantuvo a los fanáticos al borde de sus asientos.",
         "category": "Deporte",
-        "alt": "Los Lakers vencen a los Celtics 112-107 en un emocionante partido de la NBA",
+        "alt": "LeBron James de los Lakers lanzando contra la defensa de los Celtics",
         "content": [
           "El partido comenzó con una intensidad inusual desde el primer cuarto, con ambos equipos intercambiando jugadas y mostrando por qué son considerados dos de los mejores franchises de la historia de la NBA.",
           "LeBron James fue la figura destacada para los Lakers, contribuyendo con 28 puntos, 8 rebotes y 7 asistencias en una actuación que demuestra que todavía está en la cima de su carrera.",
@@ -161,7 +161,7 @@
         "title": "Encuestas Revelan Incremento en la Popularidad del Presidente",
         "summary": "Las últimas encuestas de opinión pública muestran un aumento significativo en la popularidad del presidente, reflejando un respaldo creciente de la ciudadanía hacia sus políticas y gestión gubernamental.",
         "category": "Política",
-        "alt": "Encuestas Revelan Incremento en la Popularidad del Presidente",
+        "alt": "Gráfico mostrando el aumento de la aprobación presidencial en encuestas de opinión",
         "content": [
           "Según los datos recopilados por diversas firmas encuestadoras, la aprobación del mandatario ha subido varios puntos porcentuales en comparación con los últimos meses, lo que indica una percepción positiva de su desempeño.",
           "Analistas políticos atribuyen este incremento a recientes iniciativas del gobierno en áreas clave como economía, salud y educación, así como a la comunicación efectiva de sus logros en medios de comunicación y redes sociales.",
@@ -176,7 +176,7 @@
         "title": "Atletas Rompen Récords Mundiales en Campeonato Internacional",
         "summary": "Atletas de diferentes países establecieron nuevas plusmarcas mundiales en el campeonato internacional de atletismo, superando marcas que llevaban años vigentes.",
         "category": "Deporte",
-        "alt": "Atletas Rompen Récords Mundiales en Campeonato Internacional",
+        "alt": "Atletas rompiendo récords mundiales en el campeonato internacional",
         "content": [
           "El estadio olímpico fue testigo de momentos históricos cuando tres atletas lograron superar récords mundiales que parecían imbatibles, marcando un hito en la historia del atletismo moderno.",
           "En la prueba de 100 metros planos, el velocista jamaicano Devon Allen corrió en 9.58 segundos, igualando la marca mundial y demostrando una velocidad extraordinaria.",
@@ -205,7 +205,7 @@
         "title": "Dólar alcanza máximo del año frente a otras monedas",
         "summary": "El dólar estadounidense ha alcanzado su máximo nivel del año frente a las principales divisas mundiales, impulsado por la incertidumbre global y las expectativas de política monetaria.",
         "category": "Economía",
-        "alt": "Dólar alcanza máximo del año frente a otras monedas",
+        "alt": "Billetes de dólar estadounidense y gráficos de tipo de cambio global",
         "content": [
           "El índice del dólar, que mide el rendimiento de la moneda estadounidense frente a una cesta de seis divisas importantes, ha subido un 2.3% en la última semana, posicionándose en su nivel más alto desde enero.",
           "Los analistas atribuyen este fortalecimiento a múltiples factores, incluyendo la persistente inflación que podría llevar a la Reserva Federal a mantener las tasas de interés altas por más tiempo de lo esperado.",
@@ -219,7 +219,7 @@
         "title": "Aprobación Histórica: El Congreso Da Luz Verde a la Ley de Protección Ambiental",
         "summary": "El Congreso aprobó de manera histórica la Ley de Protección Ambiental, marcando un hito en la legislación del país y consolidando un compromiso firme con la conservación de los recursos naturales y la sostenibilidad.",
         "category": "Política",
-        "alt": "Aprobación Histórica: El Congreso Da Luz Verde a la Ley de Protección Ambiental",
+        "alt": "Miembros del Congreso votando la ley de protección ambiental",
         "content": [
           "La votación contó con un amplio respaldo de los legisladores, quienes destacaron la importancia de esta ley para enfrentar los desafíos del cambio climático y proteger ecosistemas críticos para las futuras generaciones.",
           "La nueva normativa establece medidas estrictas para la preservación de bosques, ríos, mares y áreas protegidas, así como regulaciones sobre emisiones contaminantes y manejo responsable de residuos.",
@@ -236,7 +236,7 @@
         "title": "Casa Blanca Confirma Cumbre Internacional",
         "summary": "La Casa Blanca confirma cumbre internacional para esta semana para abordar temas globales incluyendo cambio climático y seguridad económica.",
         "category": "Política",
-        "alt": "Casa Blanca Confirma Cumbre Internacional",
+        "alt": "Edificio de la Casa Blanca albergando la cumbre internacional",
         "content": [
           "La Casa Blanca ha confirmado oficialmente la realización de una cumbre internacional que se llevará a cabo esta semana, con la participación de líderes de más de 50 países para abordar los desafíos más urgentes a nivel global.",
           "Entre los temas principales de la agenda se encuentran el cambio climático, la seguridad económica, la cooperación en salud pública y la estabilidad geopolítica en regiones conflictivas.",
@@ -250,7 +250,7 @@
         "title": "El Senado Debate Nueva Propuesta de Reforma Constitucional",
         "summary": "El Senado de la República inició esta semana el debate sobre una nueva propuesta de reforma constitucional que busca introducir cambios significativos en la estructura política del país.",
         "category": "Política",
-        "alt": "El Senado Debate Nueva Propuesta de Reforma Constitucional",
+        "alt": "Cámara del Senado durante el debate de la reforma constitucional",
         "content": [
           "La iniciativa, presentada por un grupo de legisladores de diferentes partidos, plantea ajustes en temas clave como la distribución del poder, la transparencia en la gestión pública y el fortalecimiento de los mecanismos de participación ciudadana.",
           "Durante la sesión plenaria, varios senadores expresaron sus posiciones respecto a los alcances de la reforma. Algunos destacaron la importancia de modernizar la Constitución para adaptarla a las demandas actuales de la sociedad, mientras que otros advirtieron sobre el riesgo de alterar artículos fundamentales sin el debido consenso político.",
@@ -267,7 +267,7 @@
         "title": "Debate Presidencial: Candidatos Confrontan sus Propuestas Frente al País",
         "summary": "El esperado debate presidencial se llevó a cabo anoche, reuniendo a los principales candidatos que aspiran a ocupar la primera magistratura del país. El evento, transmitido en cadena nacional, permitió a los aspirantes exponer y confrontar sus propuestas frente a millones de ciudadanos.",
         "category": "Política",
-        "alt": "Debate Presidencial: Candidatos Confrontan sus Propuestas Frente al País",
+        "alt": "Candidatos presidenciales debatiendo en el escenario durante el evento televisado",
         "content": [
           "Desde el inicio, el debate estuvo marcado por un tono enérgico y momentos de tensión, especialmente en los temas económicos y sociales. Los candidatos intercambiaron críticas, pero también aprovecharon para presentar soluciones concretas a los desafíos actuales del país.",
           "En materia económica, las posturas fueron diversas. Mientras algunos candidatos propusieron reducir impuestos para fomentar la inversión y el empleo, otros enfatizaron la necesidad de fortalecer los programas sociales y aumentar la recaudación fiscal de los sectores con mayores ingresos.",
@@ -284,7 +284,7 @@
         "title": "Crecen las tensiones entre Israel e Irán",
         "summary": "La región del Medio Oriente se mantiene en alerta máxima ante el aumento de las tensiones diplomáticas y militares entre Israel e Irán, con amenazas mutuas que preocupan a la comunidad internacional.",
         "category": "Internacional",
-        "alt": "Crecen las tensiones entre Israel e Irán",
+        "alt": "Mapa de Oriente Medio destacando Israel e Irán",
         "content": [
           "Las tensiones entre Israel e Irán han alcanzado su punto más alto en los últimos años, con ambos países intercambiando acusaciones y amenazas que han puesto a toda la región en estado de alerta.",
           "Fuentes diplomáticas indican que el conflicto se ha intensificado tras supuestos ataques a instalaciones estratégicas y el desarrollo de programas militares que ambas naciones consideran amenazas directas a su seguridad nacional.",
@@ -299,7 +299,7 @@
         "title": "La OTAN anuncia nuevos ejercicios militares en Europa del Este",
         "summary": "La Organización del Tratado del Atlántico Norte (OTAN) ha confirmado el despliegue de tropas y la realización de maniobras conjuntas en sus fronteras orientales, en respuesta a la inestabilidad geopolítica actual.",
         "category": "Internacional",
-        "alt": "La OTAN anuncia nuevos ejercicios militares en Europa del Este",
+        "alt": "Tropas y equipamiento militar de la OTAN en Europa del Este",
         "content": [
           "El secretario general de la alianza declaró que estos ejercicios tienen como objetivo fortalecer la capacidad defensiva de los países miembros y disuadir cualquier posible amenaza externa. Participarán miles de soldados de diferentes naciones, junto con unidades aéreas y navales.",
           "Los simulacros incluirán operaciones tácticas, defensa cibernética y logística de despliegue rápido. Se espera que estas maniobras sean las más grandes de la última década en la región, enviando un mensaje claro de unidad y preparación.",
@@ -312,7 +312,7 @@
         "title": "Unión Europea impulsa energías renovables con nuevas directivas ambiciosas",
         "summary": "La Unión Europea ha aprobado una serie de directivas destinadas a acelerar la transición hacia fuentes de energía sostenibles, con el objetivo de reducir drásticamente las emisiones de carbono en la próxima década.",
         "category": "Internacional",
-        "alt": "Unión Europea impulsa energías renovables con nuevas directivas ambiciosas",
+        "alt": "Banderas de la Unión Europea con turbinas eólicas de energía renovable",
         "content": [
           "El plan, conocido como \"Pacto Verde Europeo 2.0\", establece metas obligatorias para que los estados miembros aumenten la proporción de energía solar, eólica e hidroeléctrica en su matriz energética. También se contempla la eliminación gradual de subsidios a los combustibles fósiles.",
           "Líderes europeos destacaron la urgencia de estas medidas frente a la crisis climática global. \"No hay tiempo que perder\", afirmó la presidenta de la Comisión Europea, subrayando que la inversión en energías limpias también generará millones de empleos y fortalecerá la seguridad energética del continente.",
@@ -325,7 +325,7 @@
         "title": "Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional",
         "summary": "Nuevas conversaciones entre China y Estados Unidos han marcado un giro significativo en la política internacional, con el objetivo de mejorar las relaciones bilaterales y abordar conflictos económicos y diplomáticos recientes.",
         "category": "Internacional",
-        "alt": "Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional",
+        "alt": "Banderas de China y Estados Unidos representando conversaciones bilaterales",
         "content": [
           "Los líderes de ambos países se reunieron en un encuentro diplomático de alto nivel, donde discutieron temas clave como comercio, seguridad regional, cambio climático y cooperación tecnológica.",
           "Fuentes oficiales indicaron que las negociaciones fueron constructivas, destacando la voluntad de ambas naciones de encontrar soluciones que eviten tensiones y promuevan la estabilidad global.",
@@ -353,7 +353,7 @@
         "title": "El euro alcanza su valor más alto frente al dólar en seis meses",
         "summary": "El euro alcanzó este jueves su valor más alto frente al dólar en los últimos seis meses, superando la barrera de los 1,12 dólares por primera vez desde abril. Este fortalecimiento de la moneda europea refleja un cambio en la dinámica económica global y un aumento de la confianza de los mercados en la estabilidad de la zona euro.",
         "category": "Economía",
-        "alt": "El euro alcanza su valor más alto frente al dólar en seis meses",
+        "alt": "Monedas y billetes de euro con gráfico de tipo de cambio frente al dólar",
         "content": [
           "Los analistas atribuyen este repunte a una combinación de factores, entre ellos las señales de una posible pausa en las subidas de tasas de interés por parte de la Reserva Federal de Estados Unidos. La desaceleración económica en el país norteamericano ha reducido la demanda del dólar como activo refugio, lo que ha favorecido la recuperación del euro en los mercados internacionales.",
           "Al mismo tiempo, los datos recientes de la economía europea han mostrado una ligera mejora en la actividad industrial y en los índices de confianza empresarial. Países como Alemania, Francia y España han presentado indicadores más sólidos de lo esperado, lo que ha impulsado el optimismo sobre el crecimiento en la eurozona durante los próximos meses.",
@@ -368,7 +368,7 @@
         "title": "Petróleo registra fuerte repunte y preocupa a consumidores y empresas",
         "summary": "El precio del petróleo registró un fuerte repunte este jueves, alcanzando niveles no vistos en los últimos meses y generando preocupación tanto entre los consumidores como entre las empresas a nivel global. Este aumento se atribuye a una combinación de factores, incluyendo tensiones geopolíticas en regiones productoras y restricciones en la oferta por parte de algunos países miembros de la OPEP.",
         "category": "Economía",
-        "alt": "Petróleo registra fuerte repunte y preocupa a consumidores y empresas",
+        "alt": "Barriles de petróleo y gráfico de precios en alza en una pantalla financiera",
         "content": [
           "Los analistas indican que la subida del crudo podría tener un impacto significativo en los costos de transporte y en los precios de bienes y servicios, afectando directamente el presupuesto de las familias. Los combustibles, que representan un gasto esencial en muchas economías, podrían registrar incrementos en el corto plazo, aumentando la presión sobre el poder adquisitivo de los ciudadanos.",
           "Por el lado empresarial, las compañías de transporte, logística y producción enfrentan un aumento en sus costos operativos. Varias empresas han comenzado a ajustar precios y revisar contratos de suministro para mitigar los efectos del incremento del petróleo en sus márgenes de ganancia.",
@@ -381,7 +381,7 @@
         "title": "El PIB crece un 3,5% en el último trimestre impulsado por el consumo y la inversión",
         "summary": "El Producto Interno Bruto (PIB) creció un 3,5% en el último trimestre, según los datos publicados por el gobierno, impulsado principalmente por un aumento en el consumo interno y en la inversión privada.",
         "category": "Economía",
-        "alt": "El PIB crece un 3,5% en el último trimestre impulsado por el consumo y la inversión",
+        "alt": "Gráfico de barras del PIB mostrando un incremento del 3,5%",
         "content": [
           "El gasto de los hogares mostró un comportamiento positivo, con un incremento en la demanda de bienes duraderos y servicios, lo que refleja la confianza de los consumidores en la economía. Este crecimiento del consumo contribuyó significativamente al avance general del PIB.",
           "Por su parte, la inversión empresarial también experimentó un aumento notable. Las empresas han incrementado sus gastos en infraestructura, tecnología y expansión de operaciones, lo que ha generado un efecto multiplicador sobre el empleo y la producción.",
@@ -419,7 +419,7 @@
         "title": "El consumo excesivo de azúcares aumenta el riesgo de enfermedades metabólicas",
         "summary": "El consumo excesivo de azúcares añadidos se ha convertido en un problema crítico de salud pública, afectando a millones de personas en todo el mundo y contribuyendo al aumento de enfermedades crónicas graves.",
         "category": "Salud",
-        "alt": "El consumo excesivo de azúcares aumenta el riesgo de enfermedades metabólicas",
+        "alt": "Variedad de alimentos y bebidas azucaradas sobre una mesa",
         "content": [
           "Estudios recientes, validados por múltiples instituciones sanitarias, muestran que una ingesta elevada de azúcares añadidos está directamente relacionada con un mayor riesgo de desarrollar enfermedades metabólicas complejas, como diabetes tipo 2, obesidad severa y síndrome metabólico.",
           "Los expertos advierten que el consumo frecuente de bebidas azucaradas, dulces y alimentos ultraprocesados puede alterar rápidamente los niveles de glucosa en la sangre y afectar la función de la insulina, creando una resistencia que contribuye al deterioro de la salud a largo plazo.",
@@ -445,7 +445,7 @@
         "title": "España se clasifica para la final del Mundial de Fútbol tras vencer a Alemania",
         "summary": "España se clasificó para la final del Mundial de Fútbol tras vencer a Alemania en un emocionante partido lleno de intensidad y momentos memorables. Desde el inicio, ambos equipos mostraron un alto nivel de juego, manteniendo a los aficionados al borde de sus asientos.",
         "category": "Deporte",
-        "alt": "España se clasifica para la final del Mundial de Fútbol tras vencer a Alemania",
+        "alt": "Selección española de fútbol celebrando la clasificación a la final del Mundial",
         "content": [
           "El primer tiempo estuvo marcado por la presión ofensiva de Alemania, que generó varias oportunidades de gol, pero la defensa española se mantuvo firme, con destacadas intervenciones del portero y una coordinación impecable en la línea defensiva.",
           "En la segunda mitad, España logró imponer su ritmo de juego. El gol decisivo llegó gracias a una jugada colectiva que culminó con un remate preciso de un jugador destacado, desatando la euforia en la grada y marcando la diferencia en el marcador.",
@@ -459,7 +459,7 @@
         "title": "Los Mets vencen a los Braves en un partido decisivo de la MLB",
         "summary": "Los Mets lograron una victoria impresionante sobre los Braves en un partido decisivo de la MLB, que mantuvo a los fanáticos al borde de sus asientos hasta el último out.",
         "category": "Deporte",
-        "alt": "Los Mets vencen a los Braves en un partido decisivo de la MLB",
+        "alt": "Lanzador de los Mets tirando la pelota en un estadio de béisbol lleno",
         "content": [
           "El partido comenzó con ambos equipos mostrando un juego sólido en la ofensiva y defensiva, pero fueron los Mets quienes lograron abrir el marcador en la tercera entrada gracias a un home run de su estrella principal.",
           "Los Braves intentaron reaccionar, conectando hits importantes en la quinta y sexta entrada, pero la excelente actuación del pitcher abridor de los Mets mantuvo a raya a los bateadores rivales.",
@@ -475,7 +475,7 @@
         "title": "La selección estadounidense domina el relevo 4x100 metros en el Mundial de Natación",
         "summary": "La selección estadounidense se consagró como la gran protagonista en el relevo 4x100 metros del Mundial de Natación, dominando la competencia de principio a fin y llevándose la medalla de oro con un tiempo impresionante.",
         "category": "Deporte",
-        "alt": "La selección estadounidense domina el relevo 4x100 metros en el Mundial de Natación",
+        "alt": "Equipo de relevos estadounidense celebrando la medalla de oro en la piscina",
         "content": [
           "El equipo, compuesto por cuatro nadadores de élite, mostró una coordinación perfecta y relevos precisos, dejando claro su superioridad frente a rivales de todo el mundo.",
           "Desde la salida hasta el último tramo, los estadounidenses mantuvieron el liderazgo, con cada nadador realizando una performance destacada que contribuyó al récord personal del equipo y a su victoria contundente.",
@@ -492,7 +492,7 @@
         "title": "Ola de calor extremo afecta a varias regiones del país",
         "summary": "Las temperaturas máximas superan los 40 grados en varias provincias, generando alertas por riesgos para la salud.",
         "category": "Clima",
-        "alt": "Ola de calor extremo afecta a varias regiones del país",
+        "alt": "Termómetro marcando temperatura extrema en un paisaje urbano",
         "content": [
           "Una ola de calor histórica afecta a gran parte de Europa, provocando temperaturas récord en varias ciudades.",
           "Las autoridades han emitido alertas para extremar precauciones, especialmente para ancianos y personas con enfermedades crónicas.",
@@ -506,7 +506,7 @@
         "title": "Inundaciones afectan a miles de personas en el sur",
         "summary": "Las lluvias torrenciales han causado desbordamiento de ríos, afectando a comunidades enteras.",
         "category": "Clima",
-        "alt": "Inundaciones afectan a miles de personas en el sur",
+        "alt": "Calles inundadas en una ciudad sudamericana tras lluvias torrenciales",
         "content": [
           "Fuertes lluvias han azotado en los últimos días a varias regiones de Sudamérica, provocando graves inundaciones que han afectado a miles de personas y dejado importantes daños materiales.",
           "Los países más golpeados por las intensas precipitaciones son Brasil, Argentina, Paraguay, Bolivia y Perú, donde se han reportado desbordamientos de ríos, deslizamientos de tierra y cortes de carreteras.",
@@ -526,7 +526,7 @@
         "title": "Nevadas históricas paralizan el norte del país",
         "summary": "Las nevadas más intensas en décadas han dejado incomunicadas a varias poblaciones del norte.",
         "category": "Clima",
-        "alt": "Nevadas históricas paralizan el norte del país",
+        "alt": "Carreteras y edificios cubiertos de nieve en el norte de Europa",
         "content": [
           "Nevadas intensas están afectando el norte de Europa, causando interrupciones significativas en el transporte y generando riesgos para la población en varias regiones.",
           "Las fuertes precipitaciones de nieve han acumulado grandes cantidades en carreteras, calles y autopistas, lo que ha obligado a las autoridades a implementar cierres temporales para garantizar la seguridad de los conductores.",
@@ -544,7 +544,7 @@
         "title": "Tornado causa graves daños en el centro del país",
         "summary": "Un tornado de categoría F3 ha dejado un rastro de destrucción en varias comunidades del interior, causando daños materiales significativos y afectando a cientos de familias.",
         "category": "Clima",
-        "alt": "Tornado causa graves daños en el centro del país",
+        "alt": "Tornado F3 tocando tierra en una zona residencial",
         "content": [
           "Un poderoso tornado de categoría F3 azotó varias comunidades del centro del país, dejando un rastro de destrucción que ha afectado a más de 500 familias y causado daños estimados en millones de dólares.",
           "Las autoridades de protección civil han desplegado equipos de rescate y asistencia humanitaria en las zonas más afectadas, donde numerosas viviendas han sido destruidas o dañadas severamente.",
@@ -558,7 +558,7 @@
         "title": "Tribunal Supremo confirma sentencia histórica en caso de corrupción",
         "summary": "El Tribunal Supremo ha confirmado la sentencia dictada en un caso de corrupción política que ha conmocionado al país, estableciendo un precedente importante en la lucha contra la impunidad.",
         "category": "Justicia",
-        "alt": "Tribunal Supremo confirma sentencia histórica en caso de corrupción",
+        "alt": "Jueces ingresando al Tribunal Supremo para una sentencia histórica",
         "content": [
           "La decisión del máximo tribunal del país fue unánime y ratifica las condenas impuestas por tribunales inferiores contra varios funcionarios de alto nivel involucrados en actos de corrupción.",
           "El caso, que se ha extendido por más de tres años, ha sido uno de los más mediáticos de la última década, revelando una red de sobornos y favoritismo que afectó la adjudicación de contratos públicos por millones de dólares.",
@@ -573,7 +573,7 @@
         "title": "Condenan a cadena perpetua a líder de organización criminal internacional",
         "summary": "El líder de una organización criminal internacional ha sido condenado a cadena perpetua tras un largo proceso judicial que se extendió por varios años.",
         "category": "Justicia",
-        "alt": "Condenan a cadena perpetua a líder de organización criminal internacional",
+        "alt": "Sala de tribunal durante la sentencia de un líder criminal internacional",
         "content": [
           "La sentencia fue dictada por un tribunal especializado en delitos de crimen organizado, luego de que se presentaran pruebas contundentes que vinculan al acusado con actividades ilícitas a nivel mundial, incluyendo tráfico de drogas, lavado de dinero y corrupción.",
           "Durante el juicio, se presentaron testimonios de exintegrantes de la organización y evidencia financiera que demostró la magnitud de las operaciones ilegales lideradas por el condenado.",
@@ -589,7 +589,7 @@
         "title": "Fiscalía inicia juicio contra empresa por evasión fiscal millonaria",
         "summary": "La Fiscalía General ha iniciado un juicio contra una importante empresa nacional acusada de evasión fiscal millonaria, lo que podría derivar en sanciones históricas.",
         "category": "Justicia",
-        "alt": "Fiscalía inicia juicio contra empresa por evasión fiscal millonaria",
+        "alt": "Edificio corporativo con investigadores de la fiscalía ingresando",
         "content": [
           "Según los informes preliminares, la compañía habría omitido declarar ingresos significativos durante varios años, generando un perjuicio económico al Estado. El caso se abrió luego de una investigación de la unidad especializada en delitos financieros.",
           "Durante la audiencia inicial, los representantes de la empresa negaron las acusaciones, asegurando que todos los registros contables cumplen con la normativa vigente. Sin embargo, la Fiscalía presentó documentos y pruebas que evidencian la supuesta evasión.",
@@ -602,7 +602,7 @@
         "title": "Juez ordena prisión preventiva para acusado de homicidio múltiple",
         "summary": "El juez del caso ha dictado prisión preventiva contra el acusado, considerando necesario asegurar su presencia en el juicio debido a la gravedad de los cargos y el riesgo de fuga.",
         "category": "Justicia",
-        "alt": "Juez ordena prisión preventiva para acusado de homicidio múltiple",
+        "alt": "Juez revisando expedientes de un caso de homicidio múltiple",
         "content": [
           "La decisión se tomó luego de una audiencia en la que se presentaron pruebas contundentes que vinculan al acusado con varios homicidios ocurridos en la ciudad durante los últimos meses. El fiscal argumentó que la libertad del imputado representaría un peligro para la sociedad.",
           "La defensa del acusado manifestó que respetará la decisión del juez, pero adelantó que presentará recursos legales para solicitar una revisión de la medida. Mientras tanto, el acusado permanecerá en un centro de detención de máxima seguridad.",
@@ -615,7 +615,7 @@
         "title": "La democracia y el reto de la transparencia",
         "summary": "La confianza ciudadana depende cada vez mas de instituciones abiertas y responsables.",
         "category": "Opinion",
-        "alt": "La democracia y el reto de la transparencia",
+        "alt": "Ilustración de instituciones democráticas y conceptos de transparencia",
         "content": [
           "En el complejo escenario politico actual, la transparencia se ha consolidado no solo como un requisito etico, sino como el pilar fundamental que sostiene la legitimidad de las democracias modernas. La confianza de los ciudadanos en sus representantes e instituciones se ha visto erosionada por anos de opacidad y falta de rendicion de cuentas, creando una brecha que solo puede cerrarse con luz y honestidad.",
           "La verdadera transparencia va mas alla de publicar documentos en portales web; implica una voluntad real de exponer los procesos de toma de decisiones al escrutinio publico. Cuando los gobiernos ocultan las razones detras de sus politicas o los detalles de su gasto, fomentan un clima de sospecha que alimenta el populismo y la desafeccion politica.",
@@ -626,7 +626,7 @@
         "title": "Hacia donde va la economia global?",
         "summary": "Analizamos los factores que marcaran el rumbo economico en los proximos anos.",
         "category": "Opinion",
-        "alt": "Hacia donde va la economia global?",
+        "alt": "Representación visual de tendencias económicas globales y tecnología de IA",
         "content": [
           "Nos encontramos en un punto de inflexion sin precedentes en la historia economica contemporanea. La globalizacion, tal como la conociamos, esta siendo redefinida por tensiones geopoliticas, la transicion energetica y la irrupcion masiva de la inteligencia artificial. Estos factores no solo estan cambiando el que producimos, sino el como y donde lo hacemos.",
           "La inflacion, aunque parece estar bajo control en algunas regiones, ha dejado una huella profunda en la estructura de costes de las empresas y en el presupuesto de las familias. El gran reto de los bancos centrales sera navegar este nuevo entorno sin sofocar el crecimiento necesario para financiar la transicion hacia una economia verde.",
@@ -637,7 +637,7 @@
         "title": "La importancia de la salud preventiva",
         "summary": "Invertir en prevencion es fundamental para mantener una poblacion saludable y reducir gastos sanitarios.",
         "category": "Opinion",
-        "alt": "La importancia de la salud preventiva",
+        "alt": "Ilustración de cuidados médicos preventivos y chequeos de salud",
         "content": [
           "El sistema sanitario global ha estado historicamente enfocado en la cura, reaccionando ante la enfermedad una vez que esta se manifiesta. Sin embargo, la verdadera revolucion medica del siglo XXI reside en la prevencion. Invertir en salud preventiva no es solo una cuestion de bienestar individual, es una estrategia de supervivencia para los sistemas publicos de salud.",
           "Cada euro invertido en campanas de vacunacion, deteccion temprana y promocion de habitos saludables ahorra miles de euros en tratamientos cronicos y hospitalizaciones complejas. La tecnologia hoy nos permite monitorear nuestra salud en tiempo real, ofreciendonos una oportunidad unica para intervenir antes de que el dano sea irreversible.",

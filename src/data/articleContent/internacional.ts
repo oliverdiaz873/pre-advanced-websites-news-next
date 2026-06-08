@@ -10,7 +10,7 @@ export const internacionalArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'Nuevas conversaciones entre China y Estados Unidos han marcado un giro significativo en la política internacional, con el objetivo de mejorar las relaciones bilaterales y abordar conflictos económicos y diplomáticos recientes.',
     imageUrl: '/images/news/internacional/china.jpg',
-    alt: 'Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional',
+    alt: 'Banderas de China y Estados Unidos representando conversaciones bilaterales',
     content: [
       'Los líderes de ambos países se reunieron en un encuentro diplomático de alto nivel, donde discutieron temas clave como comercio, seguridad regional, cambio climático y cooperación tecnológica.',
       
@@ -36,7 +36,7 @@ export const internacionalArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Tras años de conflicto, se firma un acuerdo de paz histórico para la región.',
         imageUrl: '/images/news/internacional/guerra.jpg',
-        alt: 'La guerra de Ucrania llega a su fin'
+        alt: 'Líderes ucranianos e internacionales firmando un acuerdo de paz'
       },
       {
         id: 'internacional-israel-iran',
@@ -47,7 +47,7 @@ export const internacionalArticles: FullNewsArticle[] = [
         datetime: '2025-10-03',
         summary: 'La región se mantiene en alerta ante el aumento de la retórica hostil.',
         imageUrl: '/images/news/internacional/israel-and-iran.jpg',
-        alt: 'Crecen las tensiones entre Israel e Irán'
+        alt: 'Mapa de Oriente Medio destacando Israel e Irán'
       }
     ],
     breadcrumb: {
@@ -65,7 +65,7 @@ export const internacionalArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'Después de años de conflicto, la guerra en Ucrania ha llegado a su fin, marcando un momento histórico para la región y la comunidad internacional.',
     imageUrl: '/images/news/internacional/guerra.jpg',
-    alt: 'La guerra de Ucrania llega a su fin',
+    alt: 'Líderes ucranianos e internacionales firmando un acuerdo de paz',
     content: [
       'El acuerdo de paz fue firmado tras intensas negociaciones entre las partes involucradas, con mediación de organismos internacionales y líderes de varios países que buscaban poner fin a la violencia y el sufrimiento de la población civil.',
       
@@ -104,7 +104,7 @@ export const internacionalArticles: FullNewsArticle[] = [
         datetime: '2025-10-03',
         summary: 'La región se mantiene en alerta ante el aumento de la retórica hostil.',
         imageUrl: '/images/news/internacional/israel-and-iran.jpg',
-        alt: 'Crecen las tensiones entre Israel e Irán'
+        alt: 'Mapa de Oriente Medio destacando Israel e Irán'
       }
     ],
     breadcrumb: {
@@ -122,7 +122,7 @@ export const internacionalArticles: FullNewsArticle[] = [
     datetime: '2025-10-03',
     summary: 'La región del Medio Oriente se mantiene en alerta máxima ante el aumento de las tensiones diplomáticas y militares entre Israel e Irán, con amenazas mutuas que preocupan a la comunidad internacional.',
     imageUrl: '/images/news/internacional/israel-and-iran.jpg',
-    alt: 'Crecen las tensiones entre Israel e Irán',
+    alt: 'Mapa de Oriente Medio destacando Israel e Irán',
     content: [
       'Las tensiones entre Israel e Irán han alcanzado su punto más alto en los últimos años, con ambos países intercambiando acusaciones y amenazas que han puesto a toda la región en estado de alerta.',
       
@@ -159,7 +159,7 @@ export const internacionalArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Tras años de conflicto, se firma un acuerdo de paz histórico para la región.',
         imageUrl: '/images/news/internacional/guerra.jpg',
-        alt: 'La guerra de Ucrania llega a su fin'
+        alt: 'Líderes ucranianos e internacionales firmando un acuerdo de paz'
       }
     ],
     breadcrumb: {
@@ -177,7 +177,7 @@ export const internacionalArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'La Organización del Tratado del Atlántico Norte (OTAN) ha confirmado el despliegue de tropas y la realización de maniobras conjuntas en sus fronteras orientales, en respuesta a la inestabilidad geopolítica actual.',
     imageUrl: '/images/news/internacional/nato.jpg',
-    alt: 'La OTAN anuncia nuevos ejercicios militares en Europa del Este',
+    alt: 'Tropas y equipamiento militar de la OTAN en Europa del Este',
     content: [
       'El secretario general de la alianza declaró que estos ejercicios tienen como objetivo fortalecer la capacidad defensiva de los países miembros y disuadir cualquier posible amenaza externa. Participarán miles de soldados de diferentes naciones, junto con unidades aéreas y navales.',
       
@@ -199,7 +199,7 @@ export const internacionalArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Tras años de conflicto, se firma un acuerdo de paz histórico para la región.',
         imageUrl: '/images/news/internacional/guerra.jpg',
-        alt: 'La guerra de Ucrania llega a su fin'
+        alt: 'Líderes ucranianos e internacionales firmando un acuerdo de paz'
       },
       {
         id: 'internacional-china-usa',
@@ -228,7 +228,7 @@ export const internacionalArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'La Unión Europea ha aprobado una serie de directivas destinadas a acelerar la transición hacia fuentes de energía sostenibles, con el objetivo de reducir drásticamente las emisiones de carbono en la próxima década.',
     imageUrl: '/images/news/internacional/europa.jpg',
-    alt: 'Unión Europea impulsa energías renovables con nuevas directivas ambiciosas',
+    alt: 'Banderas de la Unión Europea con turbinas eólicas de energía renovable',
     content: [
       'El plan, conocido como "Pacto Verde Europeo 2.0", establece metas obligatorias para que los estados miembros aumenten la proporción de energía solar, eólica e hidroeléctrica en su matriz energética. También se contempla la eliminación gradual de subsidios a los combustibles fósiles.',
       
@@ -250,7 +250,7 @@ export const internacionalArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Tras años de conflicto, se firma un acuerdo de paz histórico para la región.',
         imageUrl: '/images/news/internacional/guerra.jpg',
-        alt: 'La guerra de Ucrania llega a su fin'
+        alt: 'Líderes ucranianos e internacionales firmando un acuerdo de paz'
       },
       {
         id: 'internacional-china-usa',
@@ -301,7 +301,7 @@ export const internacionalArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Tras años de conflicto, se firma un acuerdo de paz histórico para la región.',
         imageUrl: '/images/news/internacional/guerra.jpg',
-        alt: 'La guerra de Ucrania llega a su fin'
+        alt: 'Líderes ucranianos e internacionales firmando un acuerdo de paz'
       },
       {
         id: 'internacional-china-usa',

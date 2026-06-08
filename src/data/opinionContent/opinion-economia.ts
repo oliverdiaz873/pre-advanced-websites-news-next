@@ -9,7 +9,7 @@ export const opinionEconomiaContent: ArticleContent = {
   category: 'Opinion',
   summary: 'Analizamos los factores que marcaran el rumbo economico en los proximos anos.',
   imageUrl: '/images/opiniones/opinion-economia.jpg',
-  alt: 'Hacia donde va la economia global?',
+  alt: 'Representación visual de tendencias económicas globales y tecnología de IA',
   breadcrumb: {
     home: 'Inicio',
     category: 'Opinion',

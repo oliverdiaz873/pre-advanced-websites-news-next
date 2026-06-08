@@ -9,7 +9,7 @@ export const opinionSaludContent: ArticleContent = {
   category: 'Opinion',
   summary: 'Invertir en prevencion es fundamental para mantener una poblacion saludable y reducir gastos sanitarios.',
   imageUrl: '/images/news/salud/antibioticos.avif',
-  alt: 'La importancia de la salud preventiva',
+  alt: 'Ilustración de cuidados médicos preventivos y chequeos de salud',
   breadcrumb: {
     home: 'Inicio',
     category: 'Opinion',

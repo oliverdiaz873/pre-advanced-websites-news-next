@@ -10,7 +10,7 @@ export const politicaArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'Las últimas encuestas de opinión pública muestran un aumento significativo en la popularidad del presidente, reflejando un respaldo creciente de la ciudadanía hacia sus políticas y gestión gubernamental.',
     imageUrl: '/images/news/politica/presidente.avif',
-    alt: 'Encuestas Revelan Incremento en la Popularidad del Presidente',
+    alt: 'Gráfico mostrando el aumento de la aprobación presidencial en encuestas de opinión',
     content: [
       'Según los datos recopilados por diversas firmas encuestadoras, la aprobación del mandatario ha subido varios puntos porcentuales en comparación con los últimos meses, lo que indica una percepción positiva de su desempeño.',
       
@@ -36,7 +36,7 @@ export const politicaArticles: FullNewsArticle[] = [
         datetime: '2025-10-03',
         summary: 'La Casa Blanca confirma cumbre internacional para esta semana para abordar temas globales.',
         imageUrl: '/images/news/politica/casa-blanca.jpg',
-        alt: 'Casa Blanca Confirma Cumbre Internacional'
+        alt: 'Edificio de la Casa Blanca albergando la cumbre internacional'
       },
       {
         id: 'politica-ley-ambiental',
@@ -47,7 +47,7 @@ export const politicaArticles: FullNewsArticle[] = [
         datetime: '2025-10-02',
         summary: 'El Congreso da luz verde a la Ley de Protección Ambiental marcando un hito legislativo.',
         imageUrl: '/images/news/politica/congreso.avif',
-        alt: 'Aprobación Histórica: Ley Ambiental'
+        alt: 'Miembros del Congreso votando la ley de protección ambiental'
       }
     ],
     breadcrumb: {
@@ -65,7 +65,7 @@ export const politicaArticles: FullNewsArticle[] = [
     datetime: '2025-10-03',
     summary: 'La Casa Blanca confirma cumbre internacional para esta semana para abordar temas globales incluyendo cambio climático y seguridad económica.',
     imageUrl: '/images/news/politica/casa-blanca.jpg',
-    alt: 'Casa Blanca Confirma Cumbre Internacional',
+    alt: 'Edificio de la Casa Blanca albergando la cumbre internacional',
     content: [
       'La Casa Blanca ha confirmado oficialmente la realización de una cumbre internacional que se llevará a cabo esta semana, con la participación de líderes de más de 50 países para abordar los desafíos más urgentes a nivel global.',
       
@@ -89,7 +89,7 @@ export const politicaArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Las últimas encuestas muestran un aumento significativo en la popularidad del presidente.',
         imageUrl: '/images/news/politica/presidente.avif',
-        alt: 'Encuestas Revelan Incremento en la Popularidad del Presidente'
+        alt: 'Gráfico mostrando el aumento de la aprobación presidencial en encuestas de opinión'
       },
       {
         id: 'politica-ley-ambiental',
@@ -100,7 +100,7 @@ export const politicaArticles: FullNewsArticle[] = [
         datetime: '2025-10-02',
         summary: 'El Congreso da luz verde a la Ley de Protección Ambiental marcando un hito legislativo.',
         imageUrl: '/images/news/politica/congreso.avif',
-        alt: 'Aprobación Histórica: Ley Ambiental'
+        alt: 'Miembros del Congreso votando la ley de protección ambiental'
       }
     ],
     breadcrumb: {
@@ -118,7 +118,7 @@ export const politicaArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'El Congreso aprobó de manera histórica la Ley de Protección Ambiental, marcando un hito en la legislación del país y consolidando un compromiso firme con la conservación de los recursos naturales y la sostenibilidad.',
     imageUrl: '/images/news/politica/congreso.avif',
-    alt: 'Aprobación Histórica: El Congreso Da Luz Verde a la Ley de Protección Ambiental',
+    alt: 'Miembros del Congreso votando la ley de protección ambiental',
     content: [
       'La votación contó con un amplio respaldo de los legisladores, quienes destacaron la importancia de esta ley para enfrentar los desafíos del cambio climático y proteger ecosistemas críticos para las futuras generaciones.',
       
@@ -159,7 +159,7 @@ export const politicaArticles: FullNewsArticle[] = [
         datetime: '2025-10-03',
         summary: 'La Casa Blanca confirma cumbre internacional para esta semana para abordar temas globales.',
         imageUrl: '/images/news/politica/casa-blanca.jpg',
-        alt: 'Casa Blanca Confirma Cumbre Internacional'
+        alt: 'Edificio de la Casa Blanca albergando la cumbre internacional'
       }
     ],
     breadcrumb: {
@@ -177,7 +177,7 @@ export const politicaArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'Protestas por corrupción se han intensificado en varias ciudades del país durante los últimos días, reuniendo a miles de ciudadanos que exigen transparencia y rendición de cuentas por parte de las autoridades.',
     imageUrl: '/images/news/politica/protestas.jpg',
-    alt: 'Protestas por corrupción',
+    alt: 'Multitud de manifestantes marchando con pancartas en las calles',
     content: [
       'Los manifestantes recorren las principales avenidas con pancartas y consignas, denunciando casos recientes de malversación de fondos y solicitando investigaciones imparciales.',
       
@@ -199,7 +199,7 @@ export const politicaArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Encuestas revelan incremento en la popularidad del presidente tras recientes medidas económicas.',
         imageUrl: '/images/news/politica/presidente.avif',
-        alt: 'Encuestas Revelan Incremento en la Popularidad del Presidente'
+        alt: 'Gráfico mostrando el aumento de la aprobación presidencial en encuestas de opinión'
       },
       {
         id: 'politica-casa-blanca',
@@ -210,7 +210,7 @@ export const politicaArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'La Casa Blanca confirma cumbre internacional para esta semana para abordar temas globales.',
         imageUrl: '/images/news/politica/casa-blanca.jpg',
-        alt: 'Casa Blanca Confirma Cumbre Internacional'
+        alt: 'Edificio de la Casa Blanca albergando la cumbre internacional'
       }
     ],
     breadcrumb: {
@@ -228,7 +228,7 @@ export const politicaArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'El esperado debate presidencial se llevó a cabo anoche, reuniendo a los principales candidatos que aspiran a ocupar la primera magistratura del país. El evento, transmitido en cadena nacional, permitió a los aspirantes exponer y confrontar sus propuestas frente a millones de ciudadanos.',
     imageUrl: '/images/news/politica/debate.jpg',
-    alt: 'Debate Presidencial: Candidatos Confrontan sus Propuestas Frente al País',
+    alt: 'Candidatos presidenciales debatiendo en el escenario durante el evento televisado',
     content: [
       'Desde el inicio, el debate estuvo marcado por un tono enérgico y momentos de tensión, especialmente en los temas económicos y sociales. Los candidatos intercambiaron críticas, pero también aprovecharon para presentar soluciones concretas a los desafíos actuales del país.',
       
@@ -258,7 +258,7 @@ export const politicaArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Encuestas revelan incremento en la popularidad del presidente tras recientes medidas económicas.',
         imageUrl: '/images/news/politica/presidente.avif',
-        alt: 'Encuestas Revelan Incremento en la Popularidad del Presidente'
+        alt: 'Gráfico mostrando el aumento de la aprobación presidencial en encuestas de opinión'
       },
       {
         id: 'politica-ley-ambiental',
@@ -269,7 +269,7 @@ export const politicaArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'El Congreso da luz verde a la Ley de Protección Ambiental marcando un hito legislativo.',
         imageUrl: '/images/news/politica/congreso.avif',
-        alt: 'Aprobación Histórica: Ley Ambiental'
+        alt: 'Miembros del Congreso votando la ley de protección ambiental'
       }
     ],
     breadcrumb: {
@@ -287,7 +287,7 @@ export const politicaArticles: FullNewsArticle[] = [
     datetime: '2025-10-04',
     summary: 'El Senado de la República inició esta semana el debate sobre una nueva propuesta de reforma constitucional que busca introducir cambios significativos en la estructura política del país.',
     imageUrl: '/images/news/politica/senado.avif',
-    alt: 'El Senado Debate Nueva Propuesta de Reforma Constitucional',
+    alt: 'Cámara del Senado durante el debate de la reforma constitucional',
     content: [
       'La iniciativa, presentada por un grupo de legisladores de diferentes partidos, plantea ajustes en temas clave como la distribución del poder, la transparencia en la gestión pública y el fortalecimiento de los mecanismos de participación ciudadana.',
       
@@ -317,7 +317,7 @@ export const politicaArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'Encuestas revelan incremento en la popularidad del presidente tras recientes medidas económicas.',
         imageUrl: '/images/news/politica/presidente.avif',
-        alt: 'Encuestas Revelan Incremento en la Popularidad del Presidente'
+        alt: 'Gráfico mostrando el aumento de la aprobación presidencial en encuestas de opinión'
       },
       {
         id: 'politica-casa-blanca',
@@ -328,7 +328,7 @@ export const politicaArticles: FullNewsArticle[] = [
         datetime: '2025-10-04',
         summary: 'La Casa Blanca confirma cumbre internacional para esta semana para abordar temas globales.',
         imageUrl: '/images/news/politica/casa-blanca.jpg',
-        alt: 'Casa Blanca Confirma Cumbre Internacional'
+        alt: 'Edificio de la Casa Blanca albergando la cumbre internacional'
       }
     ],
     breadcrumb: {

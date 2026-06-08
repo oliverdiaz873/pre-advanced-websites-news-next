@@ -10,7 +10,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     datetime: '2025-10-11',
     summary: 'El líder de una organización criminal internacional ha sido condenado a cadena perpetua tras un largo proceso judicial que se extendió por varios años.',
     imageUrl: '/images/news/justicia/condena.jpg',
-    alt: 'Condenan a cadena perpetua a líder de organización criminal internacional',
+    alt: 'Sala de tribunal durante la sentencia de un líder criminal internacional',
     content: [
       'La sentencia fue dictada por un tribunal especializado en delitos de crimen organizado, luego de que se presentaran pruebas contundentes que vinculan al acusado con actividades ilícitas a nivel mundial, incluyendo tráfico de drogas, lavado de dinero y corrupción.',
       
@@ -38,7 +38,7 @@ export const justiciaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Arrestan a directivos involucrados en evasión de impuestos.',
         imageUrl: '/images/news/justicia/arrested.jpg',
-        alt: 'Detienen a exfuncionario acusado de fraude financiero millonario'
+        alt: 'Exfuncionario esposado siendo conducido por las autoridades'
       },
       {
         id: 'justicia-tribunal-supremo',
@@ -67,7 +67,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     datetime: '2025-10-11',
     summary: 'Las autoridades arrestaron este viernes a un exfuncionario público acusado de participar en un esquema de fraude financiero que habría desviado millones de dólares de fondos estatales.',
     imageUrl: '/images/news/justicia/arrested.jpg',
-    alt: 'Detienen a exfuncionario acusado de fraude financiero millonario',
+    alt: 'Exfuncionario esposado siendo conducido por las autoridades',
     content: [
       'La detención se produjo tras una extensa investigación encabezada por la fiscalía especializada en delitos económicos. De acuerdo con el informe preliminar, el exfuncionario presuntamente utilizó una red de empresas fantasma para desviar recursos destinados a programas de desarrollo social.',
       
@@ -120,7 +120,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     datetime: '2025-10-10',
     summary: 'El Tribunal Supremo ha confirmado la sentencia dictada en un caso de corrupción política que ha conmocionado al país, estableciendo un precedente importante en la lucha contra la impunidad.',
     imageUrl: '/images/news/justicia/tribunal.jpg',
-    alt: 'Tribunal Supremo confirma sentencia histórica en caso de corrupción',
+    alt: 'Jueces ingresando al Tribunal Supremo para una sentencia histórica',
     content: [
       'La decisión del máximo tribunal del país fue unánime y ratifica las condenas impuestas por tribunales inferiores contra varios funcionarios de alto nivel involucrados en actos de corrupción.',
       
@@ -157,7 +157,7 @@ export const justiciaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Arrestan a directivos involucrados en evasión de impuestos.',
         imageUrl: '/images/news/justicia/arrested.jpg',
-        alt: 'Detienen a exfuncionario acusado de fraude financiero millonario'
+        alt: 'Exfuncionario esposado siendo conducido por las autoridades'
       }
     ],
     breadcrumb: {
@@ -175,7 +175,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     datetime: '2025-10-11',
     summary: 'La policía local ha iniciado una investigación tras un homicidio ocurrido en el centro de la ciudad durante la madrugada del viernes, generando alarma en la comunidad.',
     imageUrl: '/images/news/justicia/homicidio.jpg',
-    alt: 'Investigan homicidio en el centro de la ciudad',
+    alt: 'Policía acordonando una calle durante la investigación de un homicidio',
     content: [
       'Las autoridades informaron que el incidente tuvo lugar cerca de la intersección de las avenidas principales, en un área con alta actividad comercial. Testigos presentes en el lugar relataron haber escuchado gritos y detonaciones antes de que llegaran los primeros equipos de emergencia.',
       
@@ -210,7 +210,7 @@ export const justiciaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Acusado de desviar fondos millonarios a cuentas en el extranjero.',
         imageUrl: '/images/news/justicia/arrested.jpg',
-        alt: 'Detienen a exfuncionario acusado de fraude financiero millonario'
+        alt: 'Exfuncionario esposado siendo conducido por las autoridades'
       }
     ],
     breadcrumb: {
@@ -228,7 +228,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     datetime: '2025-10-11',
     summary: 'La Fiscalía General ha iniciado un juicio contra una importante empresa nacional acusada de evasión fiscal millonaria, lo que podría derivar en sanciones históricas.',
     imageUrl: '/images/news/justicia/juicio.jpg',
-    alt: 'Fiscalía inicia juicio contra empresa por evasión fiscal millonaria',
+    alt: 'Edificio corporativo con investigadores de la fiscalía ingresando',
     content: [
       'Según los informes preliminares, la compañía habría omitido declarar ingresos significativos durante varios años, generando un perjuicio económico al Estado. El caso se abrió luego de una investigación de la unidad especializada en delitos financieros.',
       
@@ -261,7 +261,7 @@ export const justiciaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Acusado de desviar fondos millonarios a cuentas en el extranjero.',
         imageUrl: '/images/news/justicia/arrested.jpg',
-        alt: 'Detienen a exfuncionario acusado de fraude financiero millonario'
+        alt: 'Exfuncionario esposado siendo conducido por las autoridades'
       }
     ],
     breadcrumb: {
@@ -279,7 +279,7 @@ export const justiciaArticles: FullNewsArticle[] = [
     datetime: '2025-10-11',
     summary: 'El juez del caso ha dictado prisión preventiva contra el acusado, considerando necesario asegurar su presencia en el juicio debido a la gravedad de los cargos y el riesgo de fuga.',
     imageUrl: '/images/news/justicia/juez.jpg',
-    alt: 'Juez ordena prisión preventiva para acusado de homicidio múltiple',
+    alt: 'Juez revisando expedientes de un caso de homicidio múltiple',
     content: [
       'La decisión se tomó luego de una audiencia en la que se presentaron pruebas contundentes que vinculan al acusado con varios homicidios ocurridos en la ciudad durante los últimos meses. El fiscal argumentó que la libertad del imputado representaría un peligro para la sociedad.',
       
@@ -312,7 +312,7 @@ export const justiciaArticles: FullNewsArticle[] = [
         datetime: '2025-10-11',
         summary: 'Acusado de desviar fondos millonarios a cuentas en el extranjero.',
         imageUrl: '/images/news/justicia/arrested.jpg',
-        alt: 'Detienen a exfuncionario acusado de fraude financiero millonario'
+        alt: 'Exfuncionario esposado siendo conducido por las autoridades'
       }
     ],
     breadcrumb: {
