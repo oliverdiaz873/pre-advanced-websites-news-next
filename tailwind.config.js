@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         primary: ['var(--font-domine)'],
-        base: ['var(--font-inter)'],
+        base: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
       },
     },
   },

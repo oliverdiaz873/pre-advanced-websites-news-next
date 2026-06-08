@@ -1,13 +1,23 @@
-import { Domine, Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 
-export const domine = Domine({
-  subsets: ['latin'],
+export const domine = localFont({
+  src: [
+    {
+      path: '../../assets/fonts/Domine/Domine-Regular.ttf',
+      weight: '400',
+    },
+    {
+      path: '../../assets/fonts/Domine/Domine-Medium.ttf',
+      weight: '500',
+    },
+    {
+      path: '../../assets/fonts/Domine/Domine-SemiBold.ttf',
+      weight: '600',
+    },
+    {
+      path: '../../assets/fonts/Domine/Domine-Bold.ttf',
+      weight: '700',
+    },
+  ],
   variable: '--font-domine',
-  weight: ['400', '500', '600', '700'],
-})
-
-export const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  weight: ['400', '500', '600', '700'],
 })
