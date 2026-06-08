@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useLocale } from 'next-intl';
+import { useSearchParams } from 'next/navigation';
 import { useRouter, usePathname } from '@/i18n/routing';
 import { WorldIcon } from '../icons/Icons';
 
@@ -23,6 +24,7 @@ export const LanguageSelector = () => {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -44,7 +46,11 @@ export const LanguageSelector = () => {
 
   const changeLanguage = (lng: string) => {
     if (locale !== lng) {
-      router.replace(pathname, { locale: lng });
+      const query = searchParams.toString();
+      router.replace(
+        query ? `${pathname}?${query}` : pathname,
+        { locale: lng }
+      );
     }
     setIsOpen(false);
   };
