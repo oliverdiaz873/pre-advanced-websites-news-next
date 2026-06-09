@@ -2,6 +2,16 @@
 
 A pre-advanced level and fully responsive news website built with modern frontend technologies and Next.js.
 
+## Documentation
+
+Start with [docs/getting-started.md](docs/getting-started.md).
+
+Core documentation:
+
+- [Architecture](docs/architecture.md)
+- [Folder Structure](docs/folder-structure.md)
+- [Features](docs/features/README.md)
+
 ## Project Overview
 Pre-Advanced Websites – News (Next.js Edition) is a pre-advanced level web project focused on building a professional news website using modern frameworks like Next.js and Tailwind CSS.
 
