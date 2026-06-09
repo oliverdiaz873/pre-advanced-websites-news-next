@@ -7,10 +7,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Theme } from './_components/Theme';
-import { themeScript } from '@/theme/theme-script';
-import { domine } from '@/shared/config/fonts';
-import '@/theme/theme.css';
-import '@/styles/index.css';
+
 import './_components/HomePageClient.css';
 import './_components/CategoryPageClient.css';
 import './_components/ArticlePageClient.css';
@@ -78,22 +75,19 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-      <html lang={locale} suppressHydrationWarning className={domine.variable}>
-      <body>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <Theme />
+    <>
+      <Theme />
 
-        <NextIntlClientProvider messages={messages}>
-          <Providers>
-            <div className="flex min-h-screen flex-col bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
-              <ScrollToTop />
-              <Header />
-              <main className="flex-grow">{children}</main>
-              <Footer />
-            </div>
-          </Providers>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+      <NextIntlClientProvider messages={messages}>
+        <Providers>
+          <div className="flex min-h-screen flex-col bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
+            <ScrollToTop />
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
+        </Providers>
+      </NextIntlClientProvider>
+    </>
   );
 }
