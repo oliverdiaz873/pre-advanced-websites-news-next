@@ -43,7 +43,7 @@ export const useNewsArticle = () => {
     const itemId = normalize(item.id);
     
     // El slug debe coincidir con el final del href o con el ID
-    return itemHref.endsWith(normSlug) || itemId === normSlug || itemId.includes(normSlug);
+    return itemHref.endsWith('/' + normSlug) || itemId === normSlug || itemId.includes(normSlug);
   });
 
   return {
