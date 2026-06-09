@@ -13,8 +13,4 @@ export const THEME_COLOR_BY_RESOLVED_THEME: Record<ResolvedTheme, string> = {
   dark: '#111827',
 };
 
-export const THEME_OPTIONS: Array<{ value: ThemePreference; label: string; shortLabel: string }> = [
-  { value: 'light', label: 'Tema claro', shortLabel: 'Claro' },
-  { value: 'dark', label: 'Tema oscuro', shortLabel: 'Oscuro' },
-  { value: 'system', label: 'Tema del sistema', shortLabel: 'Sistema' },
-];
+

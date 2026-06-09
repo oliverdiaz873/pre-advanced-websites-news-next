@@ -50,8 +50,7 @@ html[data-theme='dark'] {
 }
 
 html,
-body,
-#root {
+body {
   min-height: 100%;
 }
 

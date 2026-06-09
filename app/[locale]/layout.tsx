@@ -7,6 +7,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Theme } from './_components/Theme';
+import { themeScript } from '@/theme/theme-script';
 import { domine } from '@/shared/config/fonts';
 import '@/theme/theme.css';
 import '@/styles/index.css';
@@ -79,6 +80,7 @@ export default async function RootLayout({
   return (
       <html lang={locale} suppressHydrationWarning className={domine.variable}>
       <body>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <Theme />
 
         <NextIntlClientProvider messages={messages}>
