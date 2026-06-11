@@ -7,6 +7,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Theme } from './_components/Theme';
+import { SITE_URL, SITE_NAME, getLocalePrefix, getOgLocale } from '@/shared/config/site';
 
 import './_components/HomePageClient.css';
 import './_components/CategoryPageClient.css';
@@ -26,13 +27,35 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const siteName = t('siteName');
   const description = t('description');
 
+  const baseUrl = SITE_URL;
+  const path = getLocalePrefix(locale);
+
+  const layoutKeywords = t('keywords');
+
   return {
-    metadataBase: new URL('https://newshub.example.com'),
+    metadataBase: new URL(SITE_URL),
     title: {
       default: siteName,
       template: `%s | ${siteName}`,
     },
     description,
+    keywords: layoutKeywords,
+    authors: [{ name: siteName }],
+    creator: siteName,
+    publisher: siteName,
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    alternates: {
+      canonical: `${baseUrl}${path}`,
+      languages: {
+        es: baseUrl,
+        en: `${baseUrl}/en`,
+        'x-default': baseUrl,
+      },
+    },
     icons: {
       icon: [
         { url: '/favicon16x16.jpg', sizes: '16x16', type: 'image/jpeg' },
@@ -44,10 +67,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     openGraph: {
       type: 'website',
+      locale: getOgLocale(locale),
+      url: `${baseUrl}${path}`,
       siteName,
       title: siteName,
       description,
-      images: ['/images/logo/logo.jpg'],
+      images: [
+        {
+          url: '/images/logo/logo.jpg',
+          width: 1200,
+          height: 630,
+          alt: siteName,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
@@ -70,6 +102,7 @@ export default async function RootLayout({
   if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
+
 
   setRequestLocale(locale);
   const messages = await getMessages();

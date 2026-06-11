@@ -2,11 +2,12 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { domine } from '@/shared/config/fonts';
 import { themeScript } from '@/theme/theme-script';
+import { SITE_URL } from '@/shared/config/site';
 import '@/theme/theme.css';
 import '@/styles/index.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://newshub.example.com'),
+  metadataBase: new URL(SITE_URL),
 };
 
 export default function RootLayout({

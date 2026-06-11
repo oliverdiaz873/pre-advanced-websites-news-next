@@ -859,24 +859,29 @@
   "metadata": {
     "home": {
       "title": "Inicio",
-      "description": "Las noticias más importantes del mundo, política, economía y deportes en un solo lugar."
+      "description": "Las noticias más importantes del mundo, política, economía y deportes en un solo lugar.",
+      "keywords": "NewsHub, noticias, información, periódico, actualidad"
     },
     "layout": {
       "siteName": "NewsHub",
-      "description": "Mantente informado con las últimas noticias internacionales, política, economía, deportes y más."
+      "description": "Mantente informado con las últimas noticias internacionales, política, economía, deportes y más.",
+      "keywords": "NewsHub, noticias, información, periódico, actualidad"
     },
     "search": {
       "title": "Búsqueda",
-      "description": "Busca noticias y opiniones publicadas en NewsHub."
+      "description": "Busca noticias y opiniones publicadas en NewsHub.",
+      "keywords": "NewsHub, búsqueda, noticias, opiniones"
     },
     "legal": {
       "privacy": {
         "title": "Política de privacidad",
-        "description": "Política de privacidad de NewsHub."
+        "description": "Política de privacidad de NewsHub.",
+        "keywords": "NewsHub, privacidad, protección de datos, política de privacidad"
       },
       "terms": {
         "title": "Términos de uso",
-        "description": "Términos de uso de NewsHub."
+        "description": "Términos de uso de NewsHub.",
+        "keywords": "NewsHub, términos de uso, condiciones, términos y condiciones"
       }
     },
     "category": {
