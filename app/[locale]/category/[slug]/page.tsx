@@ -5,6 +5,7 @@ import { SITE_URL, SITE_NAME, getLocalePrefix, getOgLocale } from '@/shared/conf
 import { buildBreadcrumbJsonLd } from '@/shared/config/seo';
 
 import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -48,6 +49,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function Page({ params }: PageProps) {
   const { slug, locale } = await params;
   const category = categoryContent[slug];
+
+  if (!category) {
+    notFound();
+  }
 
   const baseUrl = SITE_URL;
   const localePath = getLocalePrefix(locale);

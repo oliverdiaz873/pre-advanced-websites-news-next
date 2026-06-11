@@ -28,6 +28,7 @@ type PageProps = {
 };
 
 import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug, category } = await params;
@@ -83,6 +84,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function Page({ params }: PageProps) {
   const { slug, locale, category } = await params;
   const article = allArticles.find((item) => item.href.endsWith(`/${slug}`) || item.id === slug);
+
+  if (!article || article.href !== `/news/${category}/${slug}`) {
+    notFound();
+  }
 
   const baseUrl = SITE_URL;
   const localePath = getLocalePrefix(locale);
