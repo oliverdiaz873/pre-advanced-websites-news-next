@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState, type ReactElement } from 'react';
 import { useTranslations } from 'next-intl';
-import { SunIcon, MoonIcon, SystemIcon } from '../icons';
+import { SunIcon, MoonIcon, SystemIcon, ChevronDownIcon } from '../icons';
 import { useTheme, type ThemePreference } from '../../../theme';
 
 const iconByTheme: Record<ThemePreference, ReactElement> = {
@@ -23,6 +23,7 @@ export const ThemeToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
+  const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const menuId = useId();
 
   useEffect(() => {
@@ -46,6 +47,7 @@ export const ThemeToggle = () => {
     document.addEventListener('keydown', handleEscape);
 
     return () => {
+      if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
       document.removeEventListener('mousedown', handlePointerDown);
       document.removeEventListener('keydown', handleEscape);
     };
@@ -69,6 +71,13 @@ export const ThemeToggle = () => {
       ref={rootRef}
       className="theme-toggle"
       aria-label={t('theme.selectorLabel', { preference: selectedLabel, applied: resolvedThemeLabel })}
+      onMouseEnter={() => {
+        if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+        setIsOpen(true);
+      }}
+      onMouseLeave={() => {
+        hoverTimeoutRef.current = setTimeout(() => setIsOpen(false), 200);
+      }}
     >
       <button
         type="button"
@@ -81,8 +90,8 @@ export const ThemeToggle = () => {
       >
         {iconByTheme[theme]}
         <span className="theme-toggle-trigger-value">{selectedLabel}</span>
-        <span className={`theme-toggle-caret ${isOpen ? 'is-open' : ''}`} aria-hidden="true">
-          ▼
+        <span className="theme-toggle-caret" aria-hidden="true">
+          <ChevronDownIcon className={`w-3 h-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
         </span>
       </button>
 

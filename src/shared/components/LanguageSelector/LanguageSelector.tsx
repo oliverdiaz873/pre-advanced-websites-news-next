@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useLocale } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
 import { useRouter, usePathname } from '@/i18n/routing';
-import { WorldIcon } from '../icons/Icons';
+import { WorldIcon, ChevronDownIcon } from '../icons/Icons';
 
 const languages = [
   { code: 'es', name: 'Español', nativeName: 'Español' },
@@ -27,6 +27,7 @@ export const LanguageSelector = () => {
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
 
@@ -37,7 +38,10 @@ export const LanguageSelector = () => {
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    return () => {
+      if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   useEffect(() => {
@@ -56,7 +60,15 @@ export const LanguageSelector = () => {
   };
 
   return (
-    <div className="relative inline-block text-left" ref={dropdownRef}>
+    <div className="relative inline-block text-left" ref={dropdownRef}
+      onMouseEnter={() => {
+        if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+        setIsOpen(true);
+      }}
+      onMouseLeave={() => {
+        hoverTimeoutRef.current = setTimeout(() => setIsOpen(false), 200);
+      }}
+    >
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
@@ -66,27 +78,20 @@ export const LanguageSelector = () => {
       >
         <WorldIcon className="w-4 h-4 shrink-0" />
         <span className="uppercase" style={{ fontFamily: 'var(--font-domine)', fontSize: '13px', letterSpacing: '0.05em' }}>{currentLanguage.code}</span>
-        <svg 
-          className={`w-3 h-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
-          style={{ fill: 'none' }}
-          stroke="currentColor" 
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-        </svg>
+        <ChevronDownIcon className={`w-3 h-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {isOpen && (
         <div 
-          className="absolute left-0 md:left-auto md:right-0 mt-2 w-40 origin-top-left md:origin-top-right bg-[var(--color-surface-base)] border border-[var(--color-border-subtle)] rounded-[16px] shadow-[var(--shadow-elevation-2)] backdrop-blur-xl z-[1100] overflow-hidden animate-in fade-in zoom-in duration-200"
+          className="absolute left-0 md:left-auto md:right-0 mt-2 w-40 origin-top-left md:origin-top-right bg-[var(--color-surface-base)] border border-[var(--color-border-subtle)] rounded-[16px] shadow-[var(--shadow-elevation-2)] backdrop-blur-xl p-[0.35rem] z-[1100] overflow-hidden animate-in fade-in zoom-in duration-200"
           role="menu"
         >
-          <div className="py-1">
+          <div className="flex flex-col gap-[0.25rem]">
             {languages.map((lang) => (
               <button
                 key={lang.code}
                 onClick={() => changeLanguage(lang.code)}
-                className={`flex items-center justify-between w-full px-4 py-2 transition-colors duration-200 ${
+                className={`flex items-center justify-between w-full px-[0.85rem] py-[0.7rem] rounded-[12px] transition-colors duration-200 ${
                   locale === lang.code 
                     ? 'bg-red-500/10 text-red-600 dark:text-red-400 font-semibold' 
                     : 'text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10'

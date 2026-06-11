@@ -66,6 +66,13 @@ export const InstagramIcon = ({ className }: IconProps) => (
   </svg>
 );
 
+// ChevronDownIcon
+export const ChevronDownIcon = ({ className }: IconProps) => (
+  <svg className={className} style={{ fill: 'none' }} stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M19 9l-7 7-7-7" />
+  </svg>
+);
+
 // WorldIcon
 export const WorldIcon = ({ className }: IconProps) => (
   <svg className={className} style={{ fill: 'none' }} xmlns="http://www.w3.org/2000/svg" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

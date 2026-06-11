@@ -46,18 +46,13 @@
 
 .theme-toggle-caret {
   color: var(--color-text-secondary);
-  display: none;
-  font-size: 0.7rem;
+  display: inline-flex;
+  align-items: center;
   transition: transform 180ms ease;
 }
 
-.theme-toggle-trigger.is-open .theme-toggle-trigger-value,
-.theme-toggle-trigger.is-open .theme-toggle-caret {
+.theme-toggle-trigger.is-open .theme-toggle-trigger-value {
   display: inline-flex;
-}
-
-.theme-toggle-caret.is-open {
-  transform: rotate(180deg);
 }
 
 .theme-toggle-menu {
@@ -104,13 +99,13 @@
 }
 
 .theme-toggle-option:hover {
-  background: color-mix(in srgb, var(--color-surface-elevated) 80%, transparent);
-  color: var(--color-text-primary);
+  background: color-mix(in srgb, var(--color-accent-primary) 10%, transparent);
+  color: var(--color-accent-primary);
 }
 
 .theme-toggle-option.is-active {
-  background: var(--color-surface-elevated);
-  color: var(--color-text-primary);
+  background: color-mix(in srgb, var(--color-accent-primary) 10%, transparent);
+  color: var(--color-accent-primary);
 }
 
 .theme-toggle-label {
