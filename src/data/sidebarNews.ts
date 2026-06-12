@@ -209,7 +209,7 @@ export const sidebarNewsByCategory = {
       date: '4 de octubre de 2025',
       datetime: '2025-10-04',
       summary: 'La estrella de los Lakers anotó 28 puntos y dio 9 asistencias en la victoria sobre los Celtics.',
-      imageUrl: '/images/news/deporte/NBA.jpg',
+      imageUrl: '/images/news/deporte/nba.jpg',
       alt: 'LeBron James lidera victoria de los Lakers',
     }),
     createNewsArticle({

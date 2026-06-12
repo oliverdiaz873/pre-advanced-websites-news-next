@@ -9,7 +9,7 @@ export const deporteArticles: FullNewsArticle[] = [
     date: '4 de octubre de 2025',
     datetime: '2025-10-04',
     summary: 'Los Lakers de Los Ángeles derrotaron a los Boston Celtics 112-107 en un partido lleno de emoción y jugadas espectaculares que mantuvo a los fanáticos al borde de sus asientos.',
-    imageUrl: '/images/news/deporte/NBA.jpg',
+    imageUrl: '/images/news/deporte/nba.jpg',
     alt: 'LeBron James de los Lakers lanzando contra la defensa de los Celtics',
     content: [
       'El partido comenzó con una intensidad inusual desde el primer cuarto, con ambos equipos intercambiando jugadas y mostrando por qué son considerados dos de los mejores franchises de la historia de la NBA.',
@@ -94,7 +94,7 @@ export const deporteArticles: FullNewsArticle[] = [
         date: '4 de octubre de 2025',
         datetime: '2025-10-04',
         summary: 'Los Lakers derrotan a los Celtics en un partido emocionante de la NBA.',
-        imageUrl: '/images/news/deporte/NBA.jpg',
+        imageUrl: '/images/news/deporte/nba.jpg',
         alt: 'Los Lakers vencen a los Celtics 112-107'
       },
       {
@@ -151,7 +151,7 @@ export const deporteArticles: FullNewsArticle[] = [
         date: '4 de octubre de 2025',
         datetime: '2025-10-04',
         summary: 'Los Lakers lograron una victoria impresionante sobre los Celtics en un partido decisivo de la NBA.',
-        imageUrl: '/images/news/deporte/NBA.jpg',
+        imageUrl: '/images/news/deporte/nba.jpg',
         alt: 'LeBron James de los Lakers lanzando contra la defensa de los Celtics'
       },
       {
@@ -210,7 +210,7 @@ export const deporteArticles: FullNewsArticle[] = [
         date: '4 de octubre de 2025',
         datetime: '2025-10-04',
         summary: 'Los Lakers lograron una victoria impresionante sobre los Celtics en un partido decisivo de la NBA.',
-        imageUrl: '/images/news/deporte/NBA.jpg',
+        imageUrl: '/images/news/deporte/nba.jpg',
         alt: 'LeBron James de los Lakers lanzando contra la defensa de los Celtics'
       },
       {
@@ -259,7 +259,7 @@ export const deporteArticles: FullNewsArticle[] = [
         date: '4 de octubre de 2025',
         datetime: '2025-10-04',
         summary: 'Los Lakers lograron una victoria impresionante sobre los Celtics en un partido decisivo de la NBA.',
-        imageUrl: '/images/news/deporte/NBA.jpg',
+        imageUrl: '/images/news/deporte/nba.jpg',
         alt: 'LeBron James de los Lakers lanzando contra la defensa de los Celtics'
       },
       {
@@ -312,7 +312,7 @@ export const deporteArticles: FullNewsArticle[] = [
         date: '4 de octubre de 2025',
         datetime: '2025-10-04',
         summary: 'Los Lakers lograron una victoria impresionante sobre los Celtics en un partido decisivo de la NBA.',
-        imageUrl: '/images/news/deporte/NBA.jpg',
+        imageUrl: '/images/news/deporte/nba.jpg',
         alt: 'LeBron James de los Lakers lanzando contra la defensa de los Celtics'
       },
       {

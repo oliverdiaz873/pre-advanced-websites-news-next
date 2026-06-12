@@ -308,7 +308,7 @@ const deporteArticles: NewsArticle[] = [
     date: '4 de octubre de 2025',
     datetime: '2025-10-04',
     summary: 'Los Lakers de Los Ángeles derrotaron a los Boston Celtics 112-107 en un partido lleno de emoción y jugadas espectaculares.',
-    imageUrl: '/images/news/deporte/NBA.jpg',
+    imageUrl: '/images/news/deporte/nba.jpg',
     alt: 'Los Lakers vencen a los Celtics 112-107 en un emocionante partido de la NBA',
   }),
   createNewsArticle({

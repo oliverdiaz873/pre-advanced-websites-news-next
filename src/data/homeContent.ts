@@ -146,7 +146,7 @@ export const latestNews: NewsArticle[] = [
     datetime: '2025-10-07',
     summary:
       'En un emocionante enfrentamiento, los Lakers lograron imponerse a los Celtics con marcador de 112-107. LeBron James lideró con 28 puntos y 9 asistencias.',
-    imageUrl: '/images/news/deporte/NBA.jpg',
+    imageUrl: '/images/news/deporte/nba.jpg',
     alt: 'Los Lakers vencen a los Celtics',
   },
   {
