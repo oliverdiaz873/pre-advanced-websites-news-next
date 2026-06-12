@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import type { FullNewsArticle } from '../../../../data';
 
@@ -44,12 +45,13 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({ article }) => {
             </p>
           </div>
           
-          <div className="image-wrapper order-1 lg:order-2 flex-[0_0_100%] lg:flex-[0_0_60%] max-w-full lg:max-w-[60%] shadow-sm overflow-hidden rounded-[10px] aspect-video">
-            <img 
+          <div className="image-wrapper relative order-1 lg:order-2 flex-[0_0_100%] lg:flex-[0_0_60%] max-w-full lg:max-w-[60%] shadow-sm overflow-hidden rounded-[10px] aspect-video">
+            <Image 
               src={article.imageUrl} 
               alt={article.alt} 
-              className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" 
-              loading="lazy"
+              fill
+              sizes="(max-width: 1024px) 100vw, 60vw"
+              className="object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>

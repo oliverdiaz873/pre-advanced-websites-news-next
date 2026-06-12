@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import {
@@ -34,6 +35,11 @@ const CardLink = ({
   const t = useTranslations('common');
   return (
     <Link href={article.href} aria-label={t('readArticle', { title: article.title })} className="block text-inherit no-underline">
+      {/* Se mantiene <img> en lugar de next/image porque:
+          - El layout depende de la altura natural de la imagen
+          - No hay dimensiones conocidas ni aspect-ratio consistente en todos los contextos (home vs categoría)
+          - Migrar requeriría introducir restricciones de tamaño que alterarían el diseño actual
+          - La estabilidad visual tiene prioridad sobre alcanzar el 100% de migración */}
       <img src={article.imageUrl} alt={article.alt} loading="lazy" className={imageClassName} />
       <h3 className={titleClassName}>{article.title}</h3>
       <ArticleMeta article={article} />
@@ -80,11 +86,13 @@ export const FeaturedNewsSection = ({ content }: FeaturedNewsSectionProps) => {
             className="block text-inherit no-underline xl:flex xl:items-start xl:gap-6"
           >
             <div className="mb-4 xl:order-2 xl:mb-0 xl:w-[70%]">
-              <div className="overflow-hidden rounded-lg aspect-video">
-                <img
+              <div className="relative overflow-hidden rounded-lg aspect-video">
+                <Image
                   src={sectionContent.primary.imageUrl}
                   alt={sectionContent.primary.alt}
-                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  fill
+                  sizes="(max-width: 1280px) 100vw, 70vw"
+                  className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
             </div>

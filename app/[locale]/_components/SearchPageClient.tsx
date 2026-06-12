@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { SearchIcon } from '@/shared/components/icons';
@@ -50,11 +51,15 @@ export const Search = () => {
                 {results.map((article) => (
                   <article key={article.id} className="bg-white dark:bg-[#242424] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-800 flex flex-col h-full p-2.5">
                     <Link href={article.href} className="no-underline text-inherit flex flex-col h-full">
-                      <img 
-                        src={article.imageUrl} 
-                        alt={article.alt} 
-                        className="w-full h-[200px] object-cover rounded-t-lg"
-                      />
+                      <div className="relative w-full h-[200px] overflow-hidden rounded-t-lg">
+                        <Image 
+                          src={article.imageUrl} 
+                          alt={article.alt} 
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover"
+                        />
+                      </div>
                       <div className="p-4 flex flex-col flex-grow">
                         <span className="inline-block bg-[#dc3545] text-white text-xs font-bold px-1.5 py-0.5 rounded mb-2 self-start uppercase">
                           {article.category}

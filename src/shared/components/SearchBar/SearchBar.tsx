@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { SearchIcon, CloseIcon } from '../icons';
 import { useSearch } from '../../../features/news/hooks/useSearch';
 import { useArticleTranslator } from '../../../features/news/hooks/useArticleTranslation';
@@ -121,10 +122,12 @@ export const SearchBar = ({ onSearchComplete }: { onSearchComplete?: () => void 
                     >
 
                       {article.imageUrl && (
-                        <img 
+                        <Image 
                           src={article.imageUrl} 
                           alt="" 
-                          className="h-10 w-10 rounded object-cover"
+                          width={40}
+                          height={40}
+                          className="rounded object-cover"
                         />
                       )}
                       <div className="flex-1 overflow-hidden">

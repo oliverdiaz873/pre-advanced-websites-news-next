@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { opinionArticles, type OpinionArticle } from '../../../../data';
@@ -32,12 +33,15 @@ export const OpinionSidebar = ({ title, articles: rawArticles = opinionArticles 
               className="opinion-card rounded-lg p-2 transition-all duration-300 hover:translate-x-[5px]"
             >
               <Link href={article.href} className="block text-inherit no-underline">
-                <img
-                  src={article.imageUrl}
-                  alt={article.alt}
-                  loading="lazy"
-                  className="mb-2 h-[120px] w-full rounded-lg object-cover"
-                />
+                <div className="relative mb-2 w-full overflow-hidden rounded-lg opinion-image-wrapper">
+                  <Image
+                    src={article.imageUrl}
+                    alt={article.alt}
+                    fill
+                    sizes="300px"
+                    className="object-cover"
+                  />
+                </div>
                 <h4 className="mb-2 text-[0.95rem] font-bold leading-[1.3] text-[#212529] transition-colors duration-300 hover:text-[#dc3545] dark:text-[var(--color-text-primary)] line-clamp-3">
                   {article.title}
                 </h4>

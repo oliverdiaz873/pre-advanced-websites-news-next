@@ -46,14 +46,18 @@ html[data-theme='dark'] .recent-news-card .metadata {
 }
 
 /* Responsive adjustments */
+.recent-news-image-wrapper {
+  height: 120px;
+}
+
 @media (max-width: 1024px) {
-  .recent-news-card img {
+  .recent-news-image-wrapper {
     height: 100px;
   }
 }
 
 @media (max-width: 768px) {
-  .recent-news-card img {
+  .recent-news-image-wrapper {
     height: 80px;
   }
 }

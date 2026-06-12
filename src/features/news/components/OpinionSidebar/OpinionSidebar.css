@@ -39,14 +39,18 @@ html[data-theme='dark'] .opinion-card .metadata {
 }
 
 /* Responsive adjustments */
+.opinion-image-wrapper {
+  height: 120px;
+}
+
 @media (max-width: 1024px) {
-  .opinion-card img {
+  .opinion-image-wrapper {
     height: 100px;
   }
 }
 
 @media (max-width: 768px) {
-  .opinion-card img {
+  .opinion-image-wrapper {
     height: 80px;
   }
 }

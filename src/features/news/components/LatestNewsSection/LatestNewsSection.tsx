@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { latestNews, type NewsArticle } from '../../../../data';
@@ -30,12 +31,13 @@ export const LatestNewsSection = ({ title, articles: rawArticles = latestNews }:
             className="news-card-home h-full rounded-lg bg-white p-[10px] shadow-[0_2px_4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(0,0,0,0.15)] dark:bg-[var(--color-surface-base)]"
           >
             <Link href={article.href} aria-label={tCommon('readArticle', { title: article.title })} className="block text-inherit no-underline">
-              <div className="mb-3 overflow-hidden rounded-lg h-48 md:h-56 lg:h-48">
-                <img
+              <div className="relative mb-3 overflow-hidden rounded-lg h-48 md:h-56 lg:h-48">
+                <Image
                   src={article.imageUrl}
                   alt={article.alt}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <h3 className="mb-2 text-xl font-semibold leading-snug text-neutral-900 transition-colors duration-300 hover:text-[#dc3545] dark:text-[var(--color-text-primary)]">
