@@ -5,6 +5,10 @@
   "backToHomeAlt": "Volver al inicio",
   "category": "Categoría",
   "readArticle": "Leer noticia: {title}",
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o ha sido movida."
+  },
   "theme": {
     "selectorLabel": "Selector de tema. Preferencia activa: {preference}. Tema aplicado: {applied}.",
     "triggerLabel": "Tema: {preference}. Tema aplicado: {applied}.",

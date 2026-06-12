@@ -1,10 +1,8 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 
-export function NotFoundClient() {
-  const t = useTranslations('system');
+export async function NotFoundClient() {
+  const t = await getTranslations('common');
 
   return (
     <main className="flex min-h-[calc(100vh-200px)] items-center justify-center px-4">
@@ -22,7 +20,7 @@ export function NotFoundClient() {
           href="/"
           className="inline-block rounded-md bg-[var(--color-accent-primary)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-accent-strong)]"
         >
-          {t('notFound.backToHome')}
+          {t('backToHome')}
         </Link>
       </div>
     </main>

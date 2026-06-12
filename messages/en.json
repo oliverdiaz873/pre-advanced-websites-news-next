@@ -708,6 +708,10 @@
     "backToHomeAlt": "Back to home",
     "category": "Category",
     "readArticle": "Read article: {title}",
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you are looking for does not exist or has been moved."
+    },
     "theme": {
       "selectorLabel": "Theme selector. Active preference: {preference}. Applied theme: {applied}.",
       "triggerLabel": "Theme: {preference}. Applied theme: {applied}.",
