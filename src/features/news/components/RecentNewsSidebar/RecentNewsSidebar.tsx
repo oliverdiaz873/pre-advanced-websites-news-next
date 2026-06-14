@@ -35,7 +35,7 @@ export const RecentNewsSidebar = ({ title, articles: rawArticles }: RecentNewsSi
   return (
     <aside className="recent-news-sidebar font-sans">
       <section className="rounded-lg border-l border-[#ddd] bg-white p-6 shadow-[0_2px_4px_rgba(0,0,0,0.1)] dark:border-[var(--color-border-subtle)] dark:bg-[var(--color-surface-elevated)]">
-        <h3 className="section-title-home section-title-sidebar mb-4 text-2xl font-bold dark:text-[var(--color-text-primary)]">{sectionTitle}</h3>
+        <h3 className="section-title-home section-title-sidebar mb-3 text-2xl font-bold dark:text-[var(--color-text-primary)]">{sectionTitle}</h3>
 
         <div className="space-y-6">
           {recentArticles.map((article) => (
