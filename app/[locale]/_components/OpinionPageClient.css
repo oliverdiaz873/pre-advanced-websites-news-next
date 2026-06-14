@@ -34,7 +34,7 @@
   padding: 0.75rem 0;
 }
 
-.opinion-image-wrapper {
+.opinion-page-container .opinion-image-wrapper {
   margin-bottom: 2.5rem;
   overflow: hidden;
   border-radius: 12px;
